@@ -50,7 +50,7 @@ class getKeyCode : public QWidget
         QLabel *connectedlabel;
         QLabel *directionlabel;
         QSerialPort serialport;
-        int k = 30;
+        int k = 34;
         int kr = 0;
         int kd = 30;
         bool keys[8] = {0,0,0,1,0,0,0,0};

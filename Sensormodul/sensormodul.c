@@ -7,12 +7,9 @@
 #include "UART.h"
 #include "sensorFunctions.h"
 #include <avr/interrupt.h>
-volatile int start = 0;
 volatile unsigned char new_rotate_left = 0;
 volatile unsigned char new_rotate_right = 0;
-volatile unsigned char klar = 0;
 volatile unsigned int framDist;
-volatile unsigned char receive = 0;
 
 void send_to_styr();
 
@@ -24,25 +21,14 @@ void Port_Init()
 }
 void send_to_com() //s�nder alla sensorv�rden till com
 {
-	//l�gg in lidarn f�rst
-	//unsigned int d = distance_lidar_precise(16);
-	//Tryck in status och fel f�r sensormod
-	sensor[11] = 'A'; // sensor prog
-	sensor[12] = 'B'; // sensor fel
-	for(int i=0;i<14; i++) // 11 totalt ju
+	for(int i=0;i<10; i++) 
 	{
-		//_delay_ms(100);
 		UART_Transmit_kom(sensor[i]);
 	}
-	//d1 = distance_lidar_precise(2);
-	//start = 0;
 }
 void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot till sens. sens skickar klar till kom
 {
-	PORTB = 0x03;
-	sensor[9] = (unsigned char)51;
-	//sensor[13] = 0b00000000;
-	//send_to_com();
+	sensor[8] = 'L'; //programkod rotera vänster
 	uint32_t time1;
 	long int vinkel = 0;
 	int result;
@@ -53,38 +39,19 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 		time1 = TCNT1;
 		vinkel  = vinkel + (result * time1);
 	}
-	Get_Sensor_Value();
-	while((sensor[0] - 17) > sensor[1])
+	do //Försök uppräta mot vägg på högersidan
 	{
 		Get_Sensor_Value();
-	}
-	sensor[13] = 0b11111111;
-//	send_to_com();
-	PORTB = 0x01;
-	//while (receive != 0b00001111)
-// 	while (!(UCSR1A & (1<<RXC1)))
-// 	{
-// 		Get_Sensor_Value();
-// 		send_to_styr();
-// 	}
-	PORTB = 0x02;
-		Get_Sensor_Value();
-		sens_to_centi();
-		framDist = distance_lidar(); //dela upp lidarvärdets övre och undre del då hela inte får plats i en char
-		sensor[6] = (unsigned char)framDist;
-		sensor[7] = (unsigned char)(framDist >> 8);
-//		sensor[13] = 0b00001111;
-		send_to_com();
-	sensor[13] = 0b00000000;
-	klar = 0;
-	PORTB = 0x00;
-	
+	} while (((sensor[0] - 20) > sensor[1]) && (sensor[0] > 88)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
+	//88 råvärde är 13 cm, 20 råvärde under 13cm är ungefär 3 - 4 cm
+	sensor[8] = 'D';
+	sens_to_centi();
+	send_to_com();
+	sensor[8] = 'F';
 }
 void rot_right() //Roterar 90 grader höger
 {
-	PORTB = 0x03;
-	sensor[9] = (unsigned char)51;
-	
+	sensor[8] = 'R'; //sätt sensprogramkod
 	long int vinkel = 0;
 	uint32_t time1;
 	int result;
@@ -95,34 +62,20 @@ void rot_right() //Roterar 90 grader höger
 		time1 = TCNT1;
 		vinkel  = vinkel + (result * time1);
 	}
-	sensor[13] = 0b11111111;  //klarsignal till komunikation
+	sensor[8] = 'D'; //klarsignal till komunikation
 	Get_Sensor_Value();
 	sens_to_centi();
-	framDist = distance_lidar();
-	sensor[6] = (unsigned char)framDist;
-	sensor[7] = (unsigned char)(framDist >> 8);
 	send_to_com();
-	//UART_Transmit_styr(0b00000000);
-	sensor[13] = 0b00000000;
-	PORTB = 0x00;
+	sensor[8] = 'F';
 }
-ISR(USART1_RX_vect) //Ta emot instruktion
+ISR(USART1_RX_vect) //Ta emot instruktion STYR
 {
-	unsigned char data = UDR1;
-	if (data == 0b00000001) //Startsignal
-	{
-		start = 1;
-	}
-	else if (data == 0b00000010)
-	new_rotate_left = 1;//rot_left();
-	else if (data == 0b00000011)
-	new_rotate_right = 1; //rot_right();
-	else if (data == 0b00010000)
-	start = 0;
-	else if (data == 0b11111111)
-	klar = 1;
-	else if(data == 0b00001111)
-	receive = 0b00001111;
+	sensor[9] = UDR1;
+
+	if (sensor[9] == 'L')
+		new_rotate_left = 1;//rot_left();
+	else if (sensor[9] == 'R')
+		new_rotate_right = 1; //rot_right();
 	return;
 }
 // ADC Initiering
@@ -133,7 +86,6 @@ void ADC_Init()
 }
 void send_to_styr() // S�nder reglersensorer
 {
-	sensor[9] = (unsigned char)40; //Send to styr
 	UART_Transmit_styr(0x00);
 	UART_Transmit_styr(sensor[0]);
 	UART_Transmit_styr(sensor[1]);
@@ -148,38 +100,35 @@ int main(void)
 	ADC_Init();
 	UART_Init_kom();
 	TCCR1B |= (1<<CS10)|(1<<CS12); //timer init
-	//inits klar
+	
 	sei();
 	centimeter_values(); //fyller i med hash-tabellen.
-	unsigned int update_laptop = 0;
+	unsigned int update_com = 0;
 	while(1)//Main loop
 	{
 		Get_Sensor_Value();
 		send_to_styr();
-		update_laptop = update_laptop + 1;
-		if(update_laptop == 10) //skickar sensorvärden 10 ggr oftare till styrmodulen då den behöver värden snabbare pga reglering
+		update_com = update_com + 1;
+		if(update_com == 10) //skickar sensorvärden 16 ggr oftare till styrmodulen då den behöver värden snabbare pga reglering
 		{
 			framDist = distance_lidar();
 			sensor[6] = (unsigned char)framDist;
 			sensor[7] = (unsigned char)(framDist >> 8);
-			
-			Get_Sensor_Value();
 			sens_to_centi();
 			send_to_com();
-			
-			update_laptop = 0;
+			update_com = 0;
 		}
 		if (new_rotate_left == 1) //Om interruptdriven mottagen instruktion är rot-left
 		{
 			rot_left();
 			new_rotate_left = 0;
-			update_laptop = 9;
+			update_com = 0;
 		}
 		if (new_rotate_right == 1)//Om interruptdriven mottagen instruktion är rot-right
 		{
 			rot_right();
 			new_rotate_right = 0;
-			update_laptop = 9;
+			update_com = 0;
 		}
 	}
 }

@@ -8,11 +8,11 @@
 
 void UART_Init_com()
 {
-	UCSR0B = (1<<RXEN0)|(1<<TXEN0);//|(1<<RXCIE0);
+	UCSR0B = (1<<RXEN0)|(0<<TXEN0);//|(1<<RXCIE0);
 	//Baudrate
 	UBRR0H = (BAUD_COM>>8);
 	UBRR0L = BAUD_COM;
-	//enable transmit/recieve
+	//enable recieve
 	//stopbitar, 1
 	UCSR0C =  (1<<USBS0)|(3<<UCSZ00);
 }
@@ -25,11 +25,6 @@ void UART_Init_sens()
 	//enable transmit/recieve
 	//stopbitar, 1
 	UCSR1C = (1<<USBS1)|(3<<UCSZ10);
-}
-void UART_Transmit_com(unsigned char data)
-{
-	while( !(UCSR0A & (1<<UDRE0)) );
-	UDR0 = data;
 }
 unsigned char UART_Recieve_sens()
 {

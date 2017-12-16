@@ -25,26 +25,22 @@ void getKeyCode::setupUi() //Initierar objekt och placerar i fönstret
     this->setAutoFillBackground(true);
     this->setStyleSheet("background-color: black; color : white;"); //Svart bakgrund
 
-    centerLabel = new QLabel("Welcöm ver 2.5");
+    centerLabel = new QLabel("Welcöm ver 2.7");
     klabel = new QLabel("K: " + QString::number(k));
     kdlabel = new QLabel("Kd: " + QString::number(kd));
     krlabel = new QLabel("Kr: " + QString::number(kr)); //Finns inte längre
 
-    sensorfram = new QLabel("Fram: ");
-    sensorbak = new QLabel("Bak: ");
+    sensorfram = new QLabel("Lidar: ");
+    sensorbak = new QLabel("Vänster fram: ");
     sensorvl = new QLabel("Vänster lång: ");
     sensorvs = new QLabel("Vänster kort: ");
     sensorhf = new QLabel("Höger fram: ");
     sensorhb = new QLabel("Höger bak: ");
     sensorh = new QLabel("Höger: ");
-    pwmleft = new QLabel("PWM Vänster: ");
-    pwmright = new QLabel("PWM Höger: ");
     sensorprog = new QLabel("Sensormodul prog: ");
-    sensorfel = new QLabel("Sensormodul fel: ");
     styrprog = new QLabel("Styrmodul prog: ");
-    styrfel = new QLabel("Styrmodul fel: ");
     comprog = new QLabel("Kommunikationsmodul prog: ");
-    comfel = new QLabel("Kommunikationsmodul fel: ");
+    comfel = new QLabel("Rotering: ");
     connectedlabel = new QLabel("Connection: [_]");
     directionlabel = new QLabel("Riktning: Framåt");
 
@@ -83,8 +79,6 @@ void getKeyCode::setupUi() //Initierar objekt och placerar i fönstret
     recieveboxsensor->addWidget(sensorh);
     recieveboxsensor->addWidget(sensorvs);
     recieveboxsensor->addWidget(sensorvl);
-    recieveboxsensor->addWidget(pwmleft);
-    recieveboxsensor->addWidget(pwmright);
 
 
     recieveboxstyr->addWidget(autoswitch); // låt autoswitchen synas här för det fanns plats
@@ -92,9 +86,7 @@ void getKeyCode::setupUi() //Initierar objekt och placerar i fönstret
     recieveboxstyr->addWidget((new QLabel("")));//en filler så det ser finare ut
 
     recieveboxstyr->addWidget(styrprog);
-    recieveboxstyr->addWidget(styrfel);
     recieveboxstyr->addWidget(sensorprog);
-    recieveboxstyr->addWidget(sensorfel);
     recieveboxstyr->addWidget(comprog);
     recieveboxstyr->addWidget(comfel);
 
@@ -201,22 +193,22 @@ void getKeyCode::readData()
         switch(sens_count)
         {
         case 0:
-            sensorhf->setText("Högerfram: " + QString::number((quint8)rec[0]));
+            sensorhf->setText("Högerfram kort: " + QString::number((quint8)rec[0]));
             break;
         case 1:
-            sensorhb->setText("Högerbak: " + QString::number((quint8)rec[0]));
+            sensorhb->setText("Högerbak kort: " + QString::number((quint8)rec[0]));
             break;
         case 2:
-            sensorvs->setText("Vänster kort: " + QString::number((quint8)rec[0]));
+            sensorvs->setText("Fram kort: " + QString::number((quint8)rec[0]));
             break;
         case 3:
-            sensorbak->setText("Bak: " + QString::number((quint8)rec[0]));
+            sensorbak->setText("Vänster fram: " + QString::number((quint8)rec[0]));
             break;
         case 4:
-            sensorh->setText("Höger: " + QString::number((quint8)rec[0]));
+            sensorh->setText("Höger lång: " + QString::number((quint8)rec[0]));
             break;
         case 5:
-            sensorvl->setText("Vänster: " + QString::number((quint8)rec[0]));
+            sensorvl->setText("Vänster bak: " + QString::number((quint8)rec[0]));
             break;
         case 6:
             //lagra lägre delen av lidarn
@@ -224,53 +216,36 @@ void getKeyCode::readData()
             break;
         case 7:
             lidar = lidar + (quint8)rec[0]*256; //addera med övre delen
-            sensorfram->setText("Fram: " + QString::number(lidar));
+            sensorfram->setText("Lidar: " + QString::number(lidar));
             break;
         case 8:
-            pwmright->setText("PWM Höger: " + QString::number((quint8)rec[0]));
+            sensorprog->setText("Sensormodul prog: " + QString((QChar)rec[0]));
             break;
         case 9:
-            pwmleft->setText("PWM Vänster : " + QString::number((quint8)rec[0]));
+            sensorfel->setText("Styrmodul prog: " + QString((QChar)rec[0]));
+            break;
         case 10:
-            sensorprog->setText("Sensormodul prog: " + QString::number((quint8)rec[0]));
+            comprog->setText("Kommunikationsmodul prog: " + QString((QChar)rec[0]));
             break;
         case 11:
-            sensorfel->setText("Sensormodul fel: " + QString::number((quint8)rec[0]));
-            break;
-        case 12:
-            styrprog->setText("Styrmodul prog: " + QString::number((quint8)rec[0]));
-            break;
-        case 13:
-            centerLabel->setText(QString::number((quint8)rec[0])); // Denna är just nu en odefinierad intern signal hos kom-modulen
-            break;
-        case 14:
-            styrfel->setText("Styrmodul fel: " + QString::number((quint8)rec[0]));
-
-            break;
-        case 15:
-            comprog->setText("Kommunikationsmodul prog: " + QString::number((quint8)rec[0]));
-            break;
-        case 16:
-            comfel->setText("Kommunikationsmodul fel: " +QString::number((quint8)rec[0]));
-            break;
-        case 17:
+            comfel->setText("Rotering: " +QString::number((quint8)rec[0]));
             if((quint8)rec[0] < 2)
                 rotated_left = (quint8)rec[0];
             else
                 centerLabel->setText("Felaktig rotation mottagen"); //felmeddelande
             break;
             //Här kommer robotens y sen x
-        case 18:
+        case 12:
             if((quint8)rec[0] < 25) //sanity checks
                 robo_y = (quint8)rec[0];
             else
             {
-                centerLabel->setText("Felaktig koordinat mottagen");
+                centerLabel->setText("Felaktig y koordinat mottagen");
                 robo_y = 0;
             }
 
             break;
-        case 19:
+        case 13:
             if((quint8)rec[0] < 50)
             {
                 robo_x = (quint8)rec[0];
@@ -386,7 +361,7 @@ void getKeyCode::readData()
             }
 
             else
-                centerLabel->setText("Felaktig koordinat mottagen");
+                centerLabel->setText("Felaktig x koordinat mottagen");
 
             //Se till att körväg inte satts till vägg
             for(int x = 0; x<50;x++)
@@ -400,11 +375,11 @@ void getKeyCode::readData()
 
             break;
 
-        case 20: //Riktning
+        case 14: //Riktning
             direction = (quint8)rec[0];
             switch(direction)
             {
-                case 0:
+             case 0:
                 directionlabel->setText("Riktning: Framåt");
                 break;
             case 1:
@@ -436,7 +411,8 @@ void getKeyCode::readData()
             serialport.write(ready,1);
             serialport.waitForBytesWritten(20); //väntar max 20ms
 
-            if(sens_count > 20){ //Array mottagen, återställ räknare och tvinga ommålning
+            if(sens_count > 20)
+            { //Array mottagen, återställ räknare och tvinga ommålning
                 sens_count = 0;
                 update(); //Tvinga ommålning
             }
@@ -532,7 +508,6 @@ void getKeyCode::keyPressEvent(QKeyEvent *event) //Triggas varje gång en tangen
             }
         }
 
-
         break;
     case Qt::Key_H:
         if (kd < 63)
@@ -609,15 +584,6 @@ void getKeyCode::keyPressEvent(QKeyEvent *event) //Triggas varje gång en tangen
         break;
 
     }
-if(serialport.isOpen() && event->key() == Qt::Key_U)
-{
-    //skicka reset_sens_counter sync signal till kom-modul
-    QByteArray fku;
-    fku[0] = (quint8)255;
-    serialport.write(fku,1);
-    serialport.waitForBytesWritten(20);
-    send->setText("Skickat: " + QString::number((quint8)fku[0],2));
-}
     //uppdatera k
     if(serialport.isOpen() && k_changed && !kd_changed && !kr_changed)
     {
@@ -629,7 +595,7 @@ if(serialport.isOpen() && event->key() == Qt::Key_U)
         send->setText("Skickat: " + QString::number((quint8)ss[0],2));
         k_changed = false;
     }
-    //uppdatera styrbyte
+    //uppdatera bitmönster
     else if(serialport.isOpen() && !k_changed && !kd_changed && !kr_changed)
     { //Skapa bitmönster och skicka styrbyte
         char s = keys[0] + keys[1]*2 + keys[2]*4 + keys[3]*8 + keys[4]*16 + keys[5]*32 + keys[6]*64 + keys[7]*128 + keys[8]*256; //Skapa bitmönster

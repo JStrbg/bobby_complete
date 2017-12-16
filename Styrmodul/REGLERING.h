@@ -4,6 +4,7 @@
 volatile unsigned int K;
 volatile unsigned int KD;
 volatile unsigned int KR;
+volatile unsigned char programState;
 
 void Pwm_Gen( char Right_Pwm,  char Left_Pwm,  char Right_dir ,  char Left_dir );
 int mult_kd(int tot_e);

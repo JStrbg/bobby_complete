@@ -38,7 +38,6 @@ void sens_to_centi()// g�r om sensor v�rden till centimeter
 		}
 	}
 }
-
 void centimeter_values() //fyller tabeller f�r 5-30 cm och 10-80 cm sensor
 {
 longsens[	255	]=	10	;

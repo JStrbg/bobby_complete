@@ -10,6 +10,7 @@
 
 void Pwm_Gen( char Right_Pwm,  char Left_Pwm,  char Right_dir ,  char Left_dir ) //Program för att sätta pwm och riktning till motorerna
 {
+	UART_Transmit_sens(programState); // skicka state
 	//stll in riktning + motorstyrka
 	char direct;
 	direct = Left_dir;
@@ -41,25 +42,29 @@ int mult_k(int tot_e) //Justerar K-värdet för PD-regulatorn
 	tempE = (tempE>>6);
 	return tempE;
 }
-void Regler_Func(int dir){  //Program för att reglera mot en vägg
+void Regler_Func(int dir)//Program för att reglera mot en vägg
+{  
+	programState = 'S';
 	int Pwm_left,Pwm_right; 
 	char pwmLeftChar, pwmRightChar;
-	int EV_old=0	;
+	int EV_old=0;
 	int EH_old=0;
 	unsigned char sen[2];  
-	USART1_Flush();                                     //Töm Uart buffert
-	Get_Sensor(sen);                                    //Hämta sensorvärden
 	int Ev, Eh, StyrSignalHoger, StyrSignalVanster = 0;
-	int EFram, EBak,E3,sensorFram,sensorBak,sensDiff;
-	while( !(UCSR0A & (1<<RXC0)))
+	int EFram, EBak,E3,sensorFram,sensorBak;
+	Get_Sensor(sen);  //Hämta sensorvärden
+	while( !(UCSR0A & (1<<RXC0))) //sålänge den inte mottar en ny instruktion från com
 	{
-		if ((sen[0] < 50) || (sen[1] < 50) ){  //Ifall roboten inte ser en vägg på högersida, kör rakt fram
+		Get_Sensor(sen);  //Hämta sensorvärden
+		if ((sen[0] < 50) || (sen[1] < 50) )
+		{  //Ifall roboten inte ser en vägg på högersida, kör rakt fram
 			Pwm_Gen(base_pwm,base_pwm,1,1);
-			}else{
+		}
+		else
+		{
 			
 			sensorFram = 255 - sen[0];		    //F?r n?ra -> l?gt v?rde och vice versa
 			sensorBak = 255 - sen[1];
-			
 			
 			EFram = (sensorFram - W_distance); //Reglerfel: Avstånd
 			EBak = (sensorBak - W_distance);
@@ -108,23 +113,23 @@ void Regler_Func(int dir){  //Program för att reglera mot en vägg
 			pwmRightChar = Pwm_right;
 			Pwm_Gen(pwmRightChar,pwmLeftChar,1,1);
 		}
-		
-		Get_Sensor(sen);  //Hämta sensorvärden igen
 	}
 	Pwm_Gen(0,0,0,0);
 }
-void Get_Sensor(unsigned char* sens ) //Hämta sensorvärden från sensormodul
+void Get_Sensor(unsigned char* sens) // ta emot sensorvärden (för reglering)
+{
 	unsigned char sanity;
 	sanity = UART_Recieve_sens();
 	
 	if (sanity == 0b00000000)
 	{
-		for(int i = 0;2>i;i = i+1){
+		for(int i = 0;2>i;i = i+1)
+		{
 			sens[i] = UART_Recieve_sens();
 		}
 	}
 	else 
-		Get_Sensor(sens);//!????
+		Get_Sensor(sens);//Återkallas tills den är i sync
 }
 void pwm_init(){
 	TCCR3A=0b10100001; //Stll in pwm
