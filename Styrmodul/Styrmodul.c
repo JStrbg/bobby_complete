@@ -9,7 +9,7 @@
 
 #define Man_speed 220U   //PWM till motorerna för manuellt läge
 #define Turn_speed 80U   //PWM för för svängar
-#define Rotate_speed 120U//PWM för roteringar
+#define Rotate_speed 90U//PWM för roteringar
 
 void Auto_Rotate(int dir) //Kollar vilket håll vi ska rotera och starta roteringsprogrammet 
 {

@@ -5,8 +5,8 @@
 #include "REGLERING.h"
 #include <avr/io.h>
 
-#define W_distance 100U
-#define base_pwm 100U
+#define W_distance 110U
+#define base_pwm 90U
 
 void Pwm_Gen( char Right_Pwm,  char Left_Pwm,  char Right_dir ,  char Left_dir ) //Program för att sätta pwm och riktning till motorerna
 {

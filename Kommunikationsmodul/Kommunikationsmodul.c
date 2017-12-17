@@ -12,7 +12,7 @@
 //Globals
 volatile int control_signal;
 volatile unsigned char laptop_in = 0b00010000;	// styrvector
-volatile unsigned char sensor_in[15];	// //kort högerfram 0, kort h?gerbak 1, v?nsterkort 2, bak 3, h?ger l?ng 4, v?nster l?ng 5, framl?g 6, framH?G 7, PWM höger 8, PWM vänster 9, sens prog 10, sens fel 11, styr prog 12 , klarbyte rotate (sens prog) 13, styr fel 14,  kom prog 15, kom fel 16, roterat höger 17, rob_y 18, rob_x 19, direction 20
+volatile unsigned char sensor_in[15];	// //kort högerfram 0, kort h?gerbak 1, kortfram 2, lång vänster fram 3, lång höger fram 4, lång vänster bak 5, framlåg 6, framH?G 7, sens prog 8, styr progr 9, kom prog 10, rot 11, rob_y 12 , rob_x 13, direction 14
 volatile int sensor_in_length;
 volatile int laptop_in_length;
 volatile unsigned char matrix[25][50] = {{0}};
@@ -54,7 +54,7 @@ volatile unsigned int KorKok = 0;
 volatile unsigned int KokKlart = 0;
 volatile unsigned int KokFarFarAway = 0;
 volatile unsigned int first = 1;
-volatile unsigned int stop_dist = 13;
+volatile unsigned int stop_dist = 15;
 volatile unsigned char sens_safe[8];
 
 void update_position();
@@ -114,12 +114,13 @@ void send_matrix()
 			}
 		}
 	}
-	UART1_Transmit(klar);
+	UART1_Transmit(0b11111111);
 }
 
 void send_to_laptop() //inte kalla för tätt
 {
 	baby_proof_and_update();
+	sensor_in[10] = KokFarFarAway;
 	for(int i = 0; i < 8 ; ++i)
 	{
 		laptop_in = 0;
@@ -213,19 +214,19 @@ void rot_left() // rotera vänster och väntar till den är klar
 	switch(direction)
 	{
 	case 0:
-	if (sensor_in[4] < 40)
+	if ((sens_safe[4] < 40) && matrix[bot_y][bot_x + 1] != drive )
 		matrix[bot_y][bot_x + 1] = wall;
 	break;
 	case 1:
-	if (sensor_in[4] < 40)
+	if ((sens_safe[4] < 40) && matrix[bot_y - 1][bot_x] != drive)
 		matrix[bot_y - 1][bot_x] = wall;
 	break;
 	case 2:
-	if (sensor_in[4] < 40)
+	if ((sens_safe[4] < 40) && matrix[bot_y][bot_x - 1] != drive)
 		matrix[bot_y][bot_x - 1] = wall;
 	break;
 	case 3:
-	if (sensor_in[4] < 40)
+	if ((sens_safe[4] < 40) && matrix[bot_y + 1][bot_x] != drive)
 		matrix[bot_y + 1][bot_x] = wall;
 	break;
 	}
@@ -242,7 +243,7 @@ void go_forward() // tar nytt fram värde samt skickar kör fram signal och rese
 		first = 0;
 	}
 
-	if ((sensor_in[0] < 20) && (sensor_in[1] < 20 ))
+	if ((sens_safe[0] < 20) && (sens_safe[1] < 20 ))
 	{
 		harRot = 0;
 		first = 1;
@@ -277,8 +278,7 @@ void navigation() // testa att bara svänga när väggar inte finns, ej 40cm
 		driven = 0;
 	
 	}
-	if ((state == 2) && (harRot == 0 ))
-	kolla_efter_kok_left();
+
 
 	if ( (sens_safe[0] > 30) && (sens_safe[1] > 30) && (sens_safe[4] > 40) && (harRot == 0))
 	{
@@ -286,18 +286,21 @@ void navigation() // testa att bara svänga när väggar inte finns, ej 40cm
 		rot_right();
 	}
 
-	else if ((sens_safe[4] < 40) && (ny_fram < stop_dist) && (sensor_in[2] < 30) &&  (harRot == 0)) // 18 13dec. 21 14 dec
+	else if ((sens_safe[4] < 40) && (ny_fram < stop_dist) && (sens_safe[2] < 30) &&  (harRot == 0)) // 18 13dec. 21 14 dec
 	{
 		rot_left();
-		//stop_dist = 15;
+		stop_dist = 13;
 	}
 
 	else if (harRot == 1) // ska köra fram om vi rotera förra gången
 	{
 		go_forward();
 	}
-} 
-
+	
+ 	if ((state == 2) && (harRot == 0 ))
+	kolla_efter_kok_left();
+	
+}
 void handle_incoming_data()
 {
 	switch(laptop_in)
@@ -334,7 +337,7 @@ void kokHittad(){
 	do
 	{
 		baby_proof_and_update();
-	}while(ny_fram > 15);
+	}while(ny_fram > 12);
 	
 	UART0_Transmit(stop);
 	harRot = 0;
@@ -357,8 +360,9 @@ void kokHittad(){
 				bot_x = bot_x - 1;
 			break;
 		}
-	rot_left(); //rotera vänster
+	 //rotera vänster
 	}
+	rot_left();
 	kokStart_x = bot_x;
 	kokStart_y = bot_y;
 	UART0_Transmit(stop);
@@ -377,7 +381,7 @@ void go_home()
 	do
 	{
 		baby_proof_and_update();
-	}while(ny_fram > 15);
+	}while(ny_fram > 13);
 	
 	UART0_Transmit(stop);
 	harRot = 0;
@@ -401,29 +405,34 @@ void go_home()
 				bot_x = (bot_x - 1);
 				break;
 			}
-	rot_left(); //rotera vänster
+	 //rotera vänster
 	}
+	rot_left();
 	state = 1;
 	KokKlart = 1;
 }
 
 void kolla_efter_kok_left()
 {
+
+	baby_proof_and_update();
 	switch (direction)
 	{
 		case 0: //norr
-		if (matrix[bot_y][bot_x - 1] == unknown)
+		if (matrix[bot_y][bot_x - 1] == unknown || (matrix[bot_y][bot_x - 1] == drive))
 		{
-			if ((sensor_in[5] < 25) && (sensor_in[3] < 25))
-			{
+			if ((sens_safe[5] < 25 ) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) 
+			{	
+				
 				matrix[bot_y][bot_x - 1] = wall; // köksö hittad
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
 				rot_left();
 				UART0_Transmit(stop);
 				kokHittad();
+				state = 1;
 			}
-			else if((sensor_in[5] < 70) && (sensor_in[3] < 70) && (matrix[bot_y][bot_x - 2] == unknown) )
+			else if((sens_safe[5] > 25 ) && (sens_safe[3] > 25) && (sens_safe[5] < 75) && (sens_safe[3] < 75) && (matrix[bot_y][bot_x - 2] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
 			{
 				KokFarFarAway = 1;
 				
@@ -438,9 +447,9 @@ void kolla_efter_kok_left()
 		break;
 		
 		case 1: //ÖST
-		if (matrix[bot_y + 1][bot_x] == unknown)
+		if (matrix[bot_y + 1][bot_x] == unknown || (matrix[bot_y + 1][bot_x] == drive))
 		{
-			if ((sensor_in[5] < 25) && (sensor_in[3] < 25))
+			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20))
 			{
 				matrix[bot_y + 1][bot_x] = wall; // köksö hittad
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
@@ -449,7 +458,7 @@ void kolla_efter_kok_left()
 				UART0_Transmit(stop);
 				kokHittad();
 			}
-			else if((sensor_in[5] < 80) && (sensor_in[3] < 80) && (matrix[bot_y + 2][bot_x] == unknown) )
+			else if((sens_safe[5] > 25 ) && (sens_safe[3] > 25) && (sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y + 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
 			{
 				KokFarFarAway = 1;
 				matrix[bot_y + 2][bot_x] = wall; // köksö hittad
@@ -463,10 +472,11 @@ void kolla_efter_kok_left()
 		break;
 		
 		case 2:
-		if (matrix[bot_y][bot_x + 1] == unknown)
+		if (matrix[bot_y][bot_x + 1] == unknown || (matrix[bot_y][bot_x + 1] == drive))
 		{
-			if ((sensor_in[5] < 25) && (sensor_in[3] < 25)) // ökat från 20
+			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)) // ökat från 20
 			{
+				
 				matrix[bot_y][bot_x + 1] = wall; // köksö hittad
 				driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -475,7 +485,7 @@ void kolla_efter_kok_left()
 				kokHittad();
 				
 			}
-			else if((sensor_in[5] < 80) && (sensor_in[3] < 80) && (matrix[bot_y][bot_x + 2] == unknown) ) // ökat från 60
+			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y][bot_x + 2] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) // ökat från 60
 			{
 				KokFarFarAway = 1;
 				matrix[bot_y][bot_x + 2] = wall; // köksö hittad
@@ -489,9 +499,9 @@ void kolla_efter_kok_left()
 		break;
 		
 		case 3:
-		if (matrix[bot_y - 1][bot_x] == unknown)
+		if ((matrix[bot_y - 1][bot_x] == unknown) || (matrix[bot_y - 1][bot_x] == drive))
 		{
-			if ((sensor_in[5] < 25 && (sensor_in[3] < 25)))
+			if ((sens_safe[5] < 25 && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)))
 			{
 				matrix[bot_y - 1][bot_x] = wall; // köksö hittad
 				driven = 0; // för att inte gå in i update igen inuti rot_left
@@ -500,7 +510,7 @@ void kolla_efter_kok_left()
 				UART0_Transmit(stop);
 				kokHittad();
 			}
-			else if((sensor_in[5] < 80) && (sensor_in[3] < 80) && (matrix[bot_y - 2][bot_x] == unknown) )
+			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y - 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
 			{
 				KokFarFarAway = 1;
 				matrix[bot_y - 2][bot_x] = wall; // köksö hittad
@@ -524,11 +534,9 @@ void state1()
 			
 			if (matrix[bot_y][(bot_x + 1)] == unknown) // kollar åt höger
 			{
-				if (sensor_in[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
+				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
 				{
 					matrix[bot_y][(bot_x + 1)] = wall;
-					sensor_in[15] = bot_y;
-					sensor_in[16] = matrix[bot_y][(bot_x + 1)];
 				}
 			}		
 			break;
@@ -537,7 +545,7 @@ void state1()
 			bot_x = (bot_x + 1);
 			if (matrix[bot_y - 1][bot_x] == unknown) // kollar åt höger
 			{
-				if (sensor_in[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
+				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
 				{
 					matrix[bot_y - 1][bot_x] = wall;
 				}
@@ -548,7 +556,7 @@ void state1()
 			bot_y = (bot_y - 1);
 			if (matrix[bot_y][bot_x - 1] == unknown) // kollar åt höger
 			{
-				if (sensor_in[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
+				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
 				{
 					matrix[bot_y][bot_x - 1] = wall;
 				}
@@ -559,7 +567,7 @@ void state1()
 			bot_x = (bot_x - 1);
 			if (matrix[bot_y + 1][bot_x] == unknown) // kollar åt höger
 			{
-				if (sensor_in[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
+				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
 				{
 					matrix[bot_y + 1][bot_x] = wall;
 				}
@@ -571,7 +579,7 @@ void state1()
 void update_position() // gör switch case senare
 {
 	
-	//stop_dist = 19;
+	stop_dist = 15;
 	get_ny_fram();
 	state1();
 	matrix[bot_y][bot_x] = drive;
@@ -611,7 +619,7 @@ if (state == 0)
 // 
 // 	}
 }
-
+	
 int main(void)
 {
 
