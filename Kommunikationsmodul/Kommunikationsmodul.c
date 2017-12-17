@@ -54,7 +54,7 @@ volatile unsigned int KorKok = 0;
 volatile unsigned int KokKlart = 0;
 volatile unsigned int KokFarFarAway = 0;
 volatile unsigned int first = 1;
-volatile unsigned int stop_dist = 19;
+volatile unsigned int stop_dist = 13;
 volatile unsigned char sens_safe[8];
 
 void update_position();
@@ -185,7 +185,7 @@ void rot_right() // rotera höger och väntar till den är klar
 	update_direction(0);
 	_delay_ms(200); //låt den stanna och få in nya lidarvärdet framåt
 	
-	send_to_laptop();
+	send_to_laptop(); //uppdaterar ny fram också
 	start_dist = ny_fram;
 	UART0_Transmit(forward);	
 }
@@ -289,7 +289,7 @@ void navigation() // testa att bara svänga när väggar inte finns, ej 40cm
 	else if ((sens_safe[4] < 40) && (ny_fram < stop_dist) && (sensor_in[2] < 30) &&  (harRot == 0)) // 18 13dec. 21 14 dec
 	{
 		rot_left();
-		stop_dist = 15;
+		//stop_dist = 15;
 	}
 
 	else if (harRot == 1) // ska köra fram om vi rotera förra gången
@@ -305,7 +305,7 @@ void handle_incoming_data()
 		case forward:
 			AUTO = 1;
 			MANUELL = 0;
-			get_ny_fram();
+			baby_proof_and_update();
 			start_dist = ny_fram;
 			UART0_Transmit(forward);
 			
@@ -570,8 +570,8 @@ void state1()
 
 void update_position() // gör switch case senare
 {
-	//sensor_in[15] = sensor_in[15] + 1;
-	stop_dist = 19;
+	
+	//stop_dist = 19;
 	get_ny_fram();
 	state1();
 	matrix[bot_y][bot_x] = drive;

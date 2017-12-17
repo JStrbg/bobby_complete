@@ -1,0 +1,1152 @@
+
+styrmodul.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000005cc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000558  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000007  00800100  00800100  000005cc  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000005cc  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000005fc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000d8  00000000  00000000  0000063c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000012b8  00000000  00000000  00000714  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000abf  00000000  00000000  000019cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000007b7  00000000  00000000  0000248b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001dc  00000000  00000000  00002c44  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005a8  00000000  00000000  00002e20  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000c25  00000000  00000000  000033c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a8  00000000  00000000  00003fed  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	53 c0       	rjmp	.+166    	; 0xac <__bad_interrupt>
+   6:	00 00       	nop
+   8:	51 c0       	rjmp	.+162    	; 0xac <__bad_interrupt>
+   a:	00 00       	nop
+   c:	4f c0       	rjmp	.+158    	; 0xac <__bad_interrupt>
+   e:	00 00       	nop
+  10:	4d c0       	rjmp	.+154    	; 0xac <__bad_interrupt>
+  12:	00 00       	nop
+  14:	4b c0       	rjmp	.+150    	; 0xac <__bad_interrupt>
+  16:	00 00       	nop
+  18:	49 c0       	rjmp	.+146    	; 0xac <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	47 c0       	rjmp	.+142    	; 0xac <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	45 c0       	rjmp	.+138    	; 0xac <__bad_interrupt>
+  22:	00 00       	nop
+  24:	43 c0       	rjmp	.+134    	; 0xac <__bad_interrupt>
+  26:	00 00       	nop
+  28:	41 c0       	rjmp	.+130    	; 0xac <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	3f c0       	rjmp	.+126    	; 0xac <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	3d c0       	rjmp	.+122    	; 0xac <__bad_interrupt>
+  32:	00 00       	nop
+  34:	3b c0       	rjmp	.+118    	; 0xac <__bad_interrupt>
+  36:	00 00       	nop
+  38:	39 c0       	rjmp	.+114    	; 0xac <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	37 c0       	rjmp	.+110    	; 0xac <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	35 c0       	rjmp	.+106    	; 0xac <__bad_interrupt>
+  42:	00 00       	nop
+  44:	33 c0       	rjmp	.+102    	; 0xac <__bad_interrupt>
+  46:	00 00       	nop
+  48:	31 c0       	rjmp	.+98     	; 0xac <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	2f c0       	rjmp	.+94     	; 0xac <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	2d c0       	rjmp	.+90     	; 0xac <__bad_interrupt>
+  52:	00 00       	nop
+  54:	2b c0       	rjmp	.+86     	; 0xac <__bad_interrupt>
+  56:	00 00       	nop
+  58:	29 c0       	rjmp	.+82     	; 0xac <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	27 c0       	rjmp	.+78     	; 0xac <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	25 c0       	rjmp	.+74     	; 0xac <__bad_interrupt>
+  62:	00 00       	nop
+  64:	23 c0       	rjmp	.+70     	; 0xac <__bad_interrupt>
+  66:	00 00       	nop
+  68:	21 c0       	rjmp	.+66     	; 0xac <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	1f c0       	rjmp	.+62     	; 0xac <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	1d c0       	rjmp	.+58     	; 0xac <__bad_interrupt>
+  72:	00 00       	nop
+  74:	1b c0       	rjmp	.+54     	; 0xac <__bad_interrupt>
+  76:	00 00       	nop
+  78:	19 c0       	rjmp	.+50     	; 0xac <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	17 c0       	rjmp	.+46     	; 0xac <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	15 c0       	rjmp	.+42     	; 0xac <__bad_interrupt>
+  82:	00 00       	nop
+  84:	13 c0       	rjmp	.+38     	; 0xac <__bad_interrupt>
+  86:	00 00       	nop
+  88:	11 c0       	rjmp	.+34     	; 0xac <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e4       	ldi	r29, 0x40	; 64
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_clear_bss>:
+  98:	21 e0       	ldi	r18, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a7 30       	cpi	r26, 0x07	; 7
+  a4:	b2 07       	cpc	r27, r18
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	c3 d1       	rcall	.+902    	; 0x430 <main>
+  aa:	54 c2       	rjmp	.+1192   	; 0x554 <_exit>
+
+000000ac <__bad_interrupt>:
+  ac:	a9 cf       	rjmp	.-174    	; 0x0 <__vectors>
+
+000000ae <Pwm_Gen>:
+{
+	int tempE;
+	tempE = tot_e*K;
+	tempE = (tempE>>6);
+	return tempE;
+}
+  ae:	0f 93       	push	r16
+  b0:	1f 93       	push	r17
+  b2:	cf 93       	push	r28
+  b4:	df 93       	push	r29
+  b6:	d8 2f       	mov	r29, r24
+  b8:	16 2f       	mov	r17, r22
+  ba:	c4 2f       	mov	r28, r20
+  bc:	02 2f       	mov	r16, r18
+  be:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <programState>
+  c2:	40 d2       	rcall	.+1152   	; 0x544 <UART_Transmit_sens>
+  c4:	00 0f       	add	r16, r16
+  c6:	c0 0f       	add	r28, r16
+  c8:	c2 95       	swap	r28
+  ca:	c0 7f       	andi	r28, 0xF0	; 240
+  cc:	c5 b9       	out	0x05, r28	; 5
+  ce:	61 2f       	mov	r22, r17
+  d0:	70 e0       	ldi	r23, 0x00	; 0
+  d2:	70 93 99 00 	sts	0x0099, r23	; 0x800099 <__TEXT_REGION_LENGTH__+0x7e0099>
+  d6:	60 93 98 00 	sts	0x0098, r22	; 0x800098 <__TEXT_REGION_LENGTH__+0x7e0098>
+  da:	8d 2f       	mov	r24, r29
+  dc:	90 e0       	ldi	r25, 0x00	; 0
+  de:	90 93 9b 00 	sts	0x009B, r25	; 0x80009b <__TEXT_REGION_LENGTH__+0x7e009b>
+  e2:	80 93 9a 00 	sts	0x009A, r24	; 0x80009a <__TEXT_REGION_LENGTH__+0x7e009a>
+  e6:	df 91       	pop	r29
+  e8:	cf 91       	pop	r28
+  ea:	1f 91       	pop	r17
+  ec:	0f 91       	pop	r16
+  ee:	08 95       	ret
+
+000000f0 <Get_Sensor>:
+		}
+	}
+	Pwm_Gen(0,0,0,0);
+}
+void Get_Sensor(unsigned char* sens) // ta emot sensorvärden (för reglering)
+{
+  f0:	cf 93       	push	r28
+  f2:	df 93       	push	r29
+  f4:	ec 01       	movw	r28, r24
+	unsigned char sanity;
+	sanity = UART_Recieve_sens();
+  f6:	16 d2       	rcall	.+1068   	; 0x524 <UART_Recieve_sens>
+	
+	if (sanity == 0b00000000)
+  f8:	81 11       	cpse	r24, r1
+	{
+		for(int i = 0;2>i;i = i+1)
+		{
+			sens[i] = UART_Recieve_sens();
+  fa:	05 c0       	rjmp	.+10     	; 0x106 <Get_Sensor+0x16>
+  fc:	13 d2       	rcall	.+1062   	; 0x524 <UART_Recieve_sens>
+  fe:	88 83       	st	Y, r24
+ 100:	11 d2       	rcall	.+1058   	; 0x524 <UART_Recieve_sens>
+ 102:	89 83       	std	Y+1, r24	; 0x01
+		}
+	}
+	else 
+		Get_Sensor(sens);//Återkallas tills den är i sync
+ 104:	02 c0       	rjmp	.+4      	; 0x10a <Get_Sensor+0x1a>
+ 106:	ce 01       	movw	r24, r28
+ 108:	f3 df       	rcall	.-26     	; 0xf0 <Get_Sensor>
+}
+ 10a:	df 91       	pop	r29
+ 10c:	cf 91       	pop	r28
+ 10e:	08 95       	ret
+
+00000110 <Regler_Func>:
+	tempE = tot_e*K;
+	tempE = (tempE>>6);
+	return tempE;
+}
+void Regler_Func(int dir)//Program för att reglera mot en vägg
+{  
+ 110:	2f 92       	push	r2
+ 112:	3f 92       	push	r3
+ 114:	4f 92       	push	r4
+ 116:	5f 92       	push	r5
+ 118:	6f 92       	push	r6
+ 11a:	7f 92       	push	r7
+ 11c:	8f 92       	push	r8
+ 11e:	9f 92       	push	r9
+ 120:	af 92       	push	r10
+ 122:	bf 92       	push	r11
+ 124:	cf 92       	push	r12
+ 126:	df 92       	push	r13
+ 128:	ef 92       	push	r14
+ 12a:	ff 92       	push	r15
+ 12c:	0f 93       	push	r16
+ 12e:	1f 93       	push	r17
+ 130:	cf 93       	push	r28
+ 132:	df 93       	push	r29
+ 134:	00 d0       	rcall	.+0      	; 0x136 <Regler_Func+0x26>
+ 136:	cd b7       	in	r28, 0x3d	; 61
+ 138:	de b7       	in	r29, 0x3e	; 62
+	programState = 'S';
+ 13a:	83 e5       	ldi	r24, 0x53	; 83
+ 13c:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+	int EV_old=0;
+	int EH_old=0;
+	unsigned char sen[2];  
+	int Ev, Eh, StyrSignalHoger, StyrSignalVanster = 0;
+	int EFram, EBak,E3,sensorFram,sensorBak;
+	Get_Sensor(sen);  //Hämta sensorvärden
+ 140:	ce 01       	movw	r24, r28
+ 142:	01 96       	adiw	r24, 0x01	; 1
+ 144:	d5 df       	rcall	.-86     	; 0xf0 <Get_Sensor>
+{  
+	programState = 'S';
+	int Pwm_left,Pwm_right; 
+	char pwmLeftChar, pwmRightChar;
+	int EV_old=0;
+	int EH_old=0;
+ 146:	81 2c       	mov	r8, r1
+ 148:	91 2c       	mov	r9, r1
+void Regler_Func(int dir)//Program för att reglera mot en vägg
+{  
+	programState = 'S';
+	int Pwm_left,Pwm_right; 
+	char pwmLeftChar, pwmRightChar;
+	int EV_old=0;
+ 14a:	61 2c       	mov	r6, r1
+ 14c:	71 2c       	mov	r7, r1
+	int EH_old=0;
+	unsigned char sen[2];  
+	int Ev, Eh, StyrSignalHoger, StyrSignalVanster = 0;
+	int EFram, EBak,E3,sensorFram,sensorBak;
+	Get_Sensor(sen);  //Hämta sensorvärden
+	while( !(UCSR0A & (1<<RXC0))) //sålänge den inte mottar en ny instruktion från com
+ 14e:	0f 2e       	mov	r0, r31
+ 150:	f0 ec       	ldi	r31, 0xC0	; 192
+ 152:	ef 2e       	mov	r14, r31
+ 154:	f1 2c       	mov	r15, r1
+ 156:	f0 2d       	mov	r31, r0
+		{
+			
+			sensorFram = 255 - sen[0];		    //F?r n?ra -> l?gt v?rde och vice versa
+			sensorBak = 255 - sen[1];
+			
+			EFram = (sensorFram - W_distance); //Reglerfel: Avstånd
+ 158:	aa 24       	eor	r10, r10
+ 15a:	aa 94       	dec	r10
+ 15c:	b1 2c       	mov	r11, r1
+			EH_old = Eh;
+			
+			//else{
+			if (StyrSignalVanster + base_pwm > 120) //Begränsingar för att undvika OverFlow och att roboten rusar iväg
+			{
+				Pwm_left = 120;
+ 15e:	41 2c       	mov	r4, r1
+			}
+			else if (StyrSignalVanster + base_pwm < 20)
+			{
+				Pwm_left = 20;
+ 160:	0f 2e       	mov	r0, r31
+ 162:	f4 e1       	ldi	r31, 0x14	; 20
+ 164:	3f 2e       	mov	r3, r31
+ 166:	f0 2d       	mov	r31, r0
+ 168:	51 2c       	mov	r5, r1
+				Pwm_left = (StyrSignalVanster + base_pwm);
+			}
+			/////////////////////////////////////
+			if ( StyrSignalHoger + base_pwm > 120)
+			{
+				Pwm_right =120;
+ 16a:	0f 2e       	mov	r0, r31
+ 16c:	f8 e7       	ldi	r31, 0x78	; 120
+ 16e:	2f 2e       	mov	r2, r31
+ 170:	f0 2d       	mov	r31, r0
+	int EH_old=0;
+	unsigned char sen[2];  
+	int Ev, Eh, StyrSignalHoger, StyrSignalVanster = 0;
+	int EFram, EBak,E3,sensorFram,sensorBak;
+	Get_Sensor(sen);  //Hämta sensorvärden
+	while( !(UCSR0A & (1<<RXC0))) //sålänge den inte mottar en ny instruktion från com
+ 172:	a9 c0       	rjmp	.+338    	; 0x2c6 <Regler_Func+0x1b6>
+	{
+		Get_Sensor(sen);  //Hämta sensorvärden
+ 174:	ce 01       	movw	r24, r28
+ 176:	01 96       	adiw	r24, 0x01	; 1
+ 178:	bb df       	rcall	.-138    	; 0xf0 <Get_Sensor>
+		if ((sen[0] < 50) || (sen[1] < 50) )
+ 17a:	89 81       	ldd	r24, Y+1	; 0x01
+ 17c:	82 33       	cpi	r24, 0x32	; 50
+ 17e:	18 f0       	brcs	.+6      	; 0x186 <Regler_Func+0x76>
+ 180:	9a 81       	ldd	r25, Y+2	; 0x02
+ 182:	92 33       	cpi	r25, 0x32	; 50
+ 184:	30 f4       	brcc	.+12     	; 0x192 <Regler_Func+0x82>
+		{  //Ifall roboten inte ser en vägg på högersida, kör rakt fram
+			Pwm_Gen(base_pwm,base_pwm,1,1);
+ 186:	21 e0       	ldi	r18, 0x01	; 1
+ 188:	41 e0       	ldi	r20, 0x01	; 1
+ 18a:	64 e6       	ldi	r22, 0x64	; 100
+ 18c:	84 e6       	ldi	r24, 0x64	; 100
+ 18e:	8f df       	rcall	.-226    	; 0xae <Pwm_Gen>
+ 190:	9a c0       	rjmp	.+308    	; 0x2c6 <Regler_Func+0x1b6>
+		{
+			
+			sensorFram = 255 - sen[0];		    //F?r n?ra -> l?gt v?rde och vice versa
+			sensorBak = 255 - sen[1];
+			
+			EFram = (sensorFram - W_distance); //Reglerfel: Avstånd
+ 192:	85 01       	movw	r16, r10
+ 194:	08 1b       	sub	r16, r24
+ 196:	11 09       	sbc	r17, r1
+			EBak = (sensorBak - W_distance);
+			E3 = EFram - EBak;				   //Reglerfel: SensorSkillnad 
+ 198:	95 01       	movw	r18, r10
+ 19a:	29 1b       	sub	r18, r25
+ 19c:	31 09       	sbc	r19, r1
+ 19e:	c8 01       	movw	r24, r16
+ 1a0:	84 56       	subi	r24, 0x64	; 100
+ 1a2:	91 09       	sbc	r25, r1
+ 1a4:	02 1b       	sub	r16, r18
+ 1a6:	13 0b       	sbc	r17, r19
+			Ev =  E3 + EFram;                 //Totala felet
+ 1a8:	6c 01       	movw	r12, r24
+ 1aa:	c0 0e       	add	r12, r16
+ 1ac:	d1 1e       	adc	r13, r17
+			Eh =  - E3 - EFram;
+ 1ae:	11 95       	neg	r17
+ 1b0:	01 95       	neg	r16
+ 1b2:	11 09       	sbc	r17, r1
+ 1b4:	08 1b       	sub	r16, r24
+ 1b6:	19 0b       	sbc	r17, r25
+	return tempKR;
+}
+int mult_k(int tot_e) //Justerar K-värdet för PD-regulatorn
+{
+	int tempE;
+	tempE = tot_e*K;
+ 1b8:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <K>
+ 1bc:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <K+0x1>
+ 1c0:	96 01       	movw	r18, r12
+ 1c2:	22 0f       	add	r18, r18
+ 1c4:	33 1f       	adc	r19, r19
+ 1c6:	28 9f       	mul	r18, r24
+ 1c8:	d0 01       	movw	r26, r0
+ 1ca:	29 9f       	mul	r18, r25
+ 1cc:	b0 0d       	add	r27, r0
+ 1ce:	38 9f       	mul	r19, r24
+ 1d0:	b0 0d       	add	r27, r0
+ 1d2:	11 24       	eor	r1, r1
+	OCR3B = Right_Pwm; //Pwm till hger sida via port B8
+}
+int mult_kd(int tot_e) // Justerar KD-värdet för PD-regulator
+{
+	int tempKD;
+	tempKD = tot_e*KD;
+ 1d4:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+ 1d8:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <_edata+0x1>
+ 1dc:	96 01       	movw	r18, r12
+ 1de:	26 19       	sub	r18, r6
+ 1e0:	37 09       	sbc	r19, r7
+ 1e2:	28 9f       	mul	r18, r24
+ 1e4:	b0 01       	movw	r22, r0
+ 1e6:	29 9f       	mul	r18, r25
+ 1e8:	70 0d       	add	r23, r0
+ 1ea:	38 9f       	mul	r19, r24
+ 1ec:	70 0d       	add	r23, r0
+ 1ee:	11 24       	eor	r1, r1
+	return tempKR;
+}
+int mult_k(int tot_e) //Justerar K-värdet för PD-regulatorn
+{
+	int tempE;
+	tempE = tot_e*K;
+ 1f0:	20 91 03 01 	lds	r18, 0x0103	; 0x800103 <K>
+ 1f4:	30 91 04 01 	lds	r19, 0x0104	; 0x800104 <K+0x1>
+ 1f8:	a8 01       	movw	r20, r16
+ 1fa:	44 0f       	add	r20, r20
+ 1fc:	55 1f       	adc	r21, r21
+ 1fe:	42 9f       	mul	r20, r18
+ 200:	c0 01       	movw	r24, r0
+ 202:	43 9f       	mul	r20, r19
+ 204:	90 0d       	add	r25, r0
+ 206:	52 9f       	mul	r21, r18
+ 208:	90 0d       	add	r25, r0
+ 20a:	11 24       	eor	r1, r1
+	OCR3B = Right_Pwm; //Pwm till hger sida via port B8
+}
+int mult_kd(int tot_e) // Justerar KD-värdet för PD-regulator
+{
+	int tempKD;
+	tempKD = tot_e*KD;
+ 20c:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <_edata>
+ 210:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <_edata+0x1>
+ 214:	f8 01       	movw	r30, r16
+ 216:	e8 19       	sub	r30, r8
+ 218:	f9 09       	sbc	r31, r9
+ 21a:	e4 9f       	mul	r30, r20
+ 21c:	90 01       	movw	r18, r0
+ 21e:	e5 9f       	mul	r30, r21
+ 220:	30 0d       	add	r19, r0
+ 222:	f4 9f       	mul	r31, r20
+ 224:	30 0d       	add	r19, r0
+ 226:	11 24       	eor	r1, r1
+			E3 = EFram - EBak;				   //Reglerfel: SensorSkillnad 
+			Ev =  E3 + EFram;                 //Totala felet
+			Eh =  - E3 - EFram;
+
+			StyrSignalVanster = mult_k(2*Ev) + mult_kd(Ev - EV_old);  //Y = e*K + KD * e*d/dt 
+			StyrSignalHoger = mult_k(2*Eh) + mult_kd(Eh - EH_old);
+ 228:	02 2e       	mov	r0, r18
+ 22a:	23 2f       	mov	r18, r19
+ 22c:	00 0c       	add	r0, r0
+ 22e:	22 1f       	adc	r18, r18
+ 230:	33 0b       	sbc	r19, r19
+ 232:	00 0c       	add	r0, r0
+ 234:	22 1f       	adc	r18, r18
+ 236:	33 1f       	adc	r19, r19
+ 238:	08 2e       	mov	r0, r24
+ 23a:	89 2f       	mov	r24, r25
+ 23c:	00 0c       	add	r0, r0
+ 23e:	88 1f       	adc	r24, r24
+ 240:	99 0b       	sbc	r25, r25
+ 242:	00 0c       	add	r0, r0
+ 244:	88 1f       	adc	r24, r24
+ 246:	99 1f       	adc	r25, r25
+ 248:	82 0f       	add	r24, r18
+ 24a:	93 1f       	adc	r25, r19
+				
+			EV_old = Ev;  //Gammla styrsignalen
+			EH_old = Eh;
+			
+			//else{
+			if (StyrSignalVanster + base_pwm > 120) //Begränsingar för att undvika OverFlow och att roboten rusar iväg
+ 24c:	06 2e       	mov	r0, r22
+ 24e:	67 2f       	mov	r22, r23
+ 250:	00 0c       	add	r0, r0
+ 252:	66 1f       	adc	r22, r22
+ 254:	77 0b       	sbc	r23, r23
+ 256:	00 0c       	add	r0, r0
+ 258:	66 1f       	adc	r22, r22
+ 25a:	77 1f       	adc	r23, r23
+ 25c:	0a 2e       	mov	r0, r26
+ 25e:	ab 2f       	mov	r26, r27
+ 260:	00 0c       	add	r0, r0
+ 262:	aa 1f       	adc	r26, r26
+ 264:	bb 0b       	sbc	r27, r27
+ 266:	00 0c       	add	r0, r0
+ 268:	aa 1f       	adc	r26, r26
+ 26a:	bb 1f       	adc	r27, r27
+ 26c:	6a 0f       	add	r22, r26
+ 26e:	7b 1f       	adc	r23, r27
+ 270:	6c 59       	subi	r22, 0x9C	; 156
+ 272:	7f 4f       	sbci	r23, 0xFF	; 255
+ 274:	69 37       	cpi	r22, 0x79	; 121
+ 276:	71 05       	cpc	r23, r1
+ 278:	88 f5       	brcc	.+98     	; 0x2dc <Regler_Func+0x1cc>
+			{
+				Pwm_left = 120;
+			}
+			else if (StyrSignalVanster + base_pwm < 20)
+ 27a:	64 31       	cpi	r22, 0x14	; 20
+ 27c:	71 05       	cpc	r23, r1
+ 27e:	b8 f1       	brcs	.+110    	; 0x2ee <Regler_Func+0x1de>
+			else
+			{
+				Pwm_left = (StyrSignalVanster + base_pwm);
+			}
+			/////////////////////////////////////
+			if ( StyrSignalHoger + base_pwm > 120)
+ 280:	9c 01       	movw	r18, r24
+ 282:	2c 59       	subi	r18, 0x9C	; 156
+ 284:	3f 4f       	sbci	r19, 0xFF	; 255
+ 286:	29 37       	cpi	r18, 0x79	; 121
+ 288:	31 05       	cpc	r19, r1
+ 28a:	40 f4       	brcc	.+16     	; 0x29c <Regler_Func+0x18c>
+			{
+				Pwm_right =120;
+			}
+			else if (StyrSignalHoger + base_pwm < 20)
+ 28c:	24 31       	cpi	r18, 0x14	; 20
+ 28e:	31 05       	cpc	r19, r1
+ 290:	68 f0       	brcs	.+26     	; 0x2ac <Regler_Func+0x19c>
+			{
+				Pwm_right = 20;
+			}
+			else
+			{
+				Pwm_right = (StyrSignalHoger + base_pwm);
+ 292:	82 2f       	mov	r24, r18
+			}
+			//}
+			if ((Pwm_right > base_pwm + 10) && (Pwm_left > base_pwm + 10)){
+ 294:	2f 36       	cpi	r18, 0x6F	; 111
+ 296:	31 05       	cpc	r19, r1
+ 298:	88 f0       	brcs	.+34     	; 0x2bc <Regler_Func+0x1ac>
+ 29a:	01 c0       	rjmp	.+2      	; 0x29e <Regler_Func+0x18e>
+				Pwm_left = (StyrSignalVanster + base_pwm);
+			}
+			/////////////////////////////////////
+			if ( StyrSignalHoger + base_pwm > 120)
+			{
+				Pwm_right =120;
+ 29c:	82 2d       	mov	r24, r2
+			else
+			{
+				Pwm_right = (StyrSignalHoger + base_pwm);
+			}
+			//}
+			if ((Pwm_right > base_pwm + 10) && (Pwm_left > base_pwm + 10)){
+ 29e:	6f 36       	cpi	r22, 0x6F	; 111
+ 2a0:	71 05       	cpc	r23, r1
+ 2a2:	60 f0       	brcs	.+24     	; 0x2bc <Regler_Func+0x1ac>
+				Pwm_right = base_pwm;
+ 2a4:	84 e6       	ldi	r24, 0x64	; 100
+				Pwm_left = 40;
+ 2a6:	68 e2       	ldi	r22, 0x28	; 40
+ 2a8:	70 e0       	ldi	r23, 0x00	; 0
+ 2aa:	08 c0       	rjmp	.+16     	; 0x2bc <Regler_Func+0x1ac>
+			{
+				Pwm_right =120;
+			}
+			else if (StyrSignalHoger + base_pwm < 20)
+			{
+				Pwm_right = 20;
+ 2ac:	84 e1       	ldi	r24, 0x14	; 20
+ 2ae:	06 c0       	rjmp	.+12     	; 0x2bc <Regler_Func+0x1ac>
+			{
+				Pwm_right = (StyrSignalHoger + base_pwm);
+			}
+			//}
+			if ((Pwm_right > base_pwm + 10) && (Pwm_left > base_pwm + 10)){
+				Pwm_right = base_pwm;
+ 2b0:	84 e6       	ldi	r24, 0x64	; 100
+				Pwm_left = 40;
+ 2b2:	68 e2       	ldi	r22, 0x28	; 40
+ 2b4:	70 e0       	ldi	r23, 0x00	; 0
+ 2b6:	02 c0       	rjmp	.+4      	; 0x2bc <Regler_Func+0x1ac>
+				Pwm_left = (StyrSignalVanster + base_pwm);
+			}
+			/////////////////////////////////////
+			if ( StyrSignalHoger + base_pwm > 120)
+			{
+				Pwm_right =120;
+ 2b8:	82 2d       	mov	r24, r2
+				Pwm_right = base_pwm;
+				Pwm_left = 40;
+			}
+			pwmLeftChar = Pwm_left;
+			pwmRightChar = Pwm_right;
+			Pwm_Gen(pwmRightChar,pwmLeftChar,1,1);
+ 2ba:	63 2d       	mov	r22, r3
+ 2bc:	21 e0       	ldi	r18, 0x01	; 1
+ 2be:	41 e0       	ldi	r20, 0x01	; 1
+ 2c0:	f6 de       	rcall	.-532    	; 0xae <Pwm_Gen>
+
+			StyrSignalVanster = mult_k(2*Ev) + mult_kd(Ev - EV_old);  //Y = e*K + KD * e*d/dt 
+			StyrSignalHoger = mult_k(2*Eh) + mult_kd(Eh - EH_old);
+				
+			EV_old = Ev;  //Gammla styrsignalen
+			EH_old = Eh;
+ 2c2:	48 01       	movw	r8, r16
+			Eh =  - E3 - EFram;
+
+			StyrSignalVanster = mult_k(2*Ev) + mult_kd(Ev - EV_old);  //Y = e*K + KD * e*d/dt 
+			StyrSignalHoger = mult_k(2*Eh) + mult_kd(Eh - EH_old);
+				
+			EV_old = Ev;  //Gammla styrsignalen
+ 2c4:	36 01       	movw	r6, r12
+	int EH_old=0;
+	unsigned char sen[2];  
+	int Ev, Eh, StyrSignalHoger, StyrSignalVanster = 0;
+	int EFram, EBak,E3,sensorFram,sensorBak;
+	Get_Sensor(sen);  //Hämta sensorvärden
+	while( !(UCSR0A & (1<<RXC0))) //sålänge den inte mottar en ny instruktion från com
+ 2c6:	f7 01       	movw	r30, r14
+ 2c8:	80 81       	ld	r24, Z
+ 2ca:	88 23       	and	r24, r24
+ 2cc:	0c f0       	brlt	.+2      	; 0x2d0 <Regler_Func+0x1c0>
+ 2ce:	52 cf       	rjmp	.-348    	; 0x174 <Regler_Func+0x64>
+			pwmLeftChar = Pwm_left;
+			pwmRightChar = Pwm_right;
+			Pwm_Gen(pwmRightChar,pwmLeftChar,1,1);
+		}
+	}
+	Pwm_Gen(0,0,0,0);
+ 2d0:	20 e0       	ldi	r18, 0x00	; 0
+ 2d2:	40 e0       	ldi	r20, 0x00	; 0
+ 2d4:	60 e0       	ldi	r22, 0x00	; 0
+ 2d6:	80 e0       	ldi	r24, 0x00	; 0
+ 2d8:	ea de       	rcall	.-556    	; 0xae <Pwm_Gen>
+}
+ 2da:	12 c0       	rjmp	.+36     	; 0x300 <Regler_Func+0x1f0>
+			else
+			{
+				Pwm_left = (StyrSignalVanster + base_pwm);
+			}
+			/////////////////////////////////////
+			if ( StyrSignalHoger + base_pwm > 120)
+ 2dc:	9c 01       	movw	r18, r24
+ 2de:	2c 59       	subi	r18, 0x9C	; 156
+ 2e0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2e2:	29 37       	cpi	r18, 0x79	; 121
+ 2e4:	31 05       	cpc	r19, r1
+ 2e6:	20 f7       	brcc	.-56     	; 0x2b0 <Regler_Func+0x1a0>
+			EH_old = Eh;
+			
+			//else{
+			if (StyrSignalVanster + base_pwm > 120) //Begränsingar för att undvika OverFlow och att roboten rusar iväg
+			{
+				Pwm_left = 120;
+ 2e8:	68 e7       	ldi	r22, 0x78	; 120
+ 2ea:	74 2d       	mov	r23, r4
+ 2ec:	cf cf       	rjmp	.-98     	; 0x28c <Regler_Func+0x17c>
+			else
+			{
+				Pwm_left = (StyrSignalVanster + base_pwm);
+			}
+			/////////////////////////////////////
+			if ( StyrSignalHoger + base_pwm > 120)
+ 2ee:	9c 01       	movw	r18, r24
+ 2f0:	2c 59       	subi	r18, 0x9C	; 156
+ 2f2:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2f4:	29 37       	cpi	r18, 0x79	; 121
+ 2f6:	31 05       	cpc	r19, r1
+ 2f8:	f8 f6       	brcc	.-66     	; 0x2b8 <Regler_Func+0x1a8>
+			{
+				Pwm_left = 120;
+			}
+			else if (StyrSignalVanster + base_pwm < 20)
+			{
+				Pwm_left = 20;
+ 2fa:	63 2d       	mov	r22, r3
+ 2fc:	75 2d       	mov	r23, r5
+ 2fe:	c6 cf       	rjmp	.-116    	; 0x28c <Regler_Func+0x17c>
+			pwmRightChar = Pwm_right;
+			Pwm_Gen(pwmRightChar,pwmLeftChar,1,1);
+		}
+	}
+	Pwm_Gen(0,0,0,0);
+}
+ 300:	0f 90       	pop	r0
+ 302:	0f 90       	pop	r0
+ 304:	df 91       	pop	r29
+ 306:	cf 91       	pop	r28
+ 308:	1f 91       	pop	r17
+ 30a:	0f 91       	pop	r16
+ 30c:	ff 90       	pop	r15
+ 30e:	ef 90       	pop	r14
+ 310:	df 90       	pop	r13
+ 312:	cf 90       	pop	r12
+ 314:	bf 90       	pop	r11
+ 316:	af 90       	pop	r10
+ 318:	9f 90       	pop	r9
+ 31a:	8f 90       	pop	r8
+ 31c:	7f 90       	pop	r7
+ 31e:	6f 90       	pop	r6
+ 320:	5f 90       	pop	r5
+ 322:	4f 90       	pop	r4
+ 324:	3f 90       	pop	r3
+ 326:	2f 90       	pop	r2
+ 328:	08 95       	ret
+
+0000032a <pwm_init>:
+	}
+	else 
+		Get_Sensor(sens);//Återkallas tills den är i sync
+}
+void pwm_init(){
+	TCCR3A=0b10100001; //Stll in pwm
+ 32a:	81 ea       	ldi	r24, 0xA1	; 161
+ 32c:	80 93 90 00 	sts	0x0090, r24	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+	TCCR3B=0b00000011;
+ 330:	83 e0       	ldi	r24, 0x03	; 3
+ 332:	80 93 91 00 	sts	0x0091, r24	; 0x800091 <__TEXT_REGION_LENGTH__+0x7e0091>
+	TCNT0 = 0;  //PWM 0-255 (minmax)
+ 336:	16 bc       	out	0x26, r1	; 38
+	DDRB = 0b11111111; //B utportar
+ 338:	8f ef       	ldi	r24, 0xFF	; 255
+ 33a:	84 b9       	out	0x04, r24	; 4
+	DDRD = 0b00001010;
+ 33c:	8a e0       	ldi	r24, 0x0A	; 10
+ 33e:	8a b9       	out	0x0a, r24	; 10
+ 340:	08 95       	ret
+
+00000342 <Auto_Rotate>:
+#define Rotate_speed 120U//PWM för roteringar
+
+void Auto_Rotate(int dir) //Kollar vilket håll vi ska rotera och starta roteringsprogrammet 
+{
+	
+	if (dir==1)  // höger
+ 342:	01 97       	sbiw	r24, 0x01	; 1
+ 344:	31 f4       	brne	.+12     	; 0x352 <Auto_Rotate+0x10>
+	{
+		Pwm_Gen(Rotate_speed,Rotate_speed,1, 0);
+ 346:	20 e0       	ldi	r18, 0x00	; 0
+ 348:	41 e0       	ldi	r20, 0x01	; 1
+ 34a:	68 e7       	ldi	r22, 0x78	; 120
+ 34c:	88 e7       	ldi	r24, 0x78	; 120
+ 34e:	af ce       	rjmp	.-674    	; 0xae <Pwm_Gen>
+ 350:	08 95       	ret
+	}
+	else //vänster
+	{
+		Pwm_Gen(Rotate_speed,Rotate_speed,0, 1 );
+ 352:	21 e0       	ldi	r18, 0x01	; 1
+ 354:	40 e0       	ldi	r20, 0x00	; 0
+ 356:	68 e7       	ldi	r22, 0x78	; 120
+ 358:	88 e7       	ldi	r24, 0x78	; 120
+ 35a:	a9 ce       	rjmp	.-686    	; 0xae <Pwm_Gen>
+ 35c:	08 95       	ret
+
+0000035e <Auto_Cont>:
+	}
+	
+}
+void Auto_Cont(unsigned char inst){        //Kollar vilken typ av automanöver som skall ske
+ 	unsigned char Auto = inst & 0b00001111;
+ 35e:	8f 70       	andi	r24, 0x0F	; 15
+	if(Auto == 0b00000001)
+ 360:	81 30       	cpi	r24, 0x01	; 1
+ 362:	39 f4       	brne	.+14     	; 0x372 <Auto_Cont+0x14>
+	{ //fram
+			programState = 'F';
+ 364:	86 e4       	ldi	r24, 0x46	; 70
+ 366:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+		Regler_Func(0);
+ 36a:	80 e0       	ldi	r24, 0x00	; 0
+ 36c:	90 e0       	ldi	r25, 0x00	; 0
+ 36e:	d0 ce       	rjmp	.-608    	; 0x110 <Regler_Func>
+ 370:	08 95       	ret
+	}
+	else if(Auto == 0b00000010){ //bak
+ 372:	82 30       	cpi	r24, 0x02	; 2
+ 374:	39 f4       	brne	.+14     	; 0x384 <Auto_Cont+0x26>
+		programState = 'B';
+ 376:	82 e4       	ldi	r24, 0x42	; 66
+ 378:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+		Regler_Func(1);
+ 37c:	81 e0       	ldi	r24, 0x01	; 1
+ 37e:	90 e0       	ldi	r25, 0x00	; 0
+ 380:	c7 ce       	rjmp	.-626    	; 0x110 <Regler_Func>
+ 382:	08 95       	ret
+	}
+	else if(Auto == 0b00000100){ //Rot vnster
+ 384:	84 30       	cpi	r24, 0x04	; 4
+ 386:	39 f4       	brne	.+14     	; 0x396 <Auto_Cont+0x38>
+		programState = 'L';
+ 388:	8c e4       	ldi	r24, 0x4C	; 76
+ 38a:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+		Auto_Rotate(0);
+ 38e:	80 e0       	ldi	r24, 0x00	; 0
+ 390:	90 e0       	ldi	r25, 0x00	; 0
+ 392:	d7 cf       	rjmp	.-82     	; 0x342 <Auto_Rotate>
+ 394:	08 95       	ret
+	}
+	else if(Auto == 0b00001000){ //Rot hger
+ 396:	88 30       	cpi	r24, 0x08	; 8
+ 398:	31 f4       	brne	.+12     	; 0x3a6 <Auto_Cont+0x48>
+		programState = 'R';
+ 39a:	82 e5       	ldi	r24, 0x52	; 82
+ 39c:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+		Auto_Rotate(1);
+ 3a0:	81 e0       	ldi	r24, 0x01	; 1
+ 3a2:	90 e0       	ldi	r25, 0x00	; 0
+ 3a4:	ce cf       	rjmp	.-100    	; 0x342 <Auto_Rotate>
+ 3a6:	08 95       	ret
+
+000003a8 <Man_Cont>:
+	}
+}
+void Man_Cont(unsigned char inst) // Kollar typ av manuell styrinstruktion och sätter PWM till motorerna
+{
+	char dir = (inst >> 1) & 0b00000001;
+ 3a8:	81 fb       	bst	r24, 1
+ 3aa:	44 27       	eor	r20, r20
+ 3ac:	40 f9       	bld	r20, 0
+	char Man = inst & 0b00001111;
+	if( Man == 0b00000001 || Man == 0b00000011)
+ 3ae:	98 2f       	mov	r25, r24
+ 3b0:	9d 70       	andi	r25, 0x0D	; 13
+ 3b2:	91 30       	cpi	r25, 0x01	; 1
+ 3b4:	29 f4       	brne	.+10     	; 0x3c0 <Man_Cont+0x18>
+		{
+			Pwm_Gen(Man_speed,Man_speed, dir, dir);
+ 3b6:	24 2f       	mov	r18, r20
+ 3b8:	6c ed       	ldi	r22, 0xDC	; 220
+ 3ba:	8c ed       	ldi	r24, 0xDC	; 220
+ 3bc:	78 ce       	rjmp	.-784    	; 0xae <Pwm_Gen>
+ 3be:	08 95       	ret
+	}
+}
+void Man_Cont(unsigned char inst) // Kollar typ av manuell styrinstruktion och sätter PWM till motorerna
+{
+	char dir = (inst >> 1) & 0b00000001;
+	char Man = inst & 0b00001111;
+ 3c0:	8f 70       	andi	r24, 0x0F	; 15
+	if( Man == 0b00000001 || Man == 0b00000011)
+		{
+			Pwm_Gen(Man_speed,Man_speed, dir, dir);
+		}
+		else if(Man == 0b00000100)		//Rot vänster
+ 3c2:	84 30       	cpi	r24, 0x04	; 4
+ 3c4:	49 f4       	brne	.+18     	; 0x3d8 <Man_Cont+0x30>
+		{
+			programState ='V';
+ 3c6:	86 e5       	ldi	r24, 0x56	; 86
+ 3c8:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+			Pwm_Gen(Man_speed,Man_speed,0,1); // 01
+ 3cc:	21 e0       	ldi	r18, 0x01	; 1
+ 3ce:	40 e0       	ldi	r20, 0x00	; 0
+ 3d0:	6c ed       	ldi	r22, 0xDC	; 220
+ 3d2:	8c ed       	ldi	r24, 0xDC	; 220
+ 3d4:	6c ce       	rjmp	.-808    	; 0xae <Pwm_Gen>
+ 3d6:	08 95       	ret
+		}
+		else if( Man == 0b00001000)			// Rot höger
+ 3d8:	88 30       	cpi	r24, 0x08	; 8
+ 3da:	49 f4       	brne	.+18     	; 0x3ee <Man_Cont+0x46>
+		{
+			programState ='H';
+ 3dc:	88 e4       	ldi	r24, 0x48	; 72
+ 3de:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <programState>
+			Pwm_Gen(Man_speed,Man_speed,1,0);
+ 3e2:	20 e0       	ldi	r18, 0x00	; 0
+ 3e4:	41 e0       	ldi	r20, 0x01	; 1
+ 3e6:	6c ed       	ldi	r22, 0xDC	; 220
+ 3e8:	8c ed       	ldi	r24, 0xDC	; 220
+ 3ea:	61 ce       	rjmp	.-830    	; 0xae <Pwm_Gen>
+ 3ec:	08 95       	ret
+		}
+		else if(Man == 0b00000111)			// Svng vänster framt
+ 3ee:	87 30       	cpi	r24, 0x07	; 7
+ 3f0:	29 f4       	brne	.+10     	; 0x3fc <Man_Cont+0x54>
+		{
+			Pwm_Gen(Man_speed,Turn_speed,dir,dir);
+ 3f2:	24 2f       	mov	r18, r20
+ 3f4:	60 e5       	ldi	r22, 0x50	; 80
+ 3f6:	8c ed       	ldi	r24, 0xDC	; 220
+ 3f8:	5a ce       	rjmp	.-844    	; 0xae <Pwm_Gen>
+ 3fa:	08 95       	ret
+		}
+		else if (Man == 0b00001011)               // Svng höger framt
+ 3fc:	8b 30       	cpi	r24, 0x0B	; 11
+		{
+			Pwm_Gen(Turn_speed,Man_speed,dir,dir);
+ 3fe:	29 f4       	brne	.+10     	; 0x40a <__LOCK_REGION_LENGTH__+0xa>
+ 400:	24 2f       	mov	r18, r20
+ 402:	6c ed       	ldi	r22, 0xDC	; 220
+ 404:	80 e5       	ldi	r24, 0x50	; 80
+ 406:	53 ce       	rjmp	.-858    	; 0xae <Pwm_Gen>
+ 408:	08 95       	ret
+		}
+		else if(Man == 0b00000101)
+ 40a:	85 30       	cpi	r24, 0x05	; 5
+		{
+			Pwm_Gen(Turn_speed,Man_speed,dir,dir); // Svng hger bakt
+ 40c:	29 f4       	brne	.+10     	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+ 40e:	24 2f       	mov	r18, r20
+ 410:	6c ed       	ldi	r22, 0xDC	; 220
+ 412:	80 e5       	ldi	r24, 0x50	; 80
+ 414:	4c ce       	rjmp	.-872    	; 0xae <Pwm_Gen>
+		}
+		else if (Man == 0b00001001)
+ 416:	08 95       	ret
+ 418:	89 30       	cpi	r24, 0x09	; 9
+		{
+			Pwm_Gen(Man_speed,Turn_speed,dir,dir); // Svng vnster bakt
+ 41a:	29 f4       	brne	.+10     	; 0x426 <__LOCK_REGION_LENGTH__+0x26>
+ 41c:	24 2f       	mov	r18, r20
+ 41e:	60 e5       	ldi	r22, 0x50	; 80
+ 420:	8c ed       	ldi	r24, 0xDC	; 220
+ 422:	45 ce       	rjmp	.-886    	; 0xae <Pwm_Gen>
+		}
+		else
+		{
+			Pwm_Gen(0,0,dir,dir);
+ 424:	08 95       	ret
+ 426:	24 2f       	mov	r18, r20
+ 428:	60 e0       	ldi	r22, 0x00	; 0
+ 42a:	80 e0       	ldi	r24, 0x00	; 0
+ 42c:	40 ce       	rjmp	.-896    	; 0xae <Pwm_Gen>
+ 42e:	08 95       	ret
+
+00000430 <main>:
+		}
+	}
+int main(void)
+{
+		UART_Init_sens();
+ 430:	6d d0       	rcall	.+218    	; 0x50c <UART_Init_sens>
+		pwm_init();
+ 432:	7b df       	rcall	.-266    	; 0x32a <pwm_init>
+		UART_Init_com();
+ 434:	5f d0       	rcall	.+190    	; 0x4f4 <UART_Init_com>
+ 436:	82 e2       	ldi	r24, 0x22	; 34
+		
+		K = 34;
+ 438:	90 e0       	ldi	r25, 0x00	; 0
+ 43a:	90 93 04 01 	sts	0x0104, r25	; 0x800104 <K+0x1>
+ 43e:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <K>
+ 442:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <KR+0x1>
+		KR = 0;
+ 446:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <KR>
+ 44a:	8e e1       	ldi	r24, 0x1E	; 30
+		KD = 30;
+ 44c:	90 e0       	ldi	r25, 0x00	; 0
+ 44e:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <_edata+0x1>
+ 452:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+ 456:	d1 e4       	ldi	r29, 0x41	; 65
+					programState = 'M';
+					Man_Cont(inst);
+				}
+				else if(Mode == 0 )
+				{
+					programState = 'A';
+ 458:	0f 2e       	mov	r0, r31
+				{
+					KR = inst & 0b00111111;
+				}
+				else if(Mode == 1 )
+				{
+					programState = 'M';
+ 45a:	fd e4       	ldi	r31, 0x4D	; 77
+ 45c:	ff 2e       	mov	r15, r31
+ 45e:	f0 2d       	mov	r31, r0
+		unsigned char inst = 0b00000000;
+		int Mode;
+		{
+			while(1)
+			{
+				UART_Transmit_sens('W'); //skickar 'väntar på instr från com'
+ 460:	87 e5       	ldi	r24, 0x57	; 87
+ 462:	70 d0       	rcall	.+224    	; 0x544 <UART_Transmit_sens>
+ 464:	67 d0       	rcall	.+206    	; 0x534 <UART_Recieve_com>
+				inst = UART_Recieve_com();  //Hämtar instruktion från kommunikationsmodulen
+ 466:	c8 2f       	mov	r28, r24
+ 468:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <programState>
+				UART_Transmit_sens(programState); //återställer 
+ 46c:	6b d0       	rcall	.+214    	; 0x544 <UART_Transmit_sens>
+ 46e:	c1 11       	cpse	r28, r1
+ 470:	06 c0       	rjmp	.+12     	; 0x47e <main+0x4e>
+				
+				Mode = (inst>>4) & 0b00000001;
+				
+				if ( inst == 0b00000000)
+ 472:	20 e0       	ldi	r18, 0x00	; 0
+				{
+					Pwm_Gen(0x00,0x00,0,0);
+ 474:	40 e0       	ldi	r20, 0x00	; 0
+ 476:	60 e0       	ldi	r22, 0x00	; 0
+ 478:	80 e0       	ldi	r24, 0x00	; 0
+ 47a:	19 de       	rcall	.-974    	; 0xae <Pwm_Gen>
+ 47c:	36 c0       	rjmp	.+108    	; 0x4ea <main+0xba>
+ 47e:	8c 2f       	mov	r24, r28
+ 480:	82 95       	swap	r24
+				}
+				if ( ((inst>>6) & 0b00000011) == 2)
+ 482:	86 95       	lsr	r24
+ 484:	86 95       	lsr	r24
+ 486:	83 70       	andi	r24, 0x03	; 3
+ 488:	82 30       	cpi	r24, 0x02	; 2
+ 48a:	69 f4       	brne	.+26     	; 0x4a6 <main+0x76>
+ 48c:	cf 77       	andi	r28, 0x7F	; 127
+ 48e:	8c 2f       	mov	r24, r28
+				{
+					K = inst & 0b01111111;
+ 490:	90 e0       	ldi	r25, 0x00	; 0
+ 492:	90 93 04 01 	sts	0x0104, r25	; 0x800104 <K+0x1>
+ 496:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <K>
+ 49a:	20 e0       	ldi	r18, 0x00	; 0
+					
+					Pwm_Gen(0x00,0x00,0,0);
+ 49c:	40 e0       	ldi	r20, 0x00	; 0
+ 49e:	60 e0       	ldi	r22, 0x00	; 0
+ 4a0:	80 e0       	ldi	r24, 0x00	; 0
+ 4a2:	05 de       	rcall	.-1014   	; 0xae <Pwm_Gen>
+ 4a4:	dd cf       	rjmp	.-70     	; 0x460 <main+0x30>
+ 4a6:	81 30       	cpi	r24, 0x01	; 1
+ 4a8:	41 f4       	brne	.+16     	; 0x4ba <main+0x8a>
+				}
+				else if (( ((inst>>6) & 0b00000011) == 1))
+ 4aa:	cf 73       	andi	r28, 0x3F	; 63
+ 4ac:	8c 2f       	mov	r24, r28
+				{
+					KD = inst & 0b00111111;
+ 4ae:	90 e0       	ldi	r25, 0x00	; 0
+ 4b0:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <_edata+0x1>
+ 4b4:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+ 4b8:	d3 cf       	rjmp	.-90     	; 0x460 <main+0x30>
+ 4ba:	83 30       	cpi	r24, 0x03	; 3
+ 4bc:	41 f4       	brne	.+16     	; 0x4ce <main+0x9e>
+				}
+				else if (( ((inst>>6) & 0b00000011) == 3))
+ 4be:	cf 73       	andi	r28, 0x3F	; 63
+ 4c0:	8c 2f       	mov	r24, r28
+				{
+					KR = inst & 0b00111111;
+ 4c2:	90 e0       	ldi	r25, 0x00	; 0
+ 4c4:	90 93 06 01 	sts	0x0106, r25	; 0x800106 <KR+0x1>
+ 4c8:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <KR>
+ 4cc:	c9 cf       	rjmp	.-110    	; 0x460 <main+0x30>
+ 4ce:	c4 fb       	bst	r28, 4
+ 4d0:	00 27       	eor	r16, r16
+				}
+				else if(Mode == 1 )
+ 4d2:	00 f9       	bld	r16, 0
+ 4d4:	10 e0       	ldi	r17, 0x00	; 0
+ 4d6:	c4 ff       	sbrs	r28, 4
+ 4d8:	05 c0       	rjmp	.+10     	; 0x4e4 <main+0xb4>
+ 4da:	f0 92 02 01 	sts	0x0102, r15	; 0x800102 <programState>
+				{
+					programState = 'M';
+ 4de:	8c 2f       	mov	r24, r28
+					Man_Cont(inst);
+ 4e0:	63 df       	rcall	.-314    	; 0x3a8 <Man_Cont>
+ 4e2:	be cf       	rjmp	.-132    	; 0x460 <main+0x30>
+ 4e4:	01 2b       	or	r16, r17
+				}
+				else if(Mode == 0 )
+ 4e6:	09 f0       	breq	.+2      	; 0x4ea <main+0xba>
+ 4e8:	bb cf       	rjmp	.-138    	; 0x460 <main+0x30>
+ 4ea:	d0 93 02 01 	sts	0x0102, r29	; 0x800102 <programState>
+				{
+					programState = 'A';
+ 4ee:	8c 2f       	mov	r24, r28
+					Auto_Cont(inst);
+ 4f0:	36 df       	rcall	.-404    	; 0x35e <Auto_Cont>
+ 4f2:	b6 cf       	rjmp	.-148    	; 0x460 <main+0x30>
+
+000004f4 <UART_Init_com>:
+#define BAUD_SENS 31
+#define BAUD_COM 23
+
+void UART_Init_com()
+{
+	UCSR0B = (1<<RXEN0)|(0<<TXEN0);//|(1<<RXCIE0);
+ 4f4:	80 e1       	ldi	r24, 0x10	; 16
+ 4f6:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
+	//Baudrate
+	UBRR0H = (BAUD_COM>>8);
+ 4fa:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7e00c5>
+	UBRR0L = BAUD_COM;
+ 4fe:	87 e1       	ldi	r24, 0x17	; 23
+ 500:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
+	//enable recieve
+	//stopbitar, 1
+	UCSR0C =  (1<<USBS0)|(3<<UCSZ00);
+ 504:	8e e0       	ldi	r24, 0x0E	; 14
+ 506:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7e00c2>
+ 50a:	08 95       	ret
+
+0000050c <UART_Init_sens>:
+}
+void UART_Init_sens()
+{
+	UCSR1B = (1<<RXEN1)|(1<<TXEN1);//|(1<<RXCIE1);
+ 50c:	88 e1       	ldi	r24, 0x18	; 24
+ 50e:	80 93 c9 00 	sts	0x00C9, r24	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7e00c9>
+	//Baudrate
+	UBRR1H = (unsigned char)(BAUD_SENS>>8);
+ 512:	10 92 cd 00 	sts	0x00CD, r1	; 0x8000cd <__TEXT_REGION_LENGTH__+0x7e00cd>
+	UBRR1L = (unsigned char)BAUD_SENS;
+ 516:	8f e1       	ldi	r24, 0x1F	; 31
+ 518:	80 93 cc 00 	sts	0x00CC, r24	; 0x8000cc <__TEXT_REGION_LENGTH__+0x7e00cc>
+	//enable transmit/recieve
+	//stopbitar, 1
+	UCSR1C = (1<<USBS1)|(3<<UCSZ10);
+ 51c:	8e e0       	ldi	r24, 0x0E	; 14
+ 51e:	80 93 ca 00 	sts	0x00CA, r24	; 0x8000ca <__TEXT_REGION_LENGTH__+0x7e00ca>
+ 522:	08 95       	ret
+
+00000524 <UART_Recieve_sens>:
+}
+unsigned char UART_Recieve_sens()
+{
+	while( !(UCSR1A & (1<<RXC1)) );
+ 524:	e8 ec       	ldi	r30, 0xC8	; 200
+ 526:	f0 e0       	ldi	r31, 0x00	; 0
+ 528:	80 81       	ld	r24, Z
+ 52a:	88 23       	and	r24, r24
+ 52c:	ec f7       	brge	.-6      	; 0x528 <UART_Recieve_sens+0x4>
+	return UDR1;
+ 52e:	80 91 ce 00 	lds	r24, 0x00CE	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
+}
+ 532:	08 95       	ret
+
+00000534 <UART_Recieve_com>:
+unsigned char UART_Recieve_com()
+{
+	while( !(UCSR0A & (1<<RXC0)) );
+ 534:	e0 ec       	ldi	r30, 0xC0	; 192
+ 536:	f0 e0       	ldi	r31, 0x00	; 0
+ 538:	80 81       	ld	r24, Z
+ 53a:	88 23       	and	r24, r24
+ 53c:	ec f7       	brge	.-6      	; 0x538 <UART_Recieve_com+0x4>
+	return UDR0;
+ 53e:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+}
+ 542:	08 95       	ret
+
+00000544 <UART_Transmit_sens>:
+void UART_Transmit_sens(unsigned char data)
+{
+	while( !(UCSR1A & (1<<UDRE1)) );
+ 544:	e8 ec       	ldi	r30, 0xC8	; 200
+ 546:	f0 e0       	ldi	r31, 0x00	; 0
+ 548:	90 81       	ld	r25, Z
+ 54a:	95 ff       	sbrs	r25, 5
+ 54c:	fd cf       	rjmp	.-6      	; 0x548 <UART_Transmit_sens+0x4>
+	UDR1 = data;
+ 54e:	80 93 ce 00 	sts	0x00CE, r24	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
+ 552:	08 95       	ret
+
+00000554 <_exit>:
+ 554:	f8 94       	cli
+
+00000556 <__stop_program>:
+ 556:	ff cf       	rjmp	.-2      	; 0x556 <__stop_program>

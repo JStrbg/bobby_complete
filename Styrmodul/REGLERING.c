@@ -52,11 +52,13 @@ void Regler_Func(int dir)//Program för att reglera mot en vägg
 	unsigned char sen[2];  
 	int Ev, Eh, StyrSignalHoger, StyrSignalVanster = 0;
 	int EFram, EBak,E3,sensorFram,sensorBak;
+	USART1_Flush();
+	USART0_Flush();
 	Get_Sensor(sen);  //Hämta sensorvärden
 	while( !(UCSR0A & (1<<RXC0))) //sålänge den inte mottar en ny instruktion från com
 	{
-		Get_Sensor(sen);  //Hämta sensorvärden
-		if ((sen[0] < 50) || (sen[1] < 50) )
+		
+		if ((sen[0] < 65) || (sen[1] < 65) )
 		{  //Ifall roboten inte ser en vägg på högersida, kör rakt fram
 			Pwm_Gen(base_pwm,base_pwm,1,1);
 		}
@@ -79,9 +81,9 @@ void Regler_Func(int dir)//Program för att reglera mot en vägg
 			EH_old = Eh;
 			
 			//else{
-			if (StyrSignalVanster + base_pwm > 120) //Begränsingar för att undvika OverFlow och att roboten rusar iväg
+			if (StyrSignalVanster + base_pwm > 170) //Begränsingar för att undvika OverFlow och att roboten rusar iväg
 			{
-				Pwm_left = 120;
+				Pwm_left = 170;
 			}
 			else if (StyrSignalVanster + base_pwm < 20)
 			{
@@ -92,9 +94,9 @@ void Regler_Func(int dir)//Program för att reglera mot en vägg
 				Pwm_left = (StyrSignalVanster + base_pwm);
 			}
 			/////////////////////////////////////
-			if ( StyrSignalHoger + base_pwm > 120)
+			if ( StyrSignalHoger + base_pwm > 170)
 			{
-				Pwm_right =120;
+				Pwm_right =170;
 			}
 			else if (StyrSignalHoger + base_pwm < 20)
 			{
@@ -113,6 +115,7 @@ void Regler_Func(int dir)//Program för att reglera mot en vägg
 			pwmRightChar = Pwm_right;
 			Pwm_Gen(pwmRightChar,pwmLeftChar,1,1);
 		}
+		Get_Sensor(sen);  //Hämta sensorvärden
 	}
 	Pwm_Gen(0,0,0,0);
 }

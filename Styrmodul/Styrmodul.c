@@ -17,10 +17,12 @@ void Auto_Rotate(int dir) //Kollar vilket håll vi ska rotera och starta roterin
 	if (dir==1)  // höger
 	{
 		Pwm_Gen(Rotate_speed,Rotate_speed,1, 0);
+		programState = 'D';
 	}
 	else //vänster
 	{
 		Pwm_Gen(Rotate_speed,Rotate_speed,0, 1 );
+		programState = 'D';
 	}
 	
 }
@@ -28,7 +30,7 @@ void Auto_Cont(unsigned char inst){        //Kollar vilken typ av automanöver s
  	unsigned char Auto = inst & 0b00001111;
 	if(Auto == 0b00000001)
 	{ //fram
-			programState = 'F';
+		programState = 'F';
 		Regler_Func(0);
 	}
 	else if(Auto == 0b00000010){ //bak
@@ -89,7 +91,7 @@ int main(void)
 		pwm_init();
 		UART_Init_com();
 		
-		K = 34;
+		K = 32;
 		KR = 0;
 		KD = 30;
 		unsigned char inst = 0b00000000;
