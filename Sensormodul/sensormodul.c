@@ -49,7 +49,7 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 	send_to_com();
 	sensor[8] = 'F';
 }
-void rot_right() //Roterar 90 grader höger
+void rot_right() //Roterar 90 grader höger	
 {
 	sensor[8] = 'R'; //sätt sensprogramkod
 	long int vinkel = 0;

@@ -3,31 +3,31 @@ kommunikation.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000008  00800100  000010b8  0000114c  2**0
+  0 .data         00000008  00800100  00001172  00001206  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000010b8  00000000  00000000  00000094  2**1
+  1 .text         00001172  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          0000051e  00800108  00800108  00001154  2**0
+  2 .bss          0000051e  00800108  00800108  0000120e  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00001154  2**0
+  3 .comment      00000030  00000000  00000000  0000120e  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001184  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001240  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000100  00000000  00000000  000011c4  2**0
+  5 .debug_aranges 00000100  00000000  00000000  00001280  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001472  00000000  00000000  000012c4  2**0
+  6 .debug_info   000014ba  00000000  00000000  00001380  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000009f4  00000000  00000000  00002736  2**0
+  7 .debug_abbrev 000009f4  00000000  00000000  0000283a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000f0a  00000000  00000000  0000312a  2**0
+  8 .debug_line   00000f9a  00000000  00000000  0000322e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000234  00000000  00000000  00004034  2**2
+  9 .debug_frame  00000234  00000000  00000000  000041c8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000006a4  00000000  00000000  00004268  2**0
+ 10 .debug_str    000006a4  00000000  00000000  000043fc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000356  00000000  00000000  0000490c  2**0
+ 11 .debug_loc    00000356  00000000  00000000  00004aa0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000110  00000000  00000000  00004c62  2**0
+ 12 .debug_ranges 00000110  00000000  00000000  00004df6  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -35,73 +35,73 @@ Disassembly of section .text:
 00000000 <__vectors>:
        0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
        2:	00 00       	nop
-       4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+       4:	62 c0       	rjmp	.+196    	; 0xca <__bad_interrupt>
        6:	00 00       	nop
-       8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+       8:	60 c0       	rjmp	.+192    	; 0xca <__bad_interrupt>
        a:	00 00       	nop
-       c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+       c:	5e c0       	rjmp	.+188    	; 0xca <__bad_interrupt>
        e:	00 00       	nop
-      10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+      10:	5c c0       	rjmp	.+184    	; 0xca <__bad_interrupt>
       12:	00 00       	nop
-      14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+      14:	5a c0       	rjmp	.+180    	; 0xca <__bad_interrupt>
       16:	00 00       	nop
-      18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+      18:	58 c0       	rjmp	.+176    	; 0xca <__bad_interrupt>
       1a:	00 00       	nop
-      1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+      1c:	56 c0       	rjmp	.+172    	; 0xca <__bad_interrupt>
       1e:	00 00       	nop
-      20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+      20:	54 c0       	rjmp	.+168    	; 0xca <__bad_interrupt>
       22:	00 00       	nop
-      24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+      24:	52 c0       	rjmp	.+164    	; 0xca <__bad_interrupt>
       26:	00 00       	nop
-      28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+      28:	50 c0       	rjmp	.+160    	; 0xca <__bad_interrupt>
       2a:	00 00       	nop
-      2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+      2c:	4e c0       	rjmp	.+156    	; 0xca <__bad_interrupt>
       2e:	00 00       	nop
-      30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+      30:	4c c0       	rjmp	.+152    	; 0xca <__bad_interrupt>
       32:	00 00       	nop
-      34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+      34:	4a c0       	rjmp	.+148    	; 0xca <__bad_interrupt>
       36:	00 00       	nop
-      38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+      38:	48 c0       	rjmp	.+144    	; 0xca <__bad_interrupt>
       3a:	00 00       	nop
-      3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+      3c:	46 c0       	rjmp	.+140    	; 0xca <__bad_interrupt>
       3e:	00 00       	nop
-      40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+      40:	44 c0       	rjmp	.+136    	; 0xca <__bad_interrupt>
       42:	00 00       	nop
-      44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+      44:	42 c0       	rjmp	.+132    	; 0xca <__bad_interrupt>
       46:	00 00       	nop
-      48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+      48:	40 c0       	rjmp	.+128    	; 0xca <__bad_interrupt>
       4a:	00 00       	nop
-      4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+      4c:	3e c0       	rjmp	.+124    	; 0xca <__bad_interrupt>
       4e:	00 00       	nop
-      50:	dc c0       	rjmp	.+440    	; 0x20a <__vector_20>
+      50:	e0 c0       	rjmp	.+448    	; 0x212 <__vector_20>
       52:	00 00       	nop
-      54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+      54:	3a c0       	rjmp	.+116    	; 0xca <__bad_interrupt>
       56:	00 00       	nop
-      58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+      58:	38 c0       	rjmp	.+112    	; 0xca <__bad_interrupt>
       5a:	00 00       	nop
-      5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+      5c:	36 c0       	rjmp	.+108    	; 0xca <__bad_interrupt>
       5e:	00 00       	nop
-      60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+      60:	34 c0       	rjmp	.+104    	; 0xca <__bad_interrupt>
       62:	00 00       	nop
-      64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+      64:	32 c0       	rjmp	.+100    	; 0xca <__bad_interrupt>
       66:	00 00       	nop
-      68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+      68:	30 c0       	rjmp	.+96     	; 0xca <__bad_interrupt>
       6a:	00 00       	nop
-      6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+      6c:	2e c0       	rjmp	.+92     	; 0xca <__bad_interrupt>
       6e:	00 00       	nop
-      70:	b9 c0       	rjmp	.+370    	; 0x1e4 <__vector_28>
+      70:	bd c0       	rjmp	.+378    	; 0x1ec <__vector_28>
       72:	00 00       	nop
-      74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+      74:	2a c0       	rjmp	.+84     	; 0xca <__bad_interrupt>
       76:	00 00       	nop
-      78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+      78:	28 c0       	rjmp	.+80     	; 0xca <__bad_interrupt>
       7a:	00 00       	nop
-      7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+      7c:	26 c0       	rjmp	.+76     	; 0xca <__bad_interrupt>
       7e:	00 00       	nop
-      80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+      80:	24 c0       	rjmp	.+72     	; 0xca <__bad_interrupt>
       82:	00 00       	nop
-      84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+      84:	22 c0       	rjmp	.+68     	; 0xca <__bad_interrupt>
       86:	00 00       	nop
-      88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+      88:	20 c0       	rjmp	.+64     	; 0xca <__bad_interrupt>
 	...
 
 0000008c <__ctors_end>:
@@ -116,8 +116,8 @@ Disassembly of section .text:
       98:	11 e0       	ldi	r17, 0x01	; 1
       9a:	a0 e0       	ldi	r26, 0x00	; 0
       9c:	b1 e0       	ldi	r27, 0x01	; 1
-      9e:	e8 eb       	ldi	r30, 0xB8	; 184
-      a0:	f0 e1       	ldi	r31, 0x10	; 16
+      9e:	e2 e7       	ldi	r30, 0x72	; 114
+      a0:	f1 e1       	ldi	r31, 0x11	; 17
       a2:	00 e0       	ldi	r16, 0x00	; 0
       a4:	0b bf       	out	0x3b, r16	; 59
       a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
@@ -140,2320 +140,2415 @@ Disassembly of section .text:
       bc:	a6 32       	cpi	r26, 0x26	; 38
       be:	b2 07       	cpc	r27, r18
       c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
-      c2:	be d7       	rcall	.+3964   	; 0x1040 <main>
-      c4:	f7 c7       	rjmp	.+4078   	; 0x10b4 <_exit>
+      c2:	0e 94 7c 08 	call	0x10f8	; 0x10f8 <main>
+      c6:	0c 94 b7 08 	jmp	0x116e	; 0x116e <_exit>
 
-000000c6 <__bad_interrupt>:
-      c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+000000ca <__bad_interrupt>:
+      ca:	9a cf       	rjmp	.-204    	; 0x0 <__vectors>
 
-000000c8 <Init>:
+000000cc <Init>:
 void state1();
 void baby_proof_and_update();
 
 void Init()
 {
 	DDRD = 0b01100110; //D-port initiering 1 utg?ng 0 ing?ng 00100110
-      c8:	86 e6       	ldi	r24, 0x66	; 102
-      ca:	8a b9       	out	0x0a, r24	; 10
+      cc:	86 e6       	ldi	r24, 0x66	; 102
+      ce:	8a b9       	out	0x0a, r24	; 10
 	DDRB = 0b11111111;
-      cc:	8f ef       	ldi	r24, 0xFF	; 255
-      ce:	84 b9       	out	0x04, r24	; 4
+      d0:	8f ef       	ldi	r24, 0xFF	; 255
+      d2:	84 b9       	out	0x04, r24	; 4
 
 	UART0_Init(); //styr och sensor
-      d0:	d5 d7       	rcall	.+4010   	; 0x107c <UART0_Init>
+      d4:	0e 94 9b 08 	call	0x1136	; 0x1136 <UART0_Init>
 	UART1_Init(); // bl?tand
-      d2:	c8 d7       	rcall	.+3984   	; 0x1064 <UART1_Init>
-      d4:	78 94       	sei
+      d8:	0e 94 8f 08 	call	0x111e	; 0x111e <UART1_Init>
 	sei(); //enable interrupts
-      d6:	08 95       	ret
+      dc:	78 94       	sei
+      de:	08 95       	ret
 
-000000d8 <update_direction>:
-      d8:	00 97       	sbiw	r24, 0x00	; 0
+000000e0 <update_direction>:
 }
 
 void update_direction(int dir_dir) //sett från robo start är 0 fram, 1 höger, 2 bakåt, 3 vänster. input: 0 efter höger_rot, 1 efter vänster_rot
 {
 	switch(dir_dir)
-      da:	21 f0       	breq	.+8      	; 0xe4 <update_direction+0xc>
-      dc:	81 30       	cpi	r24, 0x01	; 1
-      de:	91 05       	cpc	r25, r1
-      e0:	b9 f0       	breq	.+46     	; 0x110 <update_direction+0x38>
-      e2:	2c c0       	rjmp	.+88     	; 0x13c <update_direction+0x64>
+      e0:	00 97       	sbiw	r24, 0x00	; 0
+      e2:	21 f0       	breq	.+8      	; 0xec <update_direction+0xc>
+      e4:	81 30       	cpi	r24, 0x01	; 1
+      e6:	91 05       	cpc	r25, r1
+      e8:	b9 f0       	breq	.+46     	; 0x118 <update_direction+0x38>
+      ea:	2c c0       	rjmp	.+88     	; 0x144 <update_direction+0x64>
 	{
 		case 0:
 		direction = direction + 1;
-      e4:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
-      e8:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
-      ec:	2f 5f       	subi	r18, 0xFF	; 255
-      ee:	3f 4f       	sbci	r19, 0xFF	; 255
-      f0:	30 93 25 01 	sts	0x0125, r19	; 0x800125 <direction+0x1>
-      f4:	20 93 24 01 	sts	0x0124, r18	; 0x800124 <direction>
+      ec:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
+      f0:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
+      f4:	2f 5f       	subi	r18, 0xFF	; 255
+      f6:	3f 4f       	sbci	r19, 0xFF	; 255
+      f8:	30 93 25 01 	sts	0x0125, r19	; 0x800125 <direction+0x1>
+      fc:	20 93 24 01 	sts	0x0124, r18	; 0x800124 <direction>
 		if(direction == 4)
-      f8:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
-      fc:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
-     100:	24 30       	cpi	r18, 0x04	; 4
-     102:	31 05       	cpc	r19, r1
-     104:	d9 f4       	brne	.+54     	; 0x13c <update_direction+0x64>
+     100:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
+     104:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
+     108:	24 30       	cpi	r18, 0x04	; 4
+     10a:	31 05       	cpc	r19, r1
+     10c:	d9 f4       	brne	.+54     	; 0x144 <update_direction+0x64>
 		{
 			direction = 0;
-     106:	10 92 25 01 	sts	0x0125, r1	; 0x800125 <direction+0x1>
-     10a:	10 92 24 01 	sts	0x0124, r1	; 0x800124 <direction>
-     10e:	16 c0       	rjmp	.+44     	; 0x13c <update_direction+0x64>
+     10e:	10 92 25 01 	sts	0x0125, r1	; 0x800125 <direction+0x1>
+     112:	10 92 24 01 	sts	0x0124, r1	; 0x800124 <direction>
+     116:	16 c0       	rjmp	.+44     	; 0x144 <update_direction+0x64>
 		}
 		break;
 		case 1:
 		direction = direction - 1;
-     110:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
-     114:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
-     118:	21 50       	subi	r18, 0x01	; 1
-     11a:	31 09       	sbc	r19, r1
-     11c:	30 93 25 01 	sts	0x0125, r19	; 0x800125 <direction+0x1>
-     120:	20 93 24 01 	sts	0x0124, r18	; 0x800124 <direction>
+     118:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
+     11c:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
+     120:	21 50       	subi	r18, 0x01	; 1
+     122:	31 09       	sbc	r19, r1
+     124:	30 93 25 01 	sts	0x0125, r19	; 0x800125 <direction+0x1>
+     128:	20 93 24 01 	sts	0x0124, r18	; 0x800124 <direction>
 		if (direction < 0)
-     124:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
-     128:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
-     12c:	33 23       	and	r19, r19
-     12e:	34 f4       	brge	.+12     	; 0x13c <update_direction+0x64>
+     12c:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
+     130:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
+     134:	33 23       	and	r19, r19
+     136:	34 f4       	brge	.+12     	; 0x144 <update_direction+0x64>
 		{
 			direction = 3;
-     130:	23 e0       	ldi	r18, 0x03	; 3
-     132:	30 e0       	ldi	r19, 0x00	; 0
-     134:	30 93 25 01 	sts	0x0125, r19	; 0x800125 <direction+0x1>
-     138:	20 93 24 01 	sts	0x0124, r18	; 0x800124 <direction>
+     138:	23 e0       	ldi	r18, 0x03	; 3
+     13a:	30 e0       	ldi	r19, 0x00	; 0
+     13c:	30 93 25 01 	sts	0x0125, r19	; 0x800125 <direction+0x1>
+     140:	20 93 24 01 	sts	0x0124, r18	; 0x800124 <direction>
 		}
 		break;
 		
 	}
 	sensor_in[14] = direction;
-     13c:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
-     140:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
-     144:	ed e0       	ldi	r30, 0x0D	; 13
-     146:	f6 e0       	ldi	r31, 0x06	; 6
-     148:	26 87       	std	Z+14, r18	; 0x0e
+     144:	20 91 24 01 	lds	r18, 0x0124	; 0x800124 <direction>
+     148:	30 91 25 01 	lds	r19, 0x0125	; 0x800125 <direction+0x1>
+     14c:	ed e0       	ldi	r30, 0x0D	; 13
+     14e:	f6 e0       	ldi	r31, 0x06	; 6
+     150:	26 87       	std	Z+14, r18	; 0x0e
 	sensor_in[11] = dir_dir;
-     14a:	83 87       	std	Z+11, r24	; 0x0b
-     14c:	08 95       	ret
+     152:	83 87       	std	Z+11, r24	; 0x0b
+     154:	08 95       	ret
 
-0000014e <send_matrix>:
+00000156 <send_matrix>:
 }
 
 void send_matrix()
 {
-     14e:	bf 92       	push	r11
-     150:	cf 92       	push	r12
-     152:	df 92       	push	r13
-     154:	ef 92       	push	r14
-     156:	ff 92       	push	r15
-     158:	0f 93       	push	r16
-     15a:	1f 93       	push	r17
-     15c:	cf 93       	push	r28
-     15e:	df 93       	push	r29
-     160:	e1 2c       	mov	r14, r1
-     162:	f1 2c       	mov	r15, r1
+     156:	bf 92       	push	r11
+     158:	cf 92       	push	r12
+     15a:	df 92       	push	r13
+     15c:	ef 92       	push	r14
+     15e:	ff 92       	push	r15
+     160:	0f 93       	push	r16
+     162:	1f 93       	push	r17
+     164:	cf 93       	push	r28
+     166:	df 93       	push	r29
+     168:	e1 2c       	mov	r14, r1
+     16a:	f1 2c       	mov	r15, r1
 	for (unsigned char y = 0; y < 25; ++y)
 	{
 		for (unsigned char x = 0; x < 50; ++x)
 		{
 			if (matrix[y][x] == wall)
-     164:	0f 2e       	mov	r0, r31
-     166:	f2 e3       	ldi	r31, 0x32	; 50
-     168:	bf 2e       	mov	r11, r31
-     16a:	f0 2d       	mov	r31, r0
-     16c:	24 c0       	rjmp	.+72     	; 0x1b6 <send_matrix+0x68>
-     16e:	dc 2e       	mov	r13, r28
-     170:	f8 01       	movw	r30, r16
-     172:	ec 0f       	add	r30, r28
-     174:	fd 1f       	adc	r31, r29
-     176:	90 81       	ld	r25, Z
-     178:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     17c:	98 13       	cpse	r25, r24
-     17e:	10 c0       	rjmp	.+32     	; 0x1a0 <send_matrix+0x52>
+     16c:	0f 2e       	mov	r0, r31
+     16e:	f2 e3       	ldi	r31, 0x32	; 50
+     170:	bf 2e       	mov	r11, r31
+     172:	f0 2d       	mov	r31, r0
+     174:	24 c0       	rjmp	.+72     	; 0x1be <send_matrix+0x68>
+     176:	dc 2e       	mov	r13, r28
+     178:	f8 01       	movw	r30, r16
+     17a:	ec 0f       	add	r30, r28
+     17c:	fd 1f       	adc	r31, r29
+     17e:	90 81       	ld	r25, Z
+     180:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     184:	98 13       	cpse	r25, r24
+     186:	10 c0       	rjmp	.+32     	; 0x1a8 <send_matrix+0x52>
 			{
 				laptop_in = 0;
-     180:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
+     188:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
 				UART1_Transmit(y);
-     184:	8c 2d       	mov	r24, r12
-     186:	86 d7       	rcall	.+3852   	; 0x1094 <UART1_Transmit>
+     18c:	8c 2d       	mov	r24, r12
+     18e:	df d7       	rcall	.+4030   	; 0x114e <UART1_Transmit>
 				while(laptop_in != 33);
-     188:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
-     18c:	81 32       	cpi	r24, 0x21	; 33
-     18e:	e1 f7       	brne	.-8      	; 0x188 <send_matrix+0x3a>
+     190:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
+     194:	81 32       	cpi	r24, 0x21	; 33
+     196:	e1 f7       	brne	.-8      	; 0x190 <send_matrix+0x3a>
 				
 				laptop_in = 0;
-     190:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
+     198:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
 				UART1_Transmit(x);
-     194:	8d 2d       	mov	r24, r13
-     196:	7e d7       	rcall	.+3836   	; 0x1094 <UART1_Transmit>
+     19c:	8d 2d       	mov	r24, r13
+     19e:	d7 d7       	rcall	.+4014   	; 0x114e <UART1_Transmit>
 				while(laptop_in != 33);
-     198:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
-     19c:	81 32       	cpi	r24, 0x21	; 33
-     19e:	e1 f7       	brne	.-8      	; 0x198 <send_matrix+0x4a>
-     1a0:	21 96       	adiw	r28, 0x01	; 1
+     1a0:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
+     1a4:	81 32       	cpi	r24, 0x21	; 33
+     1a6:	e1 f7       	brne	.-8      	; 0x1a0 <send_matrix+0x4a>
+     1a8:	21 96       	adiw	r28, 0x01	; 1
 
 void send_matrix()
 {
 	for (unsigned char y = 0; y < 25; ++y)
 	{
 		for (unsigned char x = 0; x < 50; ++x)
-     1a2:	c2 33       	cpi	r28, 0x32	; 50
-     1a4:	d1 05       	cpc	r29, r1
-     1a6:	19 f7       	brne	.-58     	; 0x16e <send_matrix+0x20>
-     1a8:	8f ef       	ldi	r24, 0xFF	; 255
-     1aa:	e8 1a       	sub	r14, r24
-     1ac:	f8 0a       	sbc	r15, r24
+     1aa:	c2 33       	cpi	r28, 0x32	; 50
+     1ac:	d1 05       	cpc	r29, r1
+     1ae:	19 f7       	brne	.-58     	; 0x176 <send_matrix+0x20>
+     1b0:	8f ef       	ldi	r24, 0xFF	; 255
+     1b2:	e8 1a       	sub	r14, r24
+     1b4:	f8 0a       	sbc	r15, r24
 	sensor_in[11] = dir_dir;
 }
 
 void send_matrix()
 {
 	for (unsigned char y = 0; y < 25; ++y)
-     1ae:	89 e1       	ldi	r24, 0x19	; 25
-     1b0:	e8 16       	cp	r14, r24
-     1b2:	f1 04       	cpc	r15, r1
-     1b4:	59 f0       	breq	.+22     	; 0x1cc <send_matrix+0x7e>
-     1b6:	ce 2c       	mov	r12, r14
+     1b6:	89 e1       	ldi	r24, 0x19	; 25
+     1b8:	e8 16       	cp	r14, r24
+     1ba:	f1 04       	cpc	r15, r1
+     1bc:	59 f0       	breq	.+22     	; 0x1d4 <send_matrix+0x7e>
+     1be:	ce 2c       	mov	r12, r14
 	sensor_in[14] = direction;
 	sensor_in[11] = dir_dir;
 }
 
 void send_matrix()
 {
-     1b8:	c0 e0       	ldi	r28, 0x00	; 0
-     1ba:	d0 e0       	ldi	r29, 0x00	; 0
+     1c0:	c0 e0       	ldi	r28, 0x00	; 0
+     1c2:	d0 e0       	ldi	r29, 0x00	; 0
 	for (unsigned char y = 0; y < 25; ++y)
 	{
 		for (unsigned char x = 0; x < 50; ++x)
 		{
 			if (matrix[y][x] == wall)
-     1bc:	be 9c       	mul	r11, r14
-     1be:	80 01       	movw	r16, r0
-     1c0:	bf 9c       	mul	r11, r15
-     1c2:	10 0d       	add	r17, r0
-     1c4:	11 24       	eor	r1, r1
-     1c6:	09 5d       	subi	r16, 0xD9	; 217
-     1c8:	1e 4f       	sbci	r17, 0xFE	; 254
+     1c4:	be 9c       	mul	r11, r14
+     1c6:	80 01       	movw	r16, r0
+     1c8:	bf 9c       	mul	r11, r15
+     1ca:	10 0d       	add	r17, r0
+     1cc:	11 24       	eor	r1, r1
+     1ce:	09 5d       	subi	r16, 0xD9	; 217
+     1d0:	1e 4f       	sbci	r17, 0xFE	; 254
 				UART1_Transmit(x);
 				while(laptop_in != 33);
 			}
 		}
 	}
 	UART1_Transmit(0b11111111);
-     1ca:	d1 cf       	rjmp	.-94     	; 0x16e <send_matrix+0x20>
-     1cc:	8f ef       	ldi	r24, 0xFF	; 255
-     1ce:	62 d7       	rcall	.+3780   	; 0x1094 <UART1_Transmit>
+     1d2:	d1 cf       	rjmp	.-94     	; 0x176 <send_matrix+0x20>
+     1d4:	8f ef       	ldi	r24, 0xFF	; 255
+     1d6:	bb d7       	rcall	.+3958   	; 0x114e <UART1_Transmit>
 }
-     1d0:	df 91       	pop	r29
-     1d2:	cf 91       	pop	r28
-     1d4:	1f 91       	pop	r17
-     1d6:	0f 91       	pop	r16
-     1d8:	ff 90       	pop	r15
-     1da:	ef 90       	pop	r14
-     1dc:	df 90       	pop	r13
-     1de:	cf 90       	pop	r12
-     1e0:	bf 90       	pop	r11
-     1e2:	08 95       	ret
+     1d8:	df 91       	pop	r29
+     1da:	cf 91       	pop	r28
+     1dc:	1f 91       	pop	r17
+     1de:	0f 91       	pop	r16
+     1e0:	ff 90       	pop	r15
+     1e2:	ef 90       	pop	r14
+     1e4:	df 90       	pop	r13
+     1e6:	cf 90       	pop	r12
+     1e8:	bf 90       	pop	r11
+     1ea:	08 95       	ret
 
-000001e4 <__vector_28>:
+000001ec <__vector_28>:
 	laptop_in = 0;
 	recieve_renewed = 0;
 }
 
 ISR(USART1_RX_vect) // tAR EMOT FR?N LAPTOP
 {
-     1e4:	1f 92       	push	r1
-     1e6:	0f 92       	push	r0
-     1e8:	0f b6       	in	r0, 0x3f	; 63
-     1ea:	0f 92       	push	r0
-     1ec:	11 24       	eor	r1, r1
-     1ee:	8f 93       	push	r24
+     1ec:	1f 92       	push	r1
+     1ee:	0f 92       	push	r0
+     1f0:	0f b6       	in	r0, 0x3f	; 63
+     1f2:	0f 92       	push	r0
+     1f4:	11 24       	eor	r1, r1
+     1f6:	8f 93       	push	r24
 	laptop_in = UDR1;
-     1f0:	80 91 ce 00 	lds	r24, 0x00CE	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
-     1f4:	80 93 07 01 	sts	0x0107, r24	; 0x800107 <laptop_in>
+     1f8:	80 91 ce 00 	lds	r24, 0x00CE	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
+     1fc:	80 93 07 01 	sts	0x0107, r24	; 0x800107 <laptop_in>
 	recieve_renewed = 1;
-     1f8:	81 e0       	ldi	r24, 0x01	; 1
-     1fa:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <recieve_renewed>
+     200:	81 e0       	ldi	r24, 0x01	; 1
+     202:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <recieve_renewed>
 }
-     1fe:	8f 91       	pop	r24
-     200:	0f 90       	pop	r0
-     202:	0f be       	out	0x3f, r0	; 63
-     204:	0f 90       	pop	r0
-     206:	1f 90       	pop	r1
-     208:	18 95       	reti
+     206:	8f 91       	pop	r24
+     208:	0f 90       	pop	r0
+     20a:	0f be       	out	0x3f, r0	; 63
+     20c:	0f 90       	pop	r0
+     20e:	1f 90       	pop	r1
+     210:	18 95       	reti
 
-0000020a <__vector_20>:
+00000212 <__vector_20>:
 
 ISR(USART0_RX_vect)	// tAR EMOT FR?N SENSOR
 {
-     20a:	1f 92       	push	r1
-     20c:	0f 92       	push	r0
-     20e:	0f b6       	in	r0, 0x3f	; 63
-     210:	0f 92       	push	r0
-     212:	11 24       	eor	r1, r1
-     214:	0b b6       	in	r0, 0x3b	; 59
-     216:	0f 92       	push	r0
-     218:	8f 93       	push	r24
-     21a:	9f 93       	push	r25
-     21c:	ef 93       	push	r30
-     21e:	ff 93       	push	r31
+     212:	1f 92       	push	r1
+     214:	0f 92       	push	r0
+     216:	0f b6       	in	r0, 0x3f	; 63
+     218:	0f 92       	push	r0
+     21a:	11 24       	eor	r1, r1
+     21c:	0b b6       	in	r0, 0x3b	; 59
+     21e:	0f 92       	push	r0
+     220:	8f 93       	push	r24
+     222:	9f 93       	push	r25
+     224:	ef 93       	push	r30
+     226:	ff 93       	push	r31
 	New_sens = 0;
-     220:	10 92 12 01 	sts	0x0112, r1	; 0x800112 <New_sens>
+     228:	10 92 12 01 	sts	0x0112, r1	; 0x800112 <New_sens>
 	sensor_in[counter2] = UDR0;				// tar emot alla sensorv?rden efter vi har k?rt 40cm och l?gger in i sensorvectorn
-     224:	e0 91 1f 01 	lds	r30, 0x011F	; 0x80011f <counter2>
-     228:	f0 91 20 01 	lds	r31, 0x0120	; 0x800120 <counter2+0x1>
-     22c:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
-     230:	e3 5f       	subi	r30, 0xF3	; 243
-     232:	f9 4f       	sbci	r31, 0xF9	; 249
-     234:	80 83       	st	Z, r24
+     22c:	e0 91 1f 01 	lds	r30, 0x011F	; 0x80011f <counter2>
+     230:	f0 91 20 01 	lds	r31, 0x0120	; 0x800120 <counter2+0x1>
+     234:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+     238:	e3 5f       	subi	r30, 0xF3	; 243
+     23a:	f9 4f       	sbci	r31, 0xF9	; 249
+     23c:	80 83       	st	Z, r24
 	counter2 = counter2 + 1;
-     236:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <counter2>
-     23a:	90 91 20 01 	lds	r25, 0x0120	; 0x800120 <counter2+0x1>
-     23e:	01 96       	adiw	r24, 0x01	; 1
-     240:	90 93 20 01 	sts	0x0120, r25	; 0x800120 <counter2+0x1>
-     244:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <counter2>
+     23e:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <counter2>
+     242:	90 91 20 01 	lds	r25, 0x0120	; 0x800120 <counter2+0x1>
+     246:	01 96       	adiw	r24, 0x01	; 1
+     248:	90 93 20 01 	sts	0x0120, r25	; 0x800120 <counter2+0x1>
+     24c:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <counter2>
 	if (counter2 == 10)
-     248:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <counter2>
-     24c:	90 91 20 01 	lds	r25, 0x0120	; 0x800120 <counter2+0x1>
-     250:	0a 97       	sbiw	r24, 0x0a	; 10
-     252:	39 f4       	brne	.+14     	; 0x262 <__vector_20+0x58>
+     250:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <counter2>
+     254:	90 91 20 01 	lds	r25, 0x0120	; 0x800120 <counter2+0x1>
+     258:	0a 97       	sbiw	r24, 0x0a	; 10
+     25a:	39 f4       	brne	.+14     	; 0x26a <__vector_20+0x58>
 	{
 		counter2 = 0;
-     254:	10 92 20 01 	sts	0x0120, r1	; 0x800120 <counter2+0x1>
-     258:	10 92 1f 01 	sts	0x011F, r1	; 0x80011f <counter2>
+     25c:	10 92 20 01 	sts	0x0120, r1	; 0x800120 <counter2+0x1>
+     260:	10 92 1f 01 	sts	0x011F, r1	; 0x80011f <counter2>
 		New_sens = 1;
-     25c:	81 e0       	ldi	r24, 0x01	; 1
-     25e:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <New_sens>
+     264:	81 e0       	ldi	r24, 0x01	; 1
+     266:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <New_sens>
 	}
 	
 }
-     262:	ff 91       	pop	r31
-     264:	ef 91       	pop	r30
-     266:	9f 91       	pop	r25
-     268:	8f 91       	pop	r24
-     26a:	0f 90       	pop	r0
-     26c:	0b be       	out	0x3b, r0	; 59
-     26e:	0f 90       	pop	r0
-     270:	0f be       	out	0x3f, r0	; 63
+     26a:	ff 91       	pop	r31
+     26c:	ef 91       	pop	r30
+     26e:	9f 91       	pop	r25
+     270:	8f 91       	pop	r24
      272:	0f 90       	pop	r0
-     274:	1f 90       	pop	r1
-     276:	18 95       	reti
+     274:	0b be       	out	0x3b, r0	; 59
+     276:	0f 90       	pop	r0
+     278:	0f be       	out	0x3f, r0	; 63
+     27a:	0f 90       	pop	r0
+     27c:	1f 90       	pop	r1
+     27e:	18 95       	reti
 
-00000278 <get_low_high>:
+00000280 <get_low_high>:
 
 void get_low_high()
 {
 	low = sens_safe[6];
-     278:	ee e1       	ldi	r30, 0x1E	; 30
-     27a:	f6 e0       	ldi	r31, 0x06	; 6
-     27c:	86 81       	ldd	r24, Z+6	; 0x06
-     27e:	90 e0       	ldi	r25, 0x00	; 0
-     280:	90 93 19 01 	sts	0x0119, r25	; 0x800119 <low+0x1>
-     284:	80 93 18 01 	sts	0x0118, r24	; 0x800118 <low>
+     280:	ee e1       	ldi	r30, 0x1E	; 30
+     282:	f6 e0       	ldi	r31, 0x06	; 6
+     284:	86 81       	ldd	r24, Z+6	; 0x06
+     286:	90 e0       	ldi	r25, 0x00	; 0
+     288:	90 93 19 01 	sts	0x0119, r25	; 0x800119 <low+0x1>
+     28c:	80 93 18 01 	sts	0x0118, r24	; 0x800118 <low>
 	high = sens_safe[7];
-     288:	87 81       	ldd	r24, Z+7	; 0x07
-     28a:	90 e0       	ldi	r25, 0x00	; 0
-     28c:	90 93 17 01 	sts	0x0117, r25	; 0x800117 <high+0x1>
-     290:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <high>
-     294:	08 95       	ret
+     290:	87 81       	ldd	r24, Z+7	; 0x07
+     292:	90 e0       	ldi	r25, 0x00	; 0
+     294:	90 93 17 01 	sts	0x0117, r25	; 0x800117 <high+0x1>
+     298:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <high>
+     29c:	08 95       	ret
 
-00000296 <get_ny_fram>:
+0000029e <get_ny_fram>:
 }
 
 void get_ny_fram()
 {
 	get_low_high();
-     296:	f0 df       	rcall	.-32     	; 0x278 <get_low_high>
+     29e:	f0 df       	rcall	.-32     	; 0x280 <get_low_high>
 	ny_fram = (low + (high*256)); // tar nytt fram värde som vi jämför med gamla
-     298:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <high>
-     29c:	90 91 17 01 	lds	r25, 0x0117	; 0x800117 <high+0x1>
-     2a0:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <low>
-     2a4:	30 91 19 01 	lds	r19, 0x0119	; 0x800119 <low+0x1>
-     2a8:	98 2f       	mov	r25, r24
-     2aa:	88 27       	eor	r24, r24
-     2ac:	82 0f       	add	r24, r18
-     2ae:	93 1f       	adc	r25, r19
-     2b0:	90 93 1b 01 	sts	0x011B, r25	; 0x80011b <ny_fram+0x1>
-     2b4:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <ny_fram>
-     2b8:	08 95       	ret
+     2a0:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <high>
+     2a4:	90 91 17 01 	lds	r25, 0x0117	; 0x800117 <high+0x1>
+     2a8:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <low>
+     2ac:	30 91 19 01 	lds	r19, 0x0119	; 0x800119 <low+0x1>
+     2b0:	98 2f       	mov	r25, r24
+     2b2:	88 27       	eor	r24, r24
+     2b4:	82 0f       	add	r24, r18
+     2b6:	93 1f       	adc	r25, r19
+     2b8:	90 93 1b 01 	sts	0x011B, r25	; 0x80011b <ny_fram+0x1>
+     2bc:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <ny_fram>
+     2c0:	08 95       	ret
 
-000002ba <go_forward>:
+000002c2 <go_forward>:
 	start_dist = ny_fram;
 }
 
 void go_forward() // tar nytt fram värde samt skickar kör fram signal och resetar roteratsignalen
 {	
 	if (first == 1)
-     2ba:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first>
-     2be:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first+0x1>
-     2c2:	01 97       	sbiw	r24, 0x01	; 1
-     2c4:	31 f4       	brne	.+12     	; 0x2d2 <go_forward+0x18>
+     2c2:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first>
+     2c6:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first+0x1>
+     2ca:	01 97       	sbiw	r24, 0x01	; 1
+     2cc:	31 f4       	brne	.+12     	; 0x2da <go_forward+0x18>
 	{
 		UART0_Transmit(forward);
-     2c6:	81 e0       	ldi	r24, 0x01	; 1
-     2c8:	ed d6       	rcall	.+3546   	; 0x10a4 <UART0_Transmit>
+     2ce:	81 e0       	ldi	r24, 0x01	; 1
+     2d0:	46 d7       	rcall	.+3724   	; 0x115e <UART0_Transmit>
 		first = 0;
-     2ca:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <first+0x1>
-     2ce:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <first>
+     2d2:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <first+0x1>
+     2d6:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <first>
 	}
 
 	if ((sens_safe[0] < 20) && (sens_safe[1] < 20 ))
-     2d2:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     2d6:	84 31       	cpi	r24, 0x14	; 20
-     2d8:	60 f4       	brcc	.+24     	; 0x2f2 <go_forward+0x38>
-     2da:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     2da:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
      2de:	84 31       	cpi	r24, 0x14	; 20
-     2e0:	40 f4       	brcc	.+16     	; 0x2f2 <go_forward+0x38>
+     2e0:	60 f4       	brcc	.+24     	; 0x2fa <go_forward+0x38>
+     2e2:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     2e6:	84 31       	cpi	r24, 0x14	; 20
+     2e8:	40 f4       	brcc	.+16     	; 0x2fa <go_forward+0x38>
 	{
 		harRot = 0;
-     2e2:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <harRot>
+     2ea:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <harRot>
 		first = 1;
-     2e6:	81 e0       	ldi	r24, 0x01	; 1
-     2e8:	90 e0       	ldi	r25, 0x00	; 0
-     2ea:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <first+0x1>
-     2ee:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <first>
-     2f2:	08 95       	ret
+     2ee:	81 e0       	ldi	r24, 0x01	; 1
+     2f0:	90 e0       	ldi	r25, 0x00	; 0
+     2f2:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <first+0x1>
+     2f6:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <first>
+     2fa:	08 95       	ret
 
-000002f4 <baby_proof_and_update>:
+000002fc <baby_proof_and_update>:
 	
 }
 
 void baby_proof_and_update() //safear sensorvärden, inte programkoder
 {
 	while(New_sens != 1); //Vänta på hel bytearray
-     2f4:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <New_sens>
-     2f8:	81 30       	cpi	r24, 0x01	; 1
-     2fa:	e1 f7       	brne	.-8      	; 0x2f4 <baby_proof_and_update>
+     2fc:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <New_sens>
+     300:	81 30       	cpi	r24, 0x01	; 1
+     302:	e1 f7       	brne	.-8      	; 0x2fc <baby_proof_and_update>
 	cli();
-     2fc:	f8 94       	cli
+     304:	f8 94       	cli
 		for(int i=0; i<8;i++)
-     2fe:	80 e0       	ldi	r24, 0x00	; 0
-     300:	90 e0       	ldi	r25, 0x00	; 0
+     306:	80 e0       	ldi	r24, 0x00	; 0
+     308:	90 e0       	ldi	r25, 0x00	; 0
 		{
 			sens_safe[i] = sensor_in[i];
-     302:	fc 01       	movw	r30, r24
-     304:	e3 5f       	subi	r30, 0xF3	; 243
-     306:	f9 4f       	sbci	r31, 0xF9	; 249
-     308:	20 81       	ld	r18, Z
      30a:	fc 01       	movw	r30, r24
-     30c:	e2 5e       	subi	r30, 0xE2	; 226
+     30c:	e3 5f       	subi	r30, 0xF3	; 243
      30e:	f9 4f       	sbci	r31, 0xF9	; 249
-     310:	20 83       	st	Z, r18
+     310:	20 81       	ld	r18, Z
+     312:	fc 01       	movw	r30, r24
+     314:	e2 5e       	subi	r30, 0xE2	; 226
+     316:	f9 4f       	sbci	r31, 0xF9	; 249
+     318:	20 83       	st	Z, r18
 
 void baby_proof_and_update() //safear sensorvärden, inte programkoder
 {
 	while(New_sens != 1); //Vänta på hel bytearray
 	cli();
 		for(int i=0; i<8;i++)
-     312:	01 96       	adiw	r24, 0x01	; 1
-     314:	88 30       	cpi	r24, 0x08	; 8
-     316:	91 05       	cpc	r25, r1
-     318:	a1 f7       	brne	.-24     	; 0x302 <baby_proof_and_update+0xe>
+     31a:	01 96       	adiw	r24, 0x01	; 1
+     31c:	88 30       	cpi	r24, 0x08	; 8
+     31e:	91 05       	cpc	r25, r1
+     320:	a1 f7       	brne	.-24     	; 0x30a <baby_proof_and_update+0xe>
 		{
 			sens_safe[i] = sensor_in[i];
 		}
 	sei();
-     31a:	78 94       	sei
+     322:	78 94       	sei
 	get_ny_fram();
-     31c:	bc cf       	rjmp	.-136    	; 0x296 <get_ny_fram>
-     31e:	08 95       	ret
+     324:	bc cf       	rjmp	.-136    	; 0x29e <get_ny_fram>
+     326:	08 95       	ret
 
-00000320 <send_to_laptop>:
+00000328 <send_to_laptop>:
 	}
 	UART1_Transmit(0b11111111);
 }
 
 void send_to_laptop() //inte kalla för tätt
 {
-     320:	cf 93       	push	r28
-     322:	df 93       	push	r29
+     328:	cf 93       	push	r28
+     32a:	df 93       	push	r29
 	baby_proof_and_update();
-     324:	e7 df       	rcall	.-50     	; 0x2f4 <baby_proof_and_update>
+     32c:	e7 df       	rcall	.-50     	; 0x2fc <baby_proof_and_update>
 	sensor_in[10] = KokFarFarAway;
-     326:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
-     32a:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x1>
-     32e:	80 93 17 06 	sts	0x0617, r24	; 0x800617 <sensor_in+0xa>
+     32e:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
+     332:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x1>
+     336:	80 93 17 06 	sts	0x0617, r24	; 0x800617 <sensor_in+0xa>
 	for(int i = 0; i < 8 ; ++i)
-     332:	c0 e0       	ldi	r28, 0x00	; 0
-     334:	d0 e0       	ldi	r29, 0x00	; 0
+     33a:	c0 e0       	ldi	r28, 0x00	; 0
+     33c:	d0 e0       	ldi	r29, 0x00	; 0
 	{
 		laptop_in = 0;
-     336:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
+     33e:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
 		UART1_Transmit(sens_safe[i]);
-     33a:	fe 01       	movw	r30, r28
-     33c:	e2 5e       	subi	r30, 0xE2	; 226
-     33e:	f9 4f       	sbci	r31, 0xF9	; 249
-     340:	80 81       	ld	r24, Z
-     342:	a8 d6       	rcall	.+3408   	; 0x1094 <UART1_Transmit>
+     342:	fe 01       	movw	r30, r28
+     344:	e2 5e       	subi	r30, 0xE2	; 226
+     346:	f9 4f       	sbci	r31, 0xF9	; 249
+     348:	80 81       	ld	r24, Z
+     34a:	01 d7       	rcall	.+3586   	; 0x114e <UART1_Transmit>
 		while(laptop_in != 33);
-     344:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
-     348:	81 32       	cpi	r24, 0x21	; 33
-     34a:	e1 f7       	brne	.-8      	; 0x344 <send_to_laptop+0x24>
+     34c:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
+     350:	81 32       	cpi	r24, 0x21	; 33
+     352:	e1 f7       	brne	.-8      	; 0x34c <send_to_laptop+0x24>
 
 void send_to_laptop() //inte kalla för tätt
 {
 	baby_proof_and_update();
 	sensor_in[10] = KokFarFarAway;
 	for(int i = 0; i < 8 ; ++i)
-     34c:	21 96       	adiw	r28, 0x01	; 1
-     34e:	c8 30       	cpi	r28, 0x08	; 8
-     350:	d1 05       	cpc	r29, r1
-     352:	89 f7       	brne	.-30     	; 0x336 <send_to_laptop+0x16>
-     354:	c8 e0       	ldi	r28, 0x08	; 8
-     356:	d0 e0       	ldi	r29, 0x00	; 0
+     354:	21 96       	adiw	r28, 0x01	; 1
+     356:	c8 30       	cpi	r28, 0x08	; 8
+     358:	d1 05       	cpc	r29, r1
+     35a:	89 f7       	brne	.-30     	; 0x33e <send_to_laptop+0x16>
+     35c:	c8 e0       	ldi	r28, 0x08	; 8
+     35e:	d0 e0       	ldi	r29, 0x00	; 0
 		UART1_Transmit(sens_safe[i]);
 		while(laptop_in != 33);
 	}
 	for(int i = 8; i < 15; ++i)
 	{
 		laptop_in = 0;
-     358:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
+     360:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
 		UART1_Transmit(sensor_in[i]);
-     35c:	fe 01       	movw	r30, r28
-     35e:	e3 5f       	subi	r30, 0xF3	; 243
-     360:	f9 4f       	sbci	r31, 0xF9	; 249
-     362:	80 81       	ld	r24, Z
-     364:	97 d6       	rcall	.+3374   	; 0x1094 <UART1_Transmit>
+     364:	fe 01       	movw	r30, r28
+     366:	e3 5f       	subi	r30, 0xF3	; 243
+     368:	f9 4f       	sbci	r31, 0xF9	; 249
+     36a:	80 81       	ld	r24, Z
+     36c:	f0 d6       	rcall	.+3552   	; 0x114e <UART1_Transmit>
 		while(laptop_in != 33);
-     366:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
-     36a:	81 32       	cpi	r24, 0x21	; 33
-     36c:	e1 f7       	brne	.-8      	; 0x366 <send_to_laptop+0x46>
+     36e:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
+     372:	81 32       	cpi	r24, 0x21	; 33
+     374:	e1 f7       	brne	.-8      	; 0x36e <send_to_laptop+0x46>
 	{
 		laptop_in = 0;
 		UART1_Transmit(sens_safe[i]);
 		while(laptop_in != 33);
 	}
 	for(int i = 8; i < 15; ++i)
-     36e:	21 96       	adiw	r28, 0x01	; 1
-     370:	cf 30       	cpi	r28, 0x0F	; 15
-     372:	d1 05       	cpc	r29, r1
-     374:	89 f7       	brne	.-30     	; 0x358 <send_to_laptop+0x38>
+     376:	21 96       	adiw	r28, 0x01	; 1
+     378:	cf 30       	cpi	r28, 0x0F	; 15
+     37a:	d1 05       	cpc	r29, r1
+     37c:	89 f7       	brne	.-30     	; 0x360 <send_to_laptop+0x38>
 	{
 		laptop_in = 0;
 		UART1_Transmit(sensor_in[i]);
 		while(laptop_in != 33);
 	}
 	laptop_in = 0;
-     376:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
+     37e:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <laptop_in>
 	recieve_renewed = 0;
-     37a:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <recieve_renewed>
+     382:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <recieve_renewed>
 }
-     37e:	df 91       	pop	r29
-     380:	cf 91       	pop	r28
-     382:	08 95       	ret
+     386:	df 91       	pop	r29
+     388:	cf 91       	pop	r28
+     38a:	08 95       	ret
 
-00000384 <handle_incoming_data>:
+0000038c <handle_incoming_data>:
 	kolla_efter_kok_left();
 	
 }
 void handle_incoming_data()
 {
 	switch(laptop_in)
-     384:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
-     388:	80 31       	cpi	r24, 0x10	; 16
-     38a:	a1 f0       	breq	.+40     	; 0x3b4 <handle_incoming_data+0x30>
-     38c:	80 33       	cpi	r24, 0x30	; 48
-     38e:	d1 f0       	breq	.+52     	; 0x3c4 <handle_incoming_data+0x40>
-     390:	81 30       	cpi	r24, 0x01	; 1
-     392:	f1 f4       	brne	.+60     	; 0x3d0 <handle_incoming_data+0x4c>
+     38c:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
+     390:	80 31       	cpi	r24, 0x10	; 16
+     392:	a1 f0       	breq	.+40     	; 0x3bc <handle_incoming_data+0x30>
+     394:	80 33       	cpi	r24, 0x30	; 48
+     396:	d1 f0       	breq	.+52     	; 0x3cc <handle_incoming_data+0x40>
+     398:	81 30       	cpi	r24, 0x01	; 1
+     39a:	f1 f4       	brne	.+60     	; 0x3d8 <handle_incoming_data+0x4c>
 	{
 		case forward:
 			AUTO = 1;
-     394:	80 93 15 01 	sts	0x0115, r24	; 0x800115 <AUTO>
+     39c:	80 93 15 01 	sts	0x0115, r24	; 0x800115 <AUTO>
 			MANUELL = 0;
-     398:	10 92 14 01 	sts	0x0114, r1	; 0x800114 <MANUELL>
+     3a0:	10 92 14 01 	sts	0x0114, r1	; 0x800114 <MANUELL>
 			baby_proof_and_update();
-     39c:	ab df       	rcall	.-170    	; 0x2f4 <baby_proof_and_update>
+     3a4:	ab df       	rcall	.-170    	; 0x2fc <baby_proof_and_update>
 			start_dist = ny_fram;
-     39e:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
-     3a2:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
-     3a6:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
-     3aa:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
+     3a6:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
+     3aa:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
+     3ae:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
+     3b2:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
 			UART0_Transmit(forward);
-     3ae:	81 e0       	ldi	r24, 0x01	; 1
-     3b0:	79 d6       	rcall	.+3314   	; 0x10a4 <UART0_Transmit>
+     3b6:	81 e0       	ldi	r24, 0x01	; 1
+     3b8:	d2 d6       	rcall	.+3492   	; 0x115e <UART0_Transmit>
 			
 		break;
-     3b2:	0e c0       	rjmp	.+28     	; 0x3d0 <handle_incoming_data+0x4c>
+     3ba:	0e c0       	rjmp	.+28     	; 0x3d8 <handle_incoming_data+0x4c>
 		
 		case man:
 			AUTO = 0;
-     3b4:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <AUTO>
+     3bc:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <AUTO>
 			MANUELL = 1;
-     3b8:	81 e0       	ldi	r24, 0x01	; 1
-     3ba:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <MANUELL>
+     3c0:	81 e0       	ldi	r24, 0x01	; 1
+     3c2:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <MANUELL>
 			UART0_Transmit(stop);
-     3be:	80 e0       	ldi	r24, 0x00	; 0
-     3c0:	71 d6       	rcall	.+3298   	; 0x10a4 <UART0_Transmit>
+     3c6:	80 e0       	ldi	r24, 0x00	; 0
+     3c8:	ca d6       	rcall	.+3476   	; 0x115e <UART0_Transmit>
 		break;
-     3c2:	06 c0       	rjmp	.+12     	; 0x3d0 <handle_incoming_data+0x4c>
+     3ca:	06 c0       	rjmp	.+12     	; 0x3d8 <handle_incoming_data+0x4c>
 		
 		case 0b00110000:
 			AUTO = 0;
-     3c4:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <AUTO>
+     3cc:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <AUTO>
 			MANUELL = 1;
-     3c8:	81 e0       	ldi	r24, 0x01	; 1
-     3ca:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <MANUELL>
+     3d0:	81 e0       	ldi	r24, 0x01	; 1
+     3d2:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <MANUELL>
 			send_matrix();
-     3ce:	bf de       	rcall	.-642    	; 0x14e <send_matrix>
+     3d6:	bf de       	rcall	.-642    	; 0x156 <send_matrix>
 		break;	
 		
 		default:
 		break;		
 	}
 	recieve_renewed = 0;
-     3d0:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <recieve_renewed>
-     3d4:	08 95       	ret
+     3d8:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <recieve_renewed>
+     3dc:	08 95       	ret
 
-000003d6 <state1>:
+000003de <state1>:
 	}
 }
 
 void state1()
 {
 		switch (direction)
-     3d6:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
-     3da:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
-     3de:	81 30       	cpi	r24, 0x01	; 1
-     3e0:	91 05       	cpc	r25, r1
-     3e2:	b9 f1       	breq	.+110    	; 0x452 <__LOCK_REGION_LENGTH__+0x52>
-     3e4:	1c f4       	brge	.+6      	; 0x3ec <state1+0x16>
-     3e6:	89 2b       	or	r24, r25
-     3e8:	49 f0       	breq	.+18     	; 0x3fc <state1+0x26>
-     3ea:	08 95       	ret
-     3ec:	82 30       	cpi	r24, 0x02	; 2
-     3ee:	91 05       	cpc	r25, r1
-     3f0:	09 f4       	brne	.+2      	; 0x3f4 <state1+0x1e>
-     3f2:	62 c0       	rjmp	.+196    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
-     3f4:	03 97       	sbiw	r24, 0x03	; 3
-     3f6:	09 f4       	brne	.+2      	; 0x3fa <state1+0x24>
-     3f8:	8a c0       	rjmp	.+276    	; 0x50e <__LOCK_REGION_LENGTH__+0x10e>
-     3fa:	08 95       	ret
+     3de:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
+     3e2:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
+     3e6:	81 30       	cpi	r24, 0x01	; 1
+     3e8:	91 05       	cpc	r25, r1
+     3ea:	b9 f1       	breq	.+110    	; 0x45a <__LOCK_REGION_LENGTH__+0x5a>
+     3ec:	1c f4       	brge	.+6      	; 0x3f4 <state1+0x16>
+     3ee:	89 2b       	or	r24, r25
+     3f0:	49 f0       	breq	.+18     	; 0x404 <__LOCK_REGION_LENGTH__+0x4>
+     3f2:	08 95       	ret
+     3f4:	82 30       	cpi	r24, 0x02	; 2
+     3f6:	91 05       	cpc	r25, r1
+     3f8:	09 f4       	brne	.+2      	; 0x3fc <state1+0x1e>
+     3fa:	62 c0       	rjmp	.+196    	; 0x4c0 <__LOCK_REGION_LENGTH__+0xc0>
+     3fc:	03 97       	sbiw	r24, 0x03	; 3
+     3fe:	09 f4       	brne	.+2      	; 0x402 <__LOCK_REGION_LENGTH__+0x2>
+     400:	8a c0       	rjmp	.+276    	; 0x516 <__LOCK_REGION_LENGTH__+0x116>
+     402:	08 95       	ret
 		{
 			case 0: //norr
 			bot_y = (bot_y + 1); // uppdaterar robotens position
-     3fc:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     400:	8f 5f       	subi	r24, 0xFF	; 255
-     402:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
+     404:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     408:	8f 5f       	subi	r24, 0xFF	; 255
+     40a:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
 			
 			if (matrix[bot_y][(bot_x + 1)] == unknown) // kollar åt höger
-     406:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     40a:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     40e:	f0 e0       	ldi	r31, 0x00	; 0
-     410:	22 e3       	ldi	r18, 0x32	; 50
-     412:	82 9f       	mul	r24, r18
-     414:	e0 0d       	add	r30, r0
-     416:	f1 1d       	adc	r31, r1
-     418:	11 24       	eor	r1, r1
-     41a:	e8 5d       	subi	r30, 0xD8	; 216
-     41c:	fe 4f       	sbci	r31, 0xFE	; 254
-     41e:	90 81       	ld	r25, Z
-     420:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     424:	98 13       	cpse	r25, r24
-     426:	a4 c0       	rjmp	.+328    	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     40e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     412:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     416:	f0 e0       	ldi	r31, 0x00	; 0
+     418:	22 e3       	ldi	r18, 0x32	; 50
+     41a:	82 9f       	mul	r24, r18
+     41c:	e0 0d       	add	r30, r0
+     41e:	f1 1d       	adc	r31, r1
+     420:	11 24       	eor	r1, r1
+     422:	e8 5d       	subi	r30, 0xD8	; 216
+     424:	fe 4f       	sbci	r31, 0xFE	; 254
+     426:	90 81       	ld	r25, Z
+     428:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     42c:	98 13       	cpse	r25, r24
+     42e:	a4 c0       	rjmp	.+328    	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 			{
 				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
-     428:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     42c:	88 32       	cpi	r24, 0x28	; 40
-     42e:	08 f0       	brcs	.+2      	; 0x432 <__LOCK_REGION_LENGTH__+0x32>
-     430:	9f c0       	rjmp	.+318    	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     430:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     434:	88 32       	cpi	r24, 0x28	; 40
+     436:	08 f0       	brcs	.+2      	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+     438:	9f c0       	rjmp	.+318    	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 				{
 					matrix[bot_y][(bot_x + 1)] = wall;
-     432:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
-     436:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     43a:	f0 e0       	ldi	r31, 0x00	; 0
-     43c:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     440:	22 e3       	ldi	r18, 0x32	; 50
-     442:	92 9f       	mul	r25, r18
-     444:	e0 0d       	add	r30, r0
-     446:	f1 1d       	adc	r31, r1
-     448:	11 24       	eor	r1, r1
-     44a:	e8 5d       	subi	r30, 0xD8	; 216
-     44c:	fe 4f       	sbci	r31, 0xFE	; 254
-     44e:	80 83       	st	Z, r24
-     450:	08 95       	ret
+     43a:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     43e:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     442:	f0 e0       	ldi	r31, 0x00	; 0
+     444:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     448:	22 e3       	ldi	r18, 0x32	; 50
+     44a:	92 9f       	mul	r25, r18
+     44c:	e0 0d       	add	r30, r0
+     44e:	f1 1d       	adc	r31, r1
+     450:	11 24       	eor	r1, r1
+     452:	e8 5d       	subi	r30, 0xD8	; 216
+     454:	fe 4f       	sbci	r31, 0xFE	; 254
+     456:	80 83       	st	Z, r24
+     458:	08 95       	ret
 				}
 			}		
 			break;
 			
 			case 1: //ÖST
 			bot_x = (bot_x + 1);
-     452:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
-     456:	8f 5f       	subi	r24, 0xFF	; 255
-     458:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
+     45a:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     45e:	8f 5f       	subi	r24, 0xFF	; 255
+     460:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
 			if (matrix[bot_y - 1][bot_x] == unknown) // kollar åt höger
-     45c:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     460:	90 e0       	ldi	r25, 0x00	; 0
-     462:	01 97       	sbiw	r24, 0x01	; 1
-     464:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     468:	32 e3       	ldi	r19, 0x32	; 50
-     46a:	38 9f       	mul	r19, r24
-     46c:	f0 01       	movw	r30, r0
-     46e:	39 9f       	mul	r19, r25
-     470:	f0 0d       	add	r31, r0
-     472:	11 24       	eor	r1, r1
-     474:	e9 5d       	subi	r30, 0xD9	; 217
-     476:	fe 4f       	sbci	r31, 0xFE	; 254
-     478:	e2 0f       	add	r30, r18
-     47a:	f1 1d       	adc	r31, r1
-     47c:	90 81       	ld	r25, Z
-     47e:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     482:	98 13       	cpse	r25, r24
-     484:	75 c0       	rjmp	.+234    	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     464:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     468:	90 e0       	ldi	r25, 0x00	; 0
+     46a:	01 97       	sbiw	r24, 0x01	; 1
+     46c:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     470:	32 e3       	ldi	r19, 0x32	; 50
+     472:	38 9f       	mul	r19, r24
+     474:	f0 01       	movw	r30, r0
+     476:	39 9f       	mul	r19, r25
+     478:	f0 0d       	add	r31, r0
+     47a:	11 24       	eor	r1, r1
+     47c:	e9 5d       	subi	r30, 0xD9	; 217
+     47e:	fe 4f       	sbci	r31, 0xFE	; 254
+     480:	e2 0f       	add	r30, r18
+     482:	f1 1d       	adc	r31, r1
+     484:	90 81       	ld	r25, Z
+     486:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     48a:	98 13       	cpse	r25, r24
+     48c:	75 c0       	rjmp	.+234    	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 			{
 				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
-     486:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     48a:	88 32       	cpi	r24, 0x28	; 40
-     48c:	08 f0       	brcs	.+2      	; 0x490 <__LOCK_REGION_LENGTH__+0x90>
-     48e:	70 c0       	rjmp	.+224    	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     48e:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     492:	88 32       	cpi	r24, 0x28	; 40
+     494:	08 f0       	brcs	.+2      	; 0x498 <__LOCK_REGION_LENGTH__+0x98>
+     496:	70 c0       	rjmp	.+224    	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 				{
 					matrix[bot_y - 1][bot_x] = wall;
-     490:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     494:	90 e0       	ldi	r25, 0x00	; 0
-     496:	01 97       	sbiw	r24, 0x01	; 1
-     498:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     49c:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     4a0:	42 e3       	ldi	r20, 0x32	; 50
-     4a2:	48 9f       	mul	r20, r24
-     4a4:	f0 01       	movw	r30, r0
-     4a6:	49 9f       	mul	r20, r25
-     4a8:	f0 0d       	add	r31, r0
-     4aa:	11 24       	eor	r1, r1
-     4ac:	e9 5d       	subi	r30, 0xD9	; 217
-     4ae:	fe 4f       	sbci	r31, 0xFE	; 254
-     4b0:	e3 0f       	add	r30, r19
-     4b2:	f1 1d       	adc	r31, r1
-     4b4:	20 83       	st	Z, r18
-     4b6:	08 95       	ret
+     498:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     49c:	90 e0       	ldi	r25, 0x00	; 0
+     49e:	01 97       	sbiw	r24, 0x01	; 1
+     4a0:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     4a4:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     4a8:	42 e3       	ldi	r20, 0x32	; 50
+     4aa:	48 9f       	mul	r20, r24
+     4ac:	f0 01       	movw	r30, r0
+     4ae:	49 9f       	mul	r20, r25
+     4b0:	f0 0d       	add	r31, r0
+     4b2:	11 24       	eor	r1, r1
+     4b4:	e9 5d       	subi	r30, 0xD9	; 217
+     4b6:	fe 4f       	sbci	r31, 0xFE	; 254
+     4b8:	e3 0f       	add	r30, r19
+     4ba:	f1 1d       	adc	r31, r1
+     4bc:	20 83       	st	Z, r18
+     4be:	08 95       	ret
 				}
 			}		
 			break;
 			
 			case 2:
 			bot_y = (bot_y - 1);
-     4b8:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     4bc:	81 50       	subi	r24, 0x01	; 1
-     4be:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
+     4c0:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     4c4:	81 50       	subi	r24, 0x01	; 1
+     4c6:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
 			if (matrix[bot_y][bot_x - 1] == unknown) // kollar åt höger
-     4c2:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     4c6:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     4ca:	f0 e0       	ldi	r31, 0x00	; 0
-     4cc:	92 e3       	ldi	r25, 0x32	; 50
-     4ce:	89 9f       	mul	r24, r25
-     4d0:	e0 0d       	add	r30, r0
-     4d2:	f1 1d       	adc	r31, r1
-     4d4:	11 24       	eor	r1, r1
-     4d6:	ea 5d       	subi	r30, 0xDA	; 218
-     4d8:	fe 4f       	sbci	r31, 0xFE	; 254
-     4da:	90 81       	ld	r25, Z
-     4dc:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     4e0:	98 13       	cpse	r25, r24
-     4e2:	46 c0       	rjmp	.+140    	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     4ca:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     4ce:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     4d2:	f0 e0       	ldi	r31, 0x00	; 0
+     4d4:	92 e3       	ldi	r25, 0x32	; 50
+     4d6:	89 9f       	mul	r24, r25
+     4d8:	e0 0d       	add	r30, r0
+     4da:	f1 1d       	adc	r31, r1
+     4dc:	11 24       	eor	r1, r1
+     4de:	ea 5d       	subi	r30, 0xDA	; 218
+     4e0:	fe 4f       	sbci	r31, 0xFE	; 254
+     4e2:	90 81       	ld	r25, Z
+     4e4:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     4e8:	98 13       	cpse	r25, r24
+     4ea:	46 c0       	rjmp	.+140    	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 			{
 				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
-     4e4:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     4e8:	88 32       	cpi	r24, 0x28	; 40
-     4ea:	08 f0       	brcs	.+2      	; 0x4ee <__LOCK_REGION_LENGTH__+0xee>
-     4ec:	41 c0       	rjmp	.+130    	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     4ec:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     4f0:	88 32       	cpi	r24, 0x28	; 40
+     4f2:	08 f0       	brcs	.+2      	; 0x4f6 <__LOCK_REGION_LENGTH__+0xf6>
+     4f4:	41 c0       	rjmp	.+130    	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 				{
 					matrix[bot_y][bot_x - 1] = wall;
-     4ee:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
-     4f2:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     4f6:	f0 e0       	ldi	r31, 0x00	; 0
-     4f8:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     4fc:	22 e3       	ldi	r18, 0x32	; 50
-     4fe:	92 9f       	mul	r25, r18
-     500:	e0 0d       	add	r30, r0
-     502:	f1 1d       	adc	r31, r1
-     504:	11 24       	eor	r1, r1
-     506:	ea 5d       	subi	r30, 0xDA	; 218
-     508:	fe 4f       	sbci	r31, 0xFE	; 254
-     50a:	80 83       	st	Z, r24
-     50c:	08 95       	ret
+     4f6:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     4fa:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     4fe:	f0 e0       	ldi	r31, 0x00	; 0
+     500:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     504:	22 e3       	ldi	r18, 0x32	; 50
+     506:	92 9f       	mul	r25, r18
+     508:	e0 0d       	add	r30, r0
+     50a:	f1 1d       	adc	r31, r1
+     50c:	11 24       	eor	r1, r1
+     50e:	ea 5d       	subi	r30, 0xDA	; 218
+     510:	fe 4f       	sbci	r31, 0xFE	; 254
+     512:	80 83       	st	Z, r24
+     514:	08 95       	ret
 				}
 			}			
 			break;
 			
 			case 3:
 			bot_x = (bot_x - 1);
-     50e:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
-     512:	81 50       	subi	r24, 0x01	; 1
-     514:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
+     516:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     51a:	81 50       	subi	r24, 0x01	; 1
+     51c:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
 			if (matrix[bot_y + 1][bot_x] == unknown) // kollar åt höger
-     518:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     51c:	90 e0       	ldi	r25, 0x00	; 0
-     51e:	01 96       	adiw	r24, 0x01	; 1
-     520:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     524:	32 e3       	ldi	r19, 0x32	; 50
-     526:	38 9f       	mul	r19, r24
-     528:	f0 01       	movw	r30, r0
-     52a:	39 9f       	mul	r19, r25
-     52c:	f0 0d       	add	r31, r0
-     52e:	11 24       	eor	r1, r1
-     530:	e9 5d       	subi	r30, 0xD9	; 217
-     532:	fe 4f       	sbci	r31, 0xFE	; 254
-     534:	e2 0f       	add	r30, r18
-     536:	f1 1d       	adc	r31, r1
-     538:	90 81       	ld	r25, Z
-     53a:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     53e:	98 13       	cpse	r25, r24
-     540:	17 c0       	rjmp	.+46     	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     520:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     524:	90 e0       	ldi	r25, 0x00	; 0
+     526:	01 96       	adiw	r24, 0x01	; 1
+     528:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     52c:	32 e3       	ldi	r19, 0x32	; 50
+     52e:	38 9f       	mul	r19, r24
+     530:	f0 01       	movw	r30, r0
+     532:	39 9f       	mul	r19, r25
+     534:	f0 0d       	add	r31, r0
+     536:	11 24       	eor	r1, r1
+     538:	e9 5d       	subi	r30, 0xD9	; 217
+     53a:	fe 4f       	sbci	r31, 0xFE	; 254
+     53c:	e2 0f       	add	r30, r18
+     53e:	f1 1d       	adc	r31, r1
+     540:	90 81       	ld	r25, Z
+     542:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     546:	98 13       	cpse	r25, r24
+     548:	17 c0       	rjmp	.+46     	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 			{
 				if (sens_safe[4] < 40) // uppdaterar matrisen om det är vägg på höger sida
-     542:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     546:	88 32       	cpi	r24, 0x28	; 40
-     548:	98 f4       	brcc	.+38     	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+     54a:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     54e:	88 32       	cpi	r24, 0x28	; 40
+     550:	98 f4       	brcc	.+38     	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
 				{
 					matrix[bot_y + 1][bot_x] = wall;
-     54a:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     54e:	90 e0       	ldi	r25, 0x00	; 0
-     550:	01 96       	adiw	r24, 0x01	; 1
-     552:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     556:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     55a:	42 e3       	ldi	r20, 0x32	; 50
-     55c:	48 9f       	mul	r20, r24
-     55e:	f0 01       	movw	r30, r0
-     560:	49 9f       	mul	r20, r25
-     562:	f0 0d       	add	r31, r0
-     564:	11 24       	eor	r1, r1
-     566:	e9 5d       	subi	r30, 0xD9	; 217
-     568:	fe 4f       	sbci	r31, 0xFE	; 254
-     56a:	e3 0f       	add	r30, r19
-     56c:	f1 1d       	adc	r31, r1
-     56e:	20 83       	st	Z, r18
-     570:	08 95       	ret
+     552:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     556:	90 e0       	ldi	r25, 0x00	; 0
+     558:	01 96       	adiw	r24, 0x01	; 1
+     55a:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     55e:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     562:	42 e3       	ldi	r20, 0x32	; 50
+     564:	48 9f       	mul	r20, r24
+     566:	f0 01       	movw	r30, r0
+     568:	49 9f       	mul	r20, r25
+     56a:	f0 0d       	add	r31, r0
+     56c:	11 24       	eor	r1, r1
+     56e:	e9 5d       	subi	r30, 0xD9	; 217
+     570:	fe 4f       	sbci	r31, 0xFE	; 254
+     572:	e3 0f       	add	r30, r19
+     574:	f1 1d       	adc	r31, r1
+     576:	20 83       	st	Z, r18
+     578:	08 95       	ret
 
-00000572 <update_position>:
+0000057a <update_position>:
 }
 
 void update_position() // gör switch case senare
 {
 	
 	stop_dist = 15;
-     572:	8f e0       	ldi	r24, 0x0F	; 15
-     574:	90 e0       	ldi	r25, 0x00	; 0
-     576:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
-     57a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+     57a:	8f e0       	ldi	r24, 0x0F	; 15
+     57c:	90 e0       	ldi	r25, 0x00	; 0
+     57e:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+     582:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
 	get_ny_fram();
-     57e:	8b de       	rcall	.-746    	; 0x296 <get_ny_fram>
+     586:	8b de       	rcall	.-746    	; 0x29e <get_ny_fram>
 	state1();
-     580:	2a df       	rcall	.-428    	; 0x3d6 <state1>
-     582:	e0 91 26 01 	lds	r30, 0x0126	; 0x800126 <bot_y>
+     588:	2a df       	rcall	.-428    	; 0x3de <state1>
+     58a:	e0 91 26 01 	lds	r30, 0x0126	; 0x800126 <bot_y>
 	matrix[bot_y][bot_x] = drive;
-     586:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <bot_x>
-     58a:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     58e:	22 e3       	ldi	r18, 0x32	; 50
-     590:	e2 9f       	mul	r30, r18
-     592:	f0 01       	movw	r30, r0
-     594:	11 24       	eor	r1, r1
-     596:	e9 5d       	subi	r30, 0xD9	; 217
-     598:	fe 4f       	sbci	r31, 0xFE	; 254
-     59a:	e9 0f       	add	r30, r25
-     59c:	f1 1d       	adc	r31, r1
-     59e:	80 83       	st	Z, r24
-     5a0:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     58e:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <bot_x>
+     592:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     596:	22 e3       	ldi	r18, 0x32	; 50
+     598:	e2 9f       	mul	r30, r18
+     59a:	f0 01       	movw	r30, r0
+     59c:	11 24       	eor	r1, r1
+     59e:	e9 5d       	subi	r30, 0xD9	; 217
+     5a0:	fe 4f       	sbci	r31, 0xFE	; 254
+     5a2:	e9 0f       	add	r30, r25
+     5a4:	f1 1d       	adc	r31, r1
+     5a6:	80 83       	st	Z, r24
+     5a8:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
 	sensor_in[12] = (unsigned char)bot_y;
-     5a4:	ed e0       	ldi	r30, 0x0D	; 13
-     5a6:	f6 e0       	ldi	r31, 0x06	; 6
-     5a8:	84 87       	std	Z+12, r24	; 0x0c
-     5aa:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     5ac:	ed e0       	ldi	r30, 0x0D	; 13
+     5ae:	f6 e0       	ldi	r31, 0x06	; 6
+     5b0:	84 87       	std	Z+12, r24	; 0x0c
+     5b2:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
 	sensor_in[13] = (unsigned char)bot_x;
-     5ae:	85 87       	std	Z+13, r24	; 0x0d
-     5b0:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
+     5b6:	85 87       	std	Z+13, r24	; 0x0d
+     5b8:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
 	
 if (state == 0)
-     5b4:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
-     5b8:	89 2b       	or	r24, r25
-     5ba:	31 f4       	brne	.+12     	; 0x5c8 <update_position+0x56>
-     5bc:	81 e0       	ldi	r24, 0x01	; 1
+     5bc:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
+     5c0:	89 2b       	or	r24, r25
+     5c2:	31 f4       	brne	.+12     	; 0x5d0 <update_position+0x56>
+     5c4:	81 e0       	ldi	r24, 0x01	; 1
 {
 	state = 1;
-     5be:	90 e0       	ldi	r25, 0x00	; 0
-     5c0:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
-     5c4:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
-     5c8:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
+     5c6:	90 e0       	ldi	r25, 0x00	; 0
+     5c8:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
+     5cc:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
+     5d0:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
 }
 	if ((state == 1) && (KorKok == 1) && (bot_x == kokStart_x) && (kokStart_y == bot_y)){
-     5cc:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
-     5d0:	01 97       	sbiw	r24, 0x01	; 1
-     5d2:	d1 f4       	brne	.+52     	; 0x608 <update_position+0x96>
-     5d4:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <KorKok>
-     5d8:	90 91 0d 01 	lds	r25, 0x010D	; 0x80010d <KorKok+0x1>
-     5dc:	01 97       	sbiw	r24, 0x01	; 1
-     5de:	a1 f4       	brne	.+40     	; 0x608 <update_position+0x96>
-     5e0:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <bot_x>
-     5e4:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <kokStart_x>
-     5e8:	98 13       	cpse	r25, r24
-     5ea:	0e c0       	rjmp	.+28     	; 0x608 <update_position+0x96>
-     5ec:	90 91 1c 01 	lds	r25, 0x011C	; 0x80011c <kokStart_y>
-     5f0:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     5f4:	98 13       	cpse	r25, r24
-     5f6:	08 c0       	rjmp	.+16     	; 0x608 <update_position+0x96>
-     5f8:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <KorKok+0x1>
+     5d4:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
+     5d8:	01 97       	sbiw	r24, 0x01	; 1
+     5da:	d1 f4       	brne	.+52     	; 0x610 <update_position+0x96>
+     5dc:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <KorKok>
+     5e0:	90 91 0d 01 	lds	r25, 0x010D	; 0x80010d <KorKok+0x1>
+     5e4:	01 97       	sbiw	r24, 0x01	; 1
+     5e6:	a1 f4       	brne	.+40     	; 0x610 <update_position+0x96>
+     5e8:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <bot_x>
+     5ec:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <kokStart_x>
+     5f0:	98 13       	cpse	r25, r24
+     5f2:	0e c0       	rjmp	.+28     	; 0x610 <update_position+0x96>
+     5f4:	90 91 1c 01 	lds	r25, 0x011C	; 0x80011c <kokStart_y>
+     5f8:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     5fc:	98 13       	cpse	r25, r24
+     5fe:	08 c0       	rjmp	.+16     	; 0x610 <update_position+0x96>
+     600:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <KorKok+0x1>
 		KorKok = 0;
-     5fc:	10 92 0c 01 	sts	0x010C, r1	; 0x80010c <KorKok>
+     604:	10 92 0c 01 	sts	0x010C, r1	; 0x80010c <KorKok>
 		go_home();
-     600:	a9 d1       	rcall	.+850    	; 0x954 <go_home>
+     608:	a9 d1       	rcall	.+850    	; 0x95c <go_home>
 		UART0_Transmit(stop);
-     602:	80 e0       	ldi	r24, 0x00	; 0
-     604:	4f c5       	rjmp	.+2718   	; 0x10a4 <UART0_Transmit>
-     606:	08 95       	ret
-     608:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
+     60a:	80 e0       	ldi	r24, 0x00	; 0
+     60c:	a8 c5       	rjmp	.+2896   	; 0x115e <UART0_Transmit>
+     60e:	08 95       	ret
+     610:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
 // 		MANUELL = 1;
 // 		AUTO = 0;
 	}
 	else if ((state == 1) && (bot_y == 0) && (bot_x == 25))
-     60c:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
-     610:	01 97       	sbiw	r24, 0x01	; 1
-     612:	09 f5       	brne	.+66     	; 0x656 <update_position+0xe4>
-     614:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     618:	81 11       	cpse	r24, r1
-     61a:	1d c0       	rjmp	.+58     	; 0x656 <update_position+0xe4>
-     61c:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
-     620:	89 31       	cpi	r24, 0x19	; 25
-     622:	c9 f4       	brne	.+50     	; 0x656 <update_position+0xe4>
-     624:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <KokKlart>
+     614:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
+     618:	01 97       	sbiw	r24, 0x01	; 1
+     61a:	09 f5       	brne	.+66     	; 0x65e <update_position+0xe4>
+     61c:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     620:	81 11       	cpse	r24, r1
+     622:	1d c0       	rjmp	.+58     	; 0x65e <update_position+0xe4>
+     624:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     628:	89 31       	cpi	r24, 0x19	; 25
+     62a:	c9 f4       	brne	.+50     	; 0x65e <update_position+0xe4>
+     62c:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <KokKlart>
 	{
 		if (KokKlart == 1)
-     628:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <KokKlart+0x1>
-     62c:	01 97       	sbiw	r24, 0x01	; 1
-     62e:	69 f4       	brne	.+26     	; 0x64a <update_position+0xd8>
-     630:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     630:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <KokKlart+0x1>
+     634:	01 97       	sbiw	r24, 0x01	; 1
+     636:	69 f4       	brne	.+26     	; 0x652 <update_position+0xd8>
+     638:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
 		{
 			driven = 0;
-     634:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     63c:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 			rot_left();
-     638:	44 d0       	rcall	.+136    	; 0x6c2 <rot_left>
-     63a:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <AUTO>
+     640:	44 d0       	rcall	.+136    	; 0x6ca <rot_left>
+     642:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <AUTO>
  			AUTO = 0;
  			MANUELL = 1;
-     63e:	81 e0       	ldi	r24, 0x01	; 1
-     640:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <MANUELL>
+     646:	81 e0       	ldi	r24, 0x01	; 1
+     648:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <MANUELL>
 			UART0_Transmit(stop);
-     644:	80 e0       	ldi	r24, 0x00	; 0
-     646:	2e c5       	rjmp	.+2652   	; 0x10a4 <UART0_Transmit>
-     648:	08 95       	ret
-     64a:	82 e0       	ldi	r24, 0x02	; 2
+     64c:	80 e0       	ldi	r24, 0x00	; 0
+     64e:	87 c5       	rjmp	.+2830   	; 0x115e <UART0_Transmit>
+     650:	08 95       	ret
+     652:	82 e0       	ldi	r24, 0x02	; 2
 		}
 		else
 			state = 2;
-     64c:	90 e0       	ldi	r25, 0x00	; 0
-     64e:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
-     652:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
-     656:	08 95       	ret
+     654:	90 e0       	ldi	r25, 0x00	; 0
+     656:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
+     65a:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
+     65e:	08 95       	ret
 
-00000658 <rot_right>:
-     658:	80 e0       	ldi	r24, 0x00	; 0
+00000660 <rot_right>:
+     660:	80 e0       	ldi	r24, 0x00	; 0
 	ny_fram = (low + (high*256)); // tar nytt fram värde som vi jämför med gamla
 }
 
 void rot_right() // rotera höger och väntar till den är klar
 {	
 	UART0_Transmit(stop);
-     65a:	24 d5       	rcall	.+2632   	; 0x10a4 <UART0_Transmit>
+     662:	7d d5       	rcall	.+2810   	; 0x115e <UART0_Transmit>
 		if (driven >= 13)
-     65c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
-     660:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
-     664:	0d 97       	sbiw	r24, 0x0d	; 13
+     664:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+     668:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     66c:	0d 97       	sbiw	r24, 0x0d	; 13
 		{
 			update_position();
-     666:	28 f0       	brcs	.+10     	; 0x672 <rot_right+0x1a>
-     668:	84 df       	rcall	.-248    	; 0x572 <update_position>
+     66e:	28 f0       	brcs	.+10     	; 0x67a <rot_right+0x1a>
+     670:	84 df       	rcall	.-248    	; 0x57a <update_position>
 			driven = 0;
-     66a:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
-     66e:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     672:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     676:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 		}
 	harRot = 1;
-     672:	81 e0       	ldi	r24, 0x01	; 1
-     674:	80 93 13 01 	sts	0x0113, r24	; 0x800113 <harRot>
+     67a:	81 e0       	ldi	r24, 0x01	; 1
+     67c:	80 93 13 01 	sts	0x0113, r24	; 0x800113 <harRot>
 	UART0_Transmit(rotate_right);
-     678:	88 e0       	ldi	r24, 0x08	; 8
-     67a:	14 d5       	rcall	.+2600   	; 0x10a4 <UART0_Transmit>
+     680:	88 e0       	ldi	r24, 0x08	; 8
+     682:	6d d5       	rcall	.+2778   	; 0x115e <UART0_Transmit>
 	sensor_in[8] = 'O';
-     67c:	ed e0       	ldi	r30, 0x0D	; 13
-     67e:	f6 e0       	ldi	r31, 0x06	; 6
-     680:	8f e4       	ldi	r24, 0x4F	; 79
-     682:	80 87       	std	Z+8, r24	; 0x08
+     684:	ed e0       	ldi	r30, 0x0D	; 13
+     686:	f6 e0       	ldi	r31, 0x06	; 6
+     688:	8f e4       	ldi	r24, 0x4F	; 79
+     68a:	80 87       	std	Z+8, r24	; 0x08
 	sensor_in[10] = 'R'; //com kod
-     684:	82 e5       	ldi	r24, 0x52	; 82
-     686:	82 87       	std	Z+10, r24	; 0x0a
+     68c:	82 e5       	ldi	r24, 0x52	; 82
+     68e:	82 87       	std	Z+10, r24	; 0x0a
 	while (sensor_in[8] != klar);
-     688:	80 85       	ldd	r24, Z+8	; 0x08
-     68a:	84 34       	cpi	r24, 0x44	; 68
+     690:	80 85       	ldd	r24, Z+8	; 0x08
+     692:	84 34       	cpi	r24, 0x44	; 68
 	
 	UART0_Transmit(stop);
-     68c:	e9 f7       	brne	.-6      	; 0x688 <rot_right+0x30>
-     68e:	80 e0       	ldi	r24, 0x00	; 0
+     694:	e9 f7       	brne	.-6      	; 0x690 <rot_right+0x30>
+     696:	80 e0       	ldi	r24, 0x00	; 0
 	update_direction(0);
-     690:	09 d5       	rcall	.+2578   	; 0x10a4 <UART0_Transmit>
-     692:	80 e0       	ldi	r24, 0x00	; 0
-     694:	90 e0       	ldi	r25, 0x00	; 0
-     696:	20 dd       	rcall	.-1472   	; 0xd8 <update_direction>
+     698:	62 d5       	rcall	.+2756   	; 0x115e <UART0_Transmit>
+     69a:	80 e0       	ldi	r24, 0x00	; 0
+     69c:	90 e0       	ldi	r25, 0x00	; 0
+     69e:	20 dd       	rcall	.-1472   	; 0xe0 <update_direction>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-     698:	2f ef       	ldi	r18, 0xFF	; 255
-     69a:	8f ef       	ldi	r24, 0xFF	; 255
-     69c:	98 e0       	ldi	r25, 0x08	; 8
-     69e:	21 50       	subi	r18, 0x01	; 1
-     6a0:	80 40       	sbci	r24, 0x00	; 0
-     6a2:	90 40       	sbci	r25, 0x00	; 0
-     6a4:	e1 f7       	brne	.-8      	; 0x69e <rot_right+0x46>
-     6a6:	00 c0       	rjmp	.+0      	; 0x6a8 <rot_right+0x50>
+     6a0:	2f ef       	ldi	r18, 0xFF	; 255
+     6a2:	8f ef       	ldi	r24, 0xFF	; 255
+     6a4:	98 e0       	ldi	r25, 0x08	; 8
+     6a6:	21 50       	subi	r18, 0x01	; 1
+     6a8:	80 40       	sbci	r24, 0x00	; 0
+     6aa:	90 40       	sbci	r25, 0x00	; 0
+     6ac:	e1 f7       	brne	.-8      	; 0x6a6 <rot_right+0x46>
+     6ae:	00 c0       	rjmp	.+0      	; 0x6b0 <rot_right+0x50>
 	_delay_ms(200); //låt den stanna och få in nya lidarvärdet framåt
 	
 	send_to_laptop(); //uppdaterar ny fram också
-     6a8:	00 00       	nop
-     6aa:	3a de       	rcall	.-908    	; 0x320 <send_to_laptop>
+     6b0:	00 00       	nop
+     6b2:	3a de       	rcall	.-908    	; 0x328 <send_to_laptop>
 	start_dist = ny_fram;
-     6ac:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
-     6b0:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
-     6b4:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
-     6b8:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
+     6b4:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
+     6b8:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
+     6bc:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
+     6c0:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
 	UART0_Transmit(forward);	
-     6bc:	81 e0       	ldi	r24, 0x01	; 1
-     6be:	f2 c4       	rjmp	.+2532   	; 0x10a4 <UART0_Transmit>
-     6c0:	08 95       	ret
+     6c4:	81 e0       	ldi	r24, 0x01	; 1
+     6c6:	4b c5       	rjmp	.+2710   	; 0x115e <UART0_Transmit>
+     6c8:	08 95       	ret
 
-000006c2 <rot_left>:
+000006ca <rot_left>:
 }
 
 void rot_left() // rotera vänster och väntar till den är klar
 {
 	UART0_Transmit(stop);
-     6c2:	80 e0       	ldi	r24, 0x00	; 0
-     6c4:	ef d4       	rcall	.+2526   	; 0x10a4 <UART0_Transmit>
+     6ca:	80 e0       	ldi	r24, 0x00	; 0
+     6cc:	48 d5       	rcall	.+2704   	; 0x115e <UART0_Transmit>
 		if (driven >= 13)
-     6c6:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
-     6ca:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
-     6ce:	0d 97       	sbiw	r24, 0x0d	; 13
+     6ce:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+     6d2:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     6d6:	0d 97       	sbiw	r24, 0x0d	; 13
 		{
 			update_position();
-     6d0:	28 f0       	brcs	.+10     	; 0x6dc <rot_left+0x1a>
-     6d2:	4f df       	rcall	.-354    	; 0x572 <update_position>
+     6d8:	28 f0       	brcs	.+10     	; 0x6e4 <rot_left+0x1a>
+     6da:	4f df       	rcall	.-354    	; 0x57a <update_position>
 			driven = 0;
-     6d4:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
-     6d8:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     6dc:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     6e0:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 		}
 	harRot = 1;
-     6dc:	81 e0       	ldi	r24, 0x01	; 1
-     6de:	80 93 13 01 	sts	0x0113, r24	; 0x800113 <harRot>
-     6e2:	8f ef       	ldi	r24, 0xFF	; 255
-     6e4:	9f e8       	ldi	r25, 0x8F	; 143
-     6e6:	01 97       	sbiw	r24, 0x01	; 1
-     6e8:	f1 f7       	brne	.-4      	; 0x6e6 <rot_left+0x24>
-     6ea:	00 c0       	rjmp	.+0      	; 0x6ec <rot_left+0x2a>
+     6e4:	81 e0       	ldi	r24, 0x01	; 1
+     6e6:	80 93 13 01 	sts	0x0113, r24	; 0x800113 <harRot>
+     6ea:	8f ef       	ldi	r24, 0xFF	; 255
+     6ec:	9f e8       	ldi	r25, 0x8F	; 143
+     6ee:	01 97       	sbiw	r24, 0x01	; 1
+     6f0:	f1 f7       	brne	.-4      	; 0x6ee <rot_left+0x24>
+     6f2:	00 c0       	rjmp	.+0      	; 0x6f4 <rot_left+0x2a>
 	_delay_ms(10);
 	UART0_Transmit(rotate_left);
-     6ec:	00 00       	nop
-     6ee:	84 e0       	ldi	r24, 0x04	; 4
-     6f0:	d9 d4       	rcall	.+2482   	; 0x10a4 <UART0_Transmit>
+     6f4:	00 00       	nop
+     6f6:	84 e0       	ldi	r24, 0x04	; 4
+     6f8:	32 d5       	rcall	.+2660   	; 0x115e <UART0_Transmit>
 
 	sensor_in[8] = 'O';
-     6f2:	ed e0       	ldi	r30, 0x0D	; 13
-     6f4:	f6 e0       	ldi	r31, 0x06	; 6
-     6f6:	8f e4       	ldi	r24, 0x4F	; 79
-     6f8:	80 87       	std	Z+8, r24	; 0x08
+     6fa:	ed e0       	ldi	r30, 0x0D	; 13
+     6fc:	f6 e0       	ldi	r31, 0x06	; 6
+     6fe:	8f e4       	ldi	r24, 0x4F	; 79
+     700:	80 87       	std	Z+8, r24	; 0x08
 	sensor_in[10] = 'L'; //com kod
-     6fa:	8c e4       	ldi	r24, 0x4C	; 76
-     6fc:	82 87       	std	Z+10, r24	; 0x0a
+     702:	8c e4       	ldi	r24, 0x4C	; 76
+     704:	82 87       	std	Z+10, r24	; 0x0a
 	while (sensor_in[8] != klar);
-     6fe:	80 85       	ldd	r24, Z+8	; 0x08
-     700:	84 34       	cpi	r24, 0x44	; 68
+     706:	80 85       	ldd	r24, Z+8	; 0x08
+     708:	84 34       	cpi	r24, 0x44	; 68
 
 	UART0_Transmit(stop);
-     702:	e9 f7       	brne	.-6      	; 0x6fe <rot_left+0x3c>
-     704:	80 e0       	ldi	r24, 0x00	; 0
+     70a:	e9 f7       	brne	.-6      	; 0x706 <rot_left+0x3c>
+     70c:	80 e0       	ldi	r24, 0x00	; 0
 	update_direction(1);
-     706:	ce d4       	rcall	.+2460   	; 0x10a4 <UART0_Transmit>
-     708:	81 e0       	ldi	r24, 0x01	; 1
-     70a:	90 e0       	ldi	r25, 0x00	; 0
-     70c:	e5 dc       	rcall	.-1590   	; 0xd8 <update_direction>
-     70e:	9f ef       	ldi	r25, 0xFF	; 255
-     710:	2f ef       	ldi	r18, 0xFF	; 255
-     712:	88 e0       	ldi	r24, 0x08	; 8
-     714:	91 50       	subi	r25, 0x01	; 1
-     716:	20 40       	sbci	r18, 0x00	; 0
-     718:	80 40       	sbci	r24, 0x00	; 0
-     71a:	e1 f7       	brne	.-8      	; 0x714 <rot_left+0x52>
-     71c:	00 c0       	rjmp	.+0      	; 0x71e <rot_left+0x5c>
-     71e:	00 00       	nop
+     70e:	27 d5       	rcall	.+2638   	; 0x115e <UART0_Transmit>
+     710:	81 e0       	ldi	r24, 0x01	; 1
+     712:	90 e0       	ldi	r25, 0x00	; 0
+     714:	e5 dc       	rcall	.-1590   	; 0xe0 <update_direction>
+     716:	9f ef       	ldi	r25, 0xFF	; 255
+     718:	2f ef       	ldi	r18, 0xFF	; 255
+     71a:	88 e0       	ldi	r24, 0x08	; 8
+     71c:	91 50       	subi	r25, 0x01	; 1
+     71e:	20 40       	sbci	r18, 0x00	; 0
+     720:	80 40       	sbci	r24, 0x00	; 0
+     722:	e1 f7       	brne	.-8      	; 0x71c <rot_left+0x52>
+     724:	00 c0       	rjmp	.+0      	; 0x726 <rot_left+0x5c>
+     726:	00 00       	nop
 	_delay_ms(200); //låt lidarn mäta när rotten stannat
 	
 	switch(direction)
-     720:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
-     724:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
-     728:	81 30       	cpi	r24, 0x01	; 1
-     72a:	91 05       	cpc	r25, r1
-     72c:	99 f1       	breq	.+102    	; 0x794 <rot_left+0xd2>
-     72e:	1c f4       	brge	.+6      	; 0x736 <rot_left+0x74>
-     730:	89 2b       	or	r24, r25
-     732:	49 f0       	breq	.+18     	; 0x746 <rot_left+0x84>
-     734:	b0 c0       	rjmp	.+352    	; 0x896 <rot_left+0x1d4>
-     736:	82 30       	cpi	r24, 0x02	; 2
-     738:	91 05       	cpc	r25, r1
-     73a:	09 f4       	brne	.+2      	; 0x73e <rot_left+0x7c>
-     73c:	5a c0       	rjmp	.+180    	; 0x7f2 <rot_left+0x130>
-     73e:	03 97       	sbiw	r24, 0x03	; 3
-     740:	09 f4       	brne	.+2      	; 0x744 <rot_left+0x82>
-     742:	7d c0       	rjmp	.+250    	; 0x83e <rot_left+0x17c>
-     744:	a8 c0       	rjmp	.+336    	; 0x896 <rot_left+0x1d4>
+     728:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
+     72c:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
+     730:	81 30       	cpi	r24, 0x01	; 1
+     732:	91 05       	cpc	r25, r1
+     734:	99 f1       	breq	.+102    	; 0x79c <rot_left+0xd2>
+     736:	1c f4       	brge	.+6      	; 0x73e <rot_left+0x74>
+     738:	89 2b       	or	r24, r25
+     73a:	49 f0       	breq	.+18     	; 0x74e <rot_left+0x84>
+     73c:	b0 c0       	rjmp	.+352    	; 0x89e <rot_left+0x1d4>
+     73e:	82 30       	cpi	r24, 0x02	; 2
+     740:	91 05       	cpc	r25, r1
+     742:	09 f4       	brne	.+2      	; 0x746 <rot_left+0x7c>
+     744:	5a c0       	rjmp	.+180    	; 0x7fa <rot_left+0x130>
+     746:	03 97       	sbiw	r24, 0x03	; 3
+     748:	09 f4       	brne	.+2      	; 0x74c <rot_left+0x82>
+     74a:	7d c0       	rjmp	.+250    	; 0x846 <rot_left+0x17c>
+     74c:	a8 c0       	rjmp	.+336    	; 0x89e <rot_left+0x1d4>
 	{
 	case 0:
 	if ((sens_safe[4] < 40) && matrix[bot_y][bot_x + 1] != drive )
-     746:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     74a:	88 32       	cpi	r24, 0x28	; 40
-     74c:	08 f0       	brcs	.+2      	; 0x750 <rot_left+0x8e>
-     74e:	a3 c0       	rjmp	.+326    	; 0x896 <rot_left+0x1d4>
-     750:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     754:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     758:	f0 e0       	ldi	r31, 0x00	; 0
-     75a:	92 e3       	ldi	r25, 0x32	; 50
-     75c:	89 9f       	mul	r24, r25
-     75e:	e0 0d       	add	r30, r0
-     760:	f1 1d       	adc	r31, r1
-     762:	11 24       	eor	r1, r1
-     764:	e8 5d       	subi	r30, 0xD8	; 216
-     766:	fe 4f       	sbci	r31, 0xFE	; 254
-     768:	90 81       	ld	r25, Z
-     76a:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     76e:	98 17       	cp	r25, r24
-     770:	09 f4       	brne	.+2      	; 0x774 <rot_left+0xb2>
-     772:	91 c0       	rjmp	.+290    	; 0x896 <rot_left+0x1d4>
+     74e:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     752:	88 32       	cpi	r24, 0x28	; 40
+     754:	08 f0       	brcs	.+2      	; 0x758 <rot_left+0x8e>
+     756:	a3 c0       	rjmp	.+326    	; 0x89e <rot_left+0x1d4>
+     758:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     75c:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     760:	f0 e0       	ldi	r31, 0x00	; 0
+     762:	92 e3       	ldi	r25, 0x32	; 50
+     764:	89 9f       	mul	r24, r25
+     766:	e0 0d       	add	r30, r0
+     768:	f1 1d       	adc	r31, r1
+     76a:	11 24       	eor	r1, r1
+     76c:	e8 5d       	subi	r30, 0xD8	; 216
+     76e:	fe 4f       	sbci	r31, 0xFE	; 254
+     770:	90 81       	ld	r25, Z
+     772:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     776:	98 17       	cp	r25, r24
+     778:	09 f4       	brne	.+2      	; 0x77c <rot_left+0xb2>
+     77a:	91 c0       	rjmp	.+290    	; 0x89e <rot_left+0x1d4>
 		matrix[bot_y][bot_x + 1] = wall;
-     774:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
-     778:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     77c:	f0 e0       	ldi	r31, 0x00	; 0
-     77e:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     782:	22 e3       	ldi	r18, 0x32	; 50
-     784:	92 9f       	mul	r25, r18
-     786:	e0 0d       	add	r30, r0
-     788:	f1 1d       	adc	r31, r1
-     78a:	11 24       	eor	r1, r1
-     78c:	e8 5d       	subi	r30, 0xD8	; 216
-     78e:	fe 4f       	sbci	r31, 0xFE	; 254
-     790:	80 83       	st	Z, r24
-     792:	81 c0       	rjmp	.+258    	; 0x896 <rot_left+0x1d4>
+     77c:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     780:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     784:	f0 e0       	ldi	r31, 0x00	; 0
+     786:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     78a:	22 e3       	ldi	r18, 0x32	; 50
+     78c:	92 9f       	mul	r25, r18
+     78e:	e0 0d       	add	r30, r0
+     790:	f1 1d       	adc	r31, r1
+     792:	11 24       	eor	r1, r1
+     794:	e8 5d       	subi	r30, 0xD8	; 216
+     796:	fe 4f       	sbci	r31, 0xFE	; 254
+     798:	80 83       	st	Z, r24
+     79a:	81 c0       	rjmp	.+258    	; 0x89e <rot_left+0x1d4>
 	break;
 	case 1:
 	if ((sens_safe[4] < 40) && matrix[bot_y - 1][bot_x] != drive)
-     794:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     798:	88 32       	cpi	r24, 0x28	; 40
-     79a:	08 f0       	brcs	.+2      	; 0x79e <rot_left+0xdc>
-     79c:	7c c0       	rjmp	.+248    	; 0x896 <rot_left+0x1d4>
-     79e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     7a2:	90 e0       	ldi	r25, 0x00	; 0
-     7a4:	01 97       	sbiw	r24, 0x01	; 1
-     7a6:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     7aa:	32 e3       	ldi	r19, 0x32	; 50
-     7ac:	38 9f       	mul	r19, r24
-     7ae:	f0 01       	movw	r30, r0
-     7b0:	39 9f       	mul	r19, r25
-     7b2:	f0 0d       	add	r31, r0
-     7b4:	11 24       	eor	r1, r1
-     7b6:	e9 5d       	subi	r30, 0xD9	; 217
-     7b8:	fe 4f       	sbci	r31, 0xFE	; 254
-     7ba:	e2 0f       	add	r30, r18
-     7bc:	f1 1d       	adc	r31, r1
-     7be:	90 81       	ld	r25, Z
-     7c0:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     7c4:	98 17       	cp	r25, r24
-     7c6:	09 f4       	brne	.+2      	; 0x7ca <rot_left+0x108>
-     7c8:	66 c0       	rjmp	.+204    	; 0x896 <rot_left+0x1d4>
+     79c:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     7a0:	88 32       	cpi	r24, 0x28	; 40
+     7a2:	08 f0       	brcs	.+2      	; 0x7a6 <rot_left+0xdc>
+     7a4:	7c c0       	rjmp	.+248    	; 0x89e <rot_left+0x1d4>
+     7a6:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     7aa:	90 e0       	ldi	r25, 0x00	; 0
+     7ac:	01 97       	sbiw	r24, 0x01	; 1
+     7ae:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     7b2:	32 e3       	ldi	r19, 0x32	; 50
+     7b4:	38 9f       	mul	r19, r24
+     7b6:	f0 01       	movw	r30, r0
+     7b8:	39 9f       	mul	r19, r25
+     7ba:	f0 0d       	add	r31, r0
+     7bc:	11 24       	eor	r1, r1
+     7be:	e9 5d       	subi	r30, 0xD9	; 217
+     7c0:	fe 4f       	sbci	r31, 0xFE	; 254
+     7c2:	e2 0f       	add	r30, r18
+     7c4:	f1 1d       	adc	r31, r1
+     7c6:	90 81       	ld	r25, Z
+     7c8:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     7cc:	98 17       	cp	r25, r24
+     7ce:	09 f4       	brne	.+2      	; 0x7d2 <rot_left+0x108>
+     7d0:	66 c0       	rjmp	.+204    	; 0x89e <rot_left+0x1d4>
 		matrix[bot_y - 1][bot_x] = wall;
-     7ca:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     7ce:	90 e0       	ldi	r25, 0x00	; 0
-     7d0:	01 97       	sbiw	r24, 0x01	; 1
-     7d2:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     7d6:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     7da:	42 e3       	ldi	r20, 0x32	; 50
-     7dc:	48 9f       	mul	r20, r24
-     7de:	f0 01       	movw	r30, r0
-     7e0:	49 9f       	mul	r20, r25
-     7e2:	f0 0d       	add	r31, r0
-     7e4:	11 24       	eor	r1, r1
-     7e6:	e9 5d       	subi	r30, 0xD9	; 217
-     7e8:	fe 4f       	sbci	r31, 0xFE	; 254
-     7ea:	e3 0f       	add	r30, r19
-     7ec:	f1 1d       	adc	r31, r1
-     7ee:	20 83       	st	Z, r18
-     7f0:	52 c0       	rjmp	.+164    	; 0x896 <rot_left+0x1d4>
+     7d2:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     7d6:	90 e0       	ldi	r25, 0x00	; 0
+     7d8:	01 97       	sbiw	r24, 0x01	; 1
+     7da:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     7de:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     7e2:	42 e3       	ldi	r20, 0x32	; 50
+     7e4:	48 9f       	mul	r20, r24
+     7e6:	f0 01       	movw	r30, r0
+     7e8:	49 9f       	mul	r20, r25
+     7ea:	f0 0d       	add	r31, r0
+     7ec:	11 24       	eor	r1, r1
+     7ee:	e9 5d       	subi	r30, 0xD9	; 217
+     7f0:	fe 4f       	sbci	r31, 0xFE	; 254
+     7f2:	e3 0f       	add	r30, r19
+     7f4:	f1 1d       	adc	r31, r1
+     7f6:	20 83       	st	Z, r18
+     7f8:	52 c0       	rjmp	.+164    	; 0x89e <rot_left+0x1d4>
 	break;
 	case 2:
 	if ((sens_safe[4] < 40) && matrix[bot_y][bot_x - 1] != drive)
-     7f2:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     7f6:	88 32       	cpi	r24, 0x28	; 40
-     7f8:	08 f0       	brcs	.+2      	; 0x7fc <rot_left+0x13a>
-     7fa:	4d c0       	rjmp	.+154    	; 0x896 <rot_left+0x1d4>
-     7fc:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     800:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     804:	f0 e0       	ldi	r31, 0x00	; 0
-     806:	92 e3       	ldi	r25, 0x32	; 50
-     808:	89 9f       	mul	r24, r25
-     80a:	e0 0d       	add	r30, r0
-     80c:	f1 1d       	adc	r31, r1
-     80e:	11 24       	eor	r1, r1
-     810:	ea 5d       	subi	r30, 0xDA	; 218
-     812:	fe 4f       	sbci	r31, 0xFE	; 254
-     814:	90 81       	ld	r25, Z
-     816:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     81a:	98 17       	cp	r25, r24
-     81c:	e1 f1       	breq	.+120    	; 0x896 <rot_left+0x1d4>
+     7fa:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     7fe:	88 32       	cpi	r24, 0x28	; 40
+     800:	08 f0       	brcs	.+2      	; 0x804 <rot_left+0x13a>
+     802:	4d c0       	rjmp	.+154    	; 0x89e <rot_left+0x1d4>
+     804:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     808:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     80c:	f0 e0       	ldi	r31, 0x00	; 0
+     80e:	92 e3       	ldi	r25, 0x32	; 50
+     810:	89 9f       	mul	r24, r25
+     812:	e0 0d       	add	r30, r0
+     814:	f1 1d       	adc	r31, r1
+     816:	11 24       	eor	r1, r1
+     818:	ea 5d       	subi	r30, 0xDA	; 218
+     81a:	fe 4f       	sbci	r31, 0xFE	; 254
+     81c:	90 81       	ld	r25, Z
+     81e:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     822:	98 17       	cp	r25, r24
+     824:	e1 f1       	breq	.+120    	; 0x89e <rot_left+0x1d4>
 		matrix[bot_y][bot_x - 1] = wall;
-     81e:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
-     822:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     826:	f0 e0       	ldi	r31, 0x00	; 0
-     828:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     82c:	22 e3       	ldi	r18, 0x32	; 50
-     82e:	92 9f       	mul	r25, r18
-     830:	e0 0d       	add	r30, r0
-     832:	f1 1d       	adc	r31, r1
-     834:	11 24       	eor	r1, r1
-     836:	ea 5d       	subi	r30, 0xDA	; 218
-     838:	fe 4f       	sbci	r31, 0xFE	; 254
-     83a:	80 83       	st	Z, r24
-     83c:	2c c0       	rjmp	.+88     	; 0x896 <rot_left+0x1d4>
+     826:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     82a:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     82e:	f0 e0       	ldi	r31, 0x00	; 0
+     830:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     834:	22 e3       	ldi	r18, 0x32	; 50
+     836:	92 9f       	mul	r25, r18
+     838:	e0 0d       	add	r30, r0
+     83a:	f1 1d       	adc	r31, r1
+     83c:	11 24       	eor	r1, r1
+     83e:	ea 5d       	subi	r30, 0xDA	; 218
+     840:	fe 4f       	sbci	r31, 0xFE	; 254
+     842:	80 83       	st	Z, r24
+     844:	2c c0       	rjmp	.+88     	; 0x89e <rot_left+0x1d4>
 	break;
 	case 3:
 	if ((sens_safe[4] < 40) && matrix[bot_y + 1][bot_x] != drive)
-     83e:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     842:	88 32       	cpi	r24, 0x28	; 40
-     844:	40 f5       	brcc	.+80     	; 0x896 <rot_left+0x1d4>
-     846:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     84a:	90 e0       	ldi	r25, 0x00	; 0
-     84c:	01 96       	adiw	r24, 0x01	; 1
-     84e:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     852:	32 e3       	ldi	r19, 0x32	; 50
-     854:	38 9f       	mul	r19, r24
-     856:	f0 01       	movw	r30, r0
-     858:	39 9f       	mul	r19, r25
-     85a:	f0 0d       	add	r31, r0
-     85c:	11 24       	eor	r1, r1
-     85e:	e9 5d       	subi	r30, 0xD9	; 217
-     860:	fe 4f       	sbci	r31, 0xFE	; 254
-     862:	e2 0f       	add	r30, r18
-     864:	f1 1d       	adc	r31, r1
-     866:	90 81       	ld	r25, Z
-     868:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     86c:	98 17       	cp	r25, r24
-     86e:	99 f0       	breq	.+38     	; 0x896 <rot_left+0x1d4>
+     846:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     84a:	88 32       	cpi	r24, 0x28	; 40
+     84c:	40 f5       	brcc	.+80     	; 0x89e <rot_left+0x1d4>
+     84e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     852:	90 e0       	ldi	r25, 0x00	; 0
+     854:	01 96       	adiw	r24, 0x01	; 1
+     856:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     85a:	32 e3       	ldi	r19, 0x32	; 50
+     85c:	38 9f       	mul	r19, r24
+     85e:	f0 01       	movw	r30, r0
+     860:	39 9f       	mul	r19, r25
+     862:	f0 0d       	add	r31, r0
+     864:	11 24       	eor	r1, r1
+     866:	e9 5d       	subi	r30, 0xD9	; 217
+     868:	fe 4f       	sbci	r31, 0xFE	; 254
+     86a:	e2 0f       	add	r30, r18
+     86c:	f1 1d       	adc	r31, r1
+     86e:	90 81       	ld	r25, Z
+     870:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     874:	98 17       	cp	r25, r24
+     876:	99 f0       	breq	.+38     	; 0x89e <rot_left+0x1d4>
 		matrix[bot_y + 1][bot_x] = wall;
-     870:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     874:	90 e0       	ldi	r25, 0x00	; 0
-     876:	01 96       	adiw	r24, 0x01	; 1
-     878:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     87c:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     880:	42 e3       	ldi	r20, 0x32	; 50
-     882:	48 9f       	mul	r20, r24
-     884:	f0 01       	movw	r30, r0
-     886:	49 9f       	mul	r20, r25
-     888:	f0 0d       	add	r31, r0
-     88a:	11 24       	eor	r1, r1
-     88c:	e9 5d       	subi	r30, 0xD9	; 217
-     88e:	fe 4f       	sbci	r31, 0xFE	; 254
-     890:	e3 0f       	add	r30, r19
-     892:	f1 1d       	adc	r31, r1
+     878:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     87c:	90 e0       	ldi	r25, 0x00	; 0
+     87e:	01 96       	adiw	r24, 0x01	; 1
+     880:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     884:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     888:	42 e3       	ldi	r20, 0x32	; 50
+     88a:	48 9f       	mul	r20, r24
+     88c:	f0 01       	movw	r30, r0
+     88e:	49 9f       	mul	r20, r25
+     890:	f0 0d       	add	r31, r0
+     892:	11 24       	eor	r1, r1
+     894:	e9 5d       	subi	r30, 0xD9	; 217
+     896:	fe 4f       	sbci	r31, 0xFE	; 254
+     898:	e3 0f       	add	r30, r19
+     89a:	f1 1d       	adc	r31, r1
 	break;
 	}
 	
 	send_to_laptop();
-     894:	20 83       	st	Z, r18
-     896:	44 dd       	rcall	.-1400   	; 0x320 <send_to_laptop>
+     89c:	20 83       	st	Z, r18
+     89e:	44 dd       	rcall	.-1400   	; 0x328 <send_to_laptop>
 	start_dist = ny_fram;
-     898:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
-     89c:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
-     8a0:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
-     8a4:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
-     8a8:	08 95       	ret
+     8a0:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
+     8a4:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
+     8a8:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
+     8ac:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
+     8b0:	08 95       	ret
 
-000008aa <kokHittad>:
+000008b2 <kokHittad>:
 	}
 	recieve_renewed = 0;
 }
 
 void kokHittad(){
 	UART0_Transmit(forward); //kör fram till ö
-     8aa:	81 e0       	ldi	r24, 0x01	; 1
-     8ac:	fb d3       	rcall	.+2038   	; 0x10a4 <UART0_Transmit>
+     8b2:	81 e0       	ldi	r24, 0x01	; 1
+     8b4:	54 d4       	rcall	.+2216   	; 0x115e <UART0_Transmit>
 	do
 	{
 		baby_proof_and_update();
-     8ae:	22 dd       	rcall	.-1468   	; 0x2f4 <baby_proof_and_update>
-     8b0:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
+     8b6:	22 dd       	rcall	.-1468   	; 0x2fc <baby_proof_and_update>
+     8b8:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
 	}while(ny_fram > 12);
-     8b4:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
-     8b8:	0d 97       	sbiw	r24, 0x0d	; 13
-     8ba:	c8 f7       	brcc	.-14     	; 0x8ae <kokHittad+0x4>
+     8bc:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
+     8c0:	0d 97       	sbiw	r24, 0x0d	; 13
+     8c2:	c8 f7       	brcc	.-14     	; 0x8b6 <kokHittad+0x4>
 	
 	UART0_Transmit(stop);
-     8bc:	80 e0       	ldi	r24, 0x00	; 0
-     8be:	f2 d3       	rcall	.+2020   	; 0x10a4 <UART0_Transmit>
-     8c0:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <harRot>
+     8c4:	80 e0       	ldi	r24, 0x00	; 0
+     8c6:	4b d4       	rcall	.+2198   	; 0x115e <UART0_Transmit>
+     8c8:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <harRot>
 	harRot = 0;
-     8c4:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     8cc:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
 	driven = 0;
-     8c8:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
-     8cc:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
+     8d0:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     8d4:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
 	
 	if (KokFarFarAway == 1)
-     8d0:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x1>
-     8d4:	01 97       	sbiw	r24, 0x01	; 1
-     8d6:	41 f5       	brne	.+80     	; 0x928 <kokHittad+0x7e>
-     8d8:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
+     8d8:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x1>
+     8dc:	01 97       	sbiw	r24, 0x01	; 1
+     8de:	41 f5       	brne	.+80     	; 0x930 <kokHittad+0x7e>
+     8e0:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
 	{
 		switch (direction)
-     8dc:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
-     8e0:	81 30       	cpi	r24, 0x01	; 1
-     8e2:	91 05       	cpc	r25, r1
-     8e4:	81 f0       	breq	.+32     	; 0x906 <kokHittad+0x5c>
-     8e6:	1c f4       	brge	.+6      	; 0x8ee <kokHittad+0x44>
-     8e8:	89 2b       	or	r24, r25
-     8ea:	39 f0       	breq	.+14     	; 0x8fa <kokHittad+0x50>
-     8ec:	1d c0       	rjmp	.+58     	; 0x928 <kokHittad+0x7e>
-     8ee:	82 30       	cpi	r24, 0x02	; 2
-     8f0:	91 05       	cpc	r25, r1
-     8f2:	79 f0       	breq	.+30     	; 0x912 <kokHittad+0x68>
-     8f4:	03 97       	sbiw	r24, 0x03	; 3
-     8f6:	99 f0       	breq	.+38     	; 0x91e <kokHittad+0x74>
-     8f8:	17 c0       	rjmp	.+46     	; 0x928 <kokHittad+0x7e>
-     8fa:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     8e4:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
+     8e8:	81 30       	cpi	r24, 0x01	; 1
+     8ea:	91 05       	cpc	r25, r1
+     8ec:	81 f0       	breq	.+32     	; 0x90e <kokHittad+0x5c>
+     8ee:	1c f4       	brge	.+6      	; 0x8f6 <kokHittad+0x44>
+     8f0:	89 2b       	or	r24, r25
+     8f2:	39 f0       	breq	.+14     	; 0x902 <kokHittad+0x50>
+     8f4:	1d c0       	rjmp	.+58     	; 0x930 <kokHittad+0x7e>
+     8f6:	82 30       	cpi	r24, 0x02	; 2
+     8f8:	91 05       	cpc	r25, r1
+     8fa:	79 f0       	breq	.+30     	; 0x91a <kokHittad+0x68>
+     8fc:	03 97       	sbiw	r24, 0x03	; 3
+     8fe:	99 f0       	breq	.+38     	; 0x926 <kokHittad+0x74>
+     900:	17 c0       	rjmp	.+46     	; 0x930 <kokHittad+0x7e>
+     902:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
 		{
 			case 0:
 				bot_y = bot_y + 1;
-     8fe:	8f 5f       	subi	r24, 0xFF	; 255
-     900:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
-     904:	11 c0       	rjmp	.+34     	; 0x928 <kokHittad+0x7e>
+     906:	8f 5f       	subi	r24, 0xFF	; 255
+     908:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
+     90c:	11 c0       	rjmp	.+34     	; 0x930 <kokHittad+0x7e>
 			break;
-     906:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     90e:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
 			case 1:
 				bot_x = bot_x + 1;
-     90a:	8f 5f       	subi	r24, 0xFF	; 255
-     90c:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
-     910:	0b c0       	rjmp	.+22     	; 0x928 <kokHittad+0x7e>
+     912:	8f 5f       	subi	r24, 0xFF	; 255
+     914:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
+     918:	0b c0       	rjmp	.+22     	; 0x930 <kokHittad+0x7e>
 			break;
-     912:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     91a:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
 			case 2:
 				bot_y = bot_y - 1;
-     916:	81 50       	subi	r24, 0x01	; 1
-     918:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
-     91c:	05 c0       	rjmp	.+10     	; 0x928 <kokHittad+0x7e>
+     91e:	81 50       	subi	r24, 0x01	; 1
+     920:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
+     924:	05 c0       	rjmp	.+10     	; 0x930 <kokHittad+0x7e>
 			break;
-     91e:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     926:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
 			case 3:
 				bot_x = bot_x - 1;
-     922:	81 50       	subi	r24, 0x01	; 1
-     924:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
+     92a:	81 50       	subi	r24, 0x01	; 1
+     92c:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
 			break;
 		}
 	 //rotera vänster
 	}
 	rot_left();
-     928:	cc de       	rcall	.-616    	; 0x6c2 <rot_left>
-     92a:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     930:	cc de       	rcall	.-616    	; 0x6ca <rot_left>
+     932:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
 	kokStart_x = bot_x;
-     92e:	80 93 1d 01 	sts	0x011D, r24	; 0x80011d <kokStart_x>
-     932:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     936:	80 93 1d 01 	sts	0x011D, r24	; 0x80011d <kokStart_x>
+     93a:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
 	kokStart_y = bot_y;
-     936:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <kokStart_y>
+     93e:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <kokStart_y>
 	UART0_Transmit(stop);
-     93a:	80 e0       	ldi	r24, 0x00	; 0
-     93c:	b3 d3       	rcall	.+1894   	; 0x10a4 <UART0_Transmit>
-     93e:	81 e0       	ldi	r24, 0x01	; 1
+     942:	80 e0       	ldi	r24, 0x00	; 0
+     944:	0c d4       	rcall	.+2072   	; 0x115e <UART0_Transmit>
+     946:	81 e0       	ldi	r24, 0x01	; 1
 	state = 1;
-     940:	90 e0       	ldi	r25, 0x00	; 0
-     942:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
-     946:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
-     94a:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <KorKok+0x1>
+     948:	90 e0       	ldi	r25, 0x00	; 0
+     94a:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
+     94e:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
+     952:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <KorKok+0x1>
 	KorKok = 1;
-     94e:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <KorKok>
-     952:	08 95       	ret
+     956:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <KorKok>
+     95a:	08 95       	ret
 
-00000954 <go_home>:
-     954:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+0000095c <go_home>:
+     95c:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
 	//kör runt som vanligt till position
 }
 
 void go_home()
 {
 	driven = 0;
-     958:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     960:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 	rot_left();
-     95c:	b2 de       	rcall	.-668    	; 0x6c2 <rot_left>
+     964:	b2 de       	rcall	.-668    	; 0x6ca <rot_left>
 	UART0_Transmit(forward); //kör fram till ö
-     95e:	81 e0       	ldi	r24, 0x01	; 1
+     966:	81 e0       	ldi	r24, 0x01	; 1
 	do
 	{
 		baby_proof_and_update();
-     960:	a1 d3       	rcall	.+1858   	; 0x10a4 <UART0_Transmit>
-     962:	c8 dc       	rcall	.-1648   	; 0x2f4 <baby_proof_and_update>
-	}while(ny_fram > 13);
-     964:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
-     968:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
-     96c:	0e 97       	sbiw	r24, 0x0e	; 14
+     968:	fa d3       	rcall	.+2036   	; 0x115e <UART0_Transmit>
+     96a:	c8 dc       	rcall	.-1648   	; 0x2fc <baby_proof_and_update>
+	}while(ny_fram > 11);
+     96c:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
+     970:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
+     974:	0c 97       	sbiw	r24, 0x0c	; 12
 	
 	UART0_Transmit(stop);
-     96e:	c8 f7       	brcc	.-14     	; 0x962 <go_home+0xe>
-     970:	80 e0       	ldi	r24, 0x00	; 0
-     972:	98 d3       	rcall	.+1840   	; 0x10a4 <UART0_Transmit>
+     976:	c8 f7       	brcc	.-14     	; 0x96a <go_home+0xe>
+     978:	80 e0       	ldi	r24, 0x00	; 0
+     97a:	f1 d3       	rcall	.+2018   	; 0x115e <UART0_Transmit>
 	harRot = 0;
-     974:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <harRot>
+     97c:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <harRot>
 	driven = 0;
-     978:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
-     97c:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     980:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     984:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 	if (KokFarFarAway == 1)
-     980:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
-     984:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x1>
-     988:	01 97       	sbiw	r24, 0x01	; 1
-     98a:	59 f5       	brne	.+86     	; 0x9e2 <go_home+0x8e>
+     988:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
+     98c:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x1>
+     990:	01 97       	sbiw	r24, 0x01	; 1
+     992:	59 f5       	brne	.+86     	; 0x9ea <go_home+0x8e>
 	{
 		sensor_in[15] = 10;
-     98c:	8a e0       	ldi	r24, 0x0A	; 10
-     98e:	80 93 1c 06 	sts	0x061C, r24	; 0x80061c <control_signal>
+     994:	8a e0       	ldi	r24, 0x0A	; 10
+     996:	80 93 1c 06 	sts	0x061C, r24	; 0x80061c <control_signal>
 		switch (direction)
-     992:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
-     996:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
-     99a:	81 30       	cpi	r24, 0x01	; 1
-     99c:	91 05       	cpc	r25, r1
-     99e:	81 f0       	breq	.+32     	; 0x9c0 <go_home+0x6c>
-     9a0:	1c f4       	brge	.+6      	; 0x9a8 <go_home+0x54>
-     9a2:	89 2b       	or	r24, r25
-     9a4:	39 f0       	breq	.+14     	; 0x9b4 <go_home+0x60>
-     9a6:	1d c0       	rjmp	.+58     	; 0x9e2 <go_home+0x8e>
-     9a8:	82 30       	cpi	r24, 0x02	; 2
-     9aa:	91 05       	cpc	r25, r1
-     9ac:	79 f0       	breq	.+30     	; 0x9cc <go_home+0x78>
-     9ae:	03 97       	sbiw	r24, 0x03	; 3
-     9b0:	99 f0       	breq	.+38     	; 0x9d8 <go_home+0x84>
-     9b2:	17 c0       	rjmp	.+46     	; 0x9e2 <go_home+0x8e>
+     99a:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
+     99e:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
+     9a2:	81 30       	cpi	r24, 0x01	; 1
+     9a4:	91 05       	cpc	r25, r1
+     9a6:	81 f0       	breq	.+32     	; 0x9c8 <go_home+0x6c>
+     9a8:	1c f4       	brge	.+6      	; 0x9b0 <go_home+0x54>
+     9aa:	89 2b       	or	r24, r25
+     9ac:	39 f0       	breq	.+14     	; 0x9bc <go_home+0x60>
+     9ae:	1d c0       	rjmp	.+58     	; 0x9ea <go_home+0x8e>
+     9b0:	82 30       	cpi	r24, 0x02	; 2
+     9b2:	91 05       	cpc	r25, r1
+     9b4:	79 f0       	breq	.+30     	; 0x9d4 <go_home+0x78>
+     9b6:	03 97       	sbiw	r24, 0x03	; 3
+     9b8:	99 f0       	breq	.+38     	; 0x9e0 <go_home+0x84>
+     9ba:	17 c0       	rjmp	.+46     	; 0x9ea <go_home+0x8e>
 			{
 				// om kört 80 cm,
 				case 0:
 				bot_y = (bot_y + 1);
-     9b4:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     9b8:	8f 5f       	subi	r24, 0xFF	; 255
-     9ba:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
+     9bc:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     9c0:	8f 5f       	subi	r24, 0xFF	; 255
+     9c2:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
 				break;
-     9be:	11 c0       	rjmp	.+34     	; 0x9e2 <go_home+0x8e>
+     9c6:	11 c0       	rjmp	.+34     	; 0x9ea <go_home+0x8e>
 				case 1:
 				bot_x = (bot_x + 1);
-     9c0:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
-     9c4:	8f 5f       	subi	r24, 0xFF	; 255
-     9c6:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
+     9c8:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     9cc:	8f 5f       	subi	r24, 0xFF	; 255
+     9ce:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
 				break;
-     9ca:	0b c0       	rjmp	.+22     	; 0x9e2 <go_home+0x8e>
+     9d2:	0b c0       	rjmp	.+22     	; 0x9ea <go_home+0x8e>
 				case 2:
 				bot_y = (bot_y - 1);
-     9cc:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     9d0:	81 50       	subi	r24, 0x01	; 1
-     9d2:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
+     9d4:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     9d8:	81 50       	subi	r24, 0x01	; 1
+     9da:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <bot_y>
 				break;
-     9d6:	05 c0       	rjmp	.+10     	; 0x9e2 <go_home+0x8e>
+     9de:	05 c0       	rjmp	.+10     	; 0x9ea <go_home+0x8e>
 				case 3:
 				bot_x = (bot_x - 1);
-     9d8:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
-     9dc:	81 50       	subi	r24, 0x01	; 1
-     9de:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
+     9e0:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <bot_x>
+     9e4:	81 50       	subi	r24, 0x01	; 1
+     9e6:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <bot_x>
 				break;
 			}
 	 //rotera vänster
 	}
 	rot_left();
-     9e2:	6f de       	rcall	.-802    	; 0x6c2 <rot_left>
+     9ea:	6f de       	rcall	.-802    	; 0x6ca <rot_left>
 	state = 1;
-     9e4:	81 e0       	ldi	r24, 0x01	; 1
-     9e6:	90 e0       	ldi	r25, 0x00	; 0
-     9e8:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
-     9ec:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
+     9ec:	81 e0       	ldi	r24, 0x01	; 1
+     9ee:	90 e0       	ldi	r25, 0x00	; 0
+     9f0:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
+     9f4:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
 	KokKlart = 1;
-     9f0:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <KokKlart+0x1>
-     9f4:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <KokKlart>
-     9f8:	08 95       	ret
+     9f8:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <KokKlart+0x1>
+     9fc:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <KokKlart>
+     a00:	08 95       	ret
 
-000009fa <kolla_efter_kok_left>:
+00000a02 <kolla_efter_kok_left>:
 }
 
 void kolla_efter_kok_left()
 {
 
 	baby_proof_and_update();
-     9fa:	7c dc       	rcall	.-1800   	; 0x2f4 <baby_proof_and_update>
+     a02:	7c dc       	rcall	.-1800   	; 0x2fc <baby_proof_and_update>
 	switch (direction)
-     9fc:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
-     a00:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
-     a04:	81 30       	cpi	r24, 0x01	; 1
-     a06:	91 05       	cpc	r25, r1
-     a08:	09 f4       	brne	.+2      	; 0xa0c <kolla_efter_kok_left+0x12>
-     a0a:	ae c0       	rjmp	.+348    	; 0xb68 <kolla_efter_kok_left+0x16e>
-     a0c:	1c f4       	brge	.+6      	; 0xa14 <kolla_efter_kok_left+0x1a>
-     a0e:	89 2b       	or	r24, r25
-     a10:	49 f0       	breq	.+18     	; 0xa24 <kolla_efter_kok_left+0x2a>
-     a12:	08 95       	ret
-     a14:	82 30       	cpi	r24, 0x02	; 2
-     a16:	91 05       	cpc	r25, r1
-     a18:	09 f4       	brne	.+2      	; 0xa1c <kolla_efter_kok_left+0x22>
-     a1a:	55 c1       	rjmp	.+682    	; 0xcc6 <kolla_efter_kok_left+0x2cc>
-     a1c:	03 97       	sbiw	r24, 0x03	; 3
-     a1e:	09 f4       	brne	.+2      	; 0xa22 <kolla_efter_kok_left+0x28>
-     a20:	ec c1       	rjmp	.+984    	; 0xdfa <kolla_efter_kok_left+0x400>
-     a22:	08 95       	ret
+     a04:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <direction>
+     a08:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <direction+0x1>
+     a0c:	81 30       	cpi	r24, 0x01	; 1
+     a0e:	91 05       	cpc	r25, r1
+     a10:	09 f4       	brne	.+2      	; 0xa14 <kolla_efter_kok_left+0x12>
+     a12:	c4 c0       	rjmp	.+392    	; 0xb9c <kolla_efter_kok_left+0x19a>
+     a14:	1c f4       	brge	.+6      	; 0xa1c <kolla_efter_kok_left+0x1a>
+     a16:	89 2b       	or	r24, r25
+     a18:	49 f0       	breq	.+18     	; 0xa2c <kolla_efter_kok_left+0x2a>
+     a1a:	08 95       	ret
+     a1c:	82 30       	cpi	r24, 0x02	; 2
+     a1e:	91 05       	cpc	r25, r1
+     a20:	09 f4       	brne	.+2      	; 0xa24 <kolla_efter_kok_left+0x22>
+     a22:	81 c1       	rjmp	.+770    	; 0xd26 <kolla_efter_kok_left+0x324>
+     a24:	03 97       	sbiw	r24, 0x03	; 3
+     a26:	09 f4       	brne	.+2      	; 0xa2a <kolla_efter_kok_left+0x28>
+     a28:	2e c2       	rjmp	.+1116   	; 0xe86 <kolla_efter_kok_left+0x484>
+     a2a:	08 95       	ret
 	{
 		case 0: //norr
 		if (matrix[bot_y][bot_x - 1] == unknown || (matrix[bot_y][bot_x - 1] == drive))
-     a24:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     a28:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     a2c:	f0 e0       	ldi	r31, 0x00	; 0
-     a2e:	22 e3       	ldi	r18, 0x32	; 50
-     a30:	82 9f       	mul	r24, r18
-     a32:	e0 0d       	add	r30, r0
-     a34:	f1 1d       	adc	r31, r1
-     a36:	11 24       	eor	r1, r1
-     a38:	ea 5d       	subi	r30, 0xDA	; 218
-     a3a:	fe 4f       	sbci	r31, 0xFE	; 254
-     a3c:	90 81       	ld	r25, Z
-     a3e:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     a42:	98 17       	cp	r25, r24
-     a44:	89 f0       	breq	.+34     	; 0xa68 <kolla_efter_kok_left+0x6e>
-     a46:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     a4a:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     a4e:	f0 e0       	ldi	r31, 0x00	; 0
-     a50:	92 e3       	ldi	r25, 0x32	; 50
-     a52:	89 9f       	mul	r24, r25
-     a54:	e0 0d       	add	r30, r0
-     a56:	f1 1d       	adc	r31, r1
-     a58:	11 24       	eor	r1, r1
-     a5a:	ea 5d       	subi	r30, 0xDA	; 218
-     a5c:	fe 4f       	sbci	r31, 0xFE	; 254
-     a5e:	90 81       	ld	r25, Z
-     a60:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     a64:	98 13       	cpse	r25, r24
-     a66:	72 c2       	rjmp	.+1252   	; 0xf4c <kolla_efter_kok_left+0x552>
+     a2c:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     a30:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     a34:	f0 e0       	ldi	r31, 0x00	; 0
+     a36:	22 e3       	ldi	r18, 0x32	; 50
+     a38:	82 9f       	mul	r24, r18
+     a3a:	e0 0d       	add	r30, r0
+     a3c:	f1 1d       	adc	r31, r1
+     a3e:	11 24       	eor	r1, r1
+     a40:	ea 5d       	subi	r30, 0xDA	; 218
+     a42:	fe 4f       	sbci	r31, 0xFE	; 254
+     a44:	90 81       	ld	r25, Z
+     a46:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     a4a:	98 17       	cp	r25, r24
+     a4c:	89 f0       	breq	.+34     	; 0xa70 <kolla_efter_kok_left+0x6e>
+     a4e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     a52:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     a56:	f0 e0       	ldi	r31, 0x00	; 0
+     a58:	92 e3       	ldi	r25, 0x32	; 50
+     a5a:	89 9f       	mul	r24, r25
+     a5c:	e0 0d       	add	r30, r0
+     a5e:	f1 1d       	adc	r31, r1
+     a60:	11 24       	eor	r1, r1
+     a62:	ea 5d       	subi	r30, 0xDA	; 218
+     a64:	fe 4f       	sbci	r31, 0xFE	; 254
+     a66:	90 81       	ld	r25, Z
+     a68:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     a6c:	98 13       	cpse	r25, r24
+     a6e:	ca c2       	rjmp	.+1428   	; 0x1004 <kolla_efter_kok_left+0x602>
 		{
 			if ((sens_safe[5] < 25 ) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) 
-     a68:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
-     a6c:	89 31       	cpi	r24, 0x19	; 25
-     a6e:	60 f5       	brcc	.+88     	; 0xac8 <kolla_efter_kok_left+0xce>
-     a70:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     a70:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
      a74:	89 31       	cpi	r24, 0x19	; 25
-     a76:	40 f5       	brcc	.+80     	; 0xac8 <kolla_efter_kok_left+0xce>
-     a78:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     a7c:	84 31       	cpi	r24, 0x14	; 20
-     a7e:	20 f5       	brcc	.+72     	; 0xac8 <kolla_efter_kok_left+0xce>
-     a80:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     a76:	b8 f5       	brcc	.+110    	; 0xae6 <kolla_efter_kok_left+0xe4>
+     a78:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     a7c:	89 31       	cpi	r24, 0x19	; 25
+     a7e:	98 f5       	brcc	.+102    	; 0xae6 <kolla_efter_kok_left+0xe4>
+     a80:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
      a84:	84 31       	cpi	r24, 0x14	; 20
-     a86:	00 f5       	brcc	.+64     	; 0xac8 <kolla_efter_kok_left+0xce>
-     a88:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     a86:	78 f5       	brcc	.+94     	; 0xae6 <kolla_efter_kok_left+0xe4>
+     a88:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
      a8c:	84 31       	cpi	r24, 0x14	; 20
-     a8e:	e0 f4       	brcc	.+56     	; 0xac8 <kolla_efter_kok_left+0xce>
+     a8e:	58 f5       	brcc	.+86     	; 0xae6 <kolla_efter_kok_left+0xe4>
+     a90:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     a94:	84 31       	cpi	r24, 0x14	; 20
+     a96:	38 f5       	brcc	.+78     	; 0xae6 <kolla_efter_kok_left+0xe4>
 			{	
-				
+				if (driven >= 30)
+     a98:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+     a9c:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     aa0:	4e 97       	sbiw	r24, 0x1e	; 30
+				{
+					update_position();
+     aa2:	28 f0       	brcs	.+10     	; 0xaae <kolla_efter_kok_left+0xac>
+     aa4:	6a dd       	rcall	.-1324   	; 0x57a <update_position>
+					driven = 0;
+     aa6:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     aaa:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+				}
 				matrix[bot_y][bot_x - 1] = wall; // köksö hittad
-     a90:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
-     a94:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     a98:	f0 e0       	ldi	r31, 0x00	; 0
-     a9a:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     a9e:	22 e3       	ldi	r18, 0x32	; 50
-     aa0:	92 9f       	mul	r25, r18
-     aa2:	e0 0d       	add	r30, r0
-     aa4:	f1 1d       	adc	r31, r1
-     aa6:	11 24       	eor	r1, r1
-     aa8:	ea 5d       	subi	r30, 0xDA	; 218
-     aaa:	fe 4f       	sbci	r31, 0xFE	; 254
-     aac:	80 83       	st	Z, r24
+     aae:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     ab2:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     ab6:	f0 e0       	ldi	r31, 0x00	; 0
+     ab8:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     abc:	22 e3       	ldi	r18, 0x32	; 50
+     abe:	92 9f       	mul	r25, r18
+     ac0:	e0 0d       	add	r30, r0
+     ac2:	f1 1d       	adc	r31, r1
+     ac4:	11 24       	eor	r1, r1
+     ac6:	ea 5d       	subi	r30, 0xDA	; 218
+     ac8:	fe 4f       	sbci	r31, 0xFE	; 254
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
-     aae:	80 e0       	ldi	r24, 0x00	; 0
+     aca:	80 83       	st	Z, r24
+     acc:	80 e0       	ldi	r24, 0x00	; 0
 				rot_left();
-     ab0:	f9 d2       	rcall	.+1522   	; 0x10a4 <UART0_Transmit>
+     ace:	47 d3       	rcall	.+1678   	; 0x115e <UART0_Transmit>
 				UART0_Transmit(stop);
-     ab2:	07 de       	rcall	.-1010   	; 0x6c2 <rot_left>
-     ab4:	80 e0       	ldi	r24, 0x00	; 0
-     ab6:	f6 d2       	rcall	.+1516   	; 0x10a4 <UART0_Transmit>
+     ad0:	fc dd       	rcall	.-1032   	; 0x6ca <rot_left>
+     ad2:	80 e0       	ldi	r24, 0x00	; 0
+     ad4:	44 d3       	rcall	.+1672   	; 0x115e <UART0_Transmit>
 				kokHittad();
-     ab8:	f8 de       	rcall	.-528    	; 0x8aa <kokHittad>
-     aba:	81 e0       	ldi	r24, 0x01	; 1
+     ad6:	ed de       	rcall	.-550    	; 0x8b2 <kokHittad>
+     ad8:	81 e0       	ldi	r24, 0x01	; 1
 				state = 1;
-     abc:	90 e0       	ldi	r25, 0x00	; 0
-     abe:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
-     ac2:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
-     ac6:	08 95       	ret
-     ac8:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     ada:	90 e0       	ldi	r25, 0x00	; 0
+     adc:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <state+0x1>
+     ae0:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <state>
+     ae4:	08 95       	ret
+     ae6:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
 			}
 			else if((sens_safe[5] > 25 ) && (sens_safe[3] > 25) && (sens_safe[5] < 75) && (sens_safe[3] < 75) && (matrix[bot_y][bot_x - 2] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
-     acc:	8a 31       	cpi	r24, 0x1A	; 26
-     ace:	08 f4       	brcc	.+2      	; 0xad2 <kolla_efter_kok_left+0xd8>
-     ad0:	3d c2       	rjmp	.+1146   	; 0xf4c <kolla_efter_kok_left+0x552>
-     ad2:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     ad6:	8a 31       	cpi	r24, 0x1A	; 26
-     ad8:	08 f4       	brcc	.+2      	; 0xadc <kolla_efter_kok_left+0xe2>
-     ada:	38 c2       	rjmp	.+1136   	; 0xf4c <kolla_efter_kok_left+0x552>
-     adc:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
-     ae0:	8b 34       	cpi	r24, 0x4B	; 75
-     ae2:	08 f0       	brcs	.+2      	; 0xae6 <kolla_efter_kok_left+0xec>
-     ae4:	33 c2       	rjmp	.+1126   	; 0xf4c <kolla_efter_kok_left+0x552>
-     ae6:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     aea:	8b 34       	cpi	r24, 0x4B	; 75
-     aec:	08 f0       	brcs	.+2      	; 0xaf0 <kolla_efter_kok_left+0xf6>
-     aee:	2e c2       	rjmp	.+1116   	; 0xf4c <kolla_efter_kok_left+0x552>
-     af0:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     af4:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     af8:	f0 e0       	ldi	r31, 0x00	; 0
-     afa:	92 e3       	ldi	r25, 0x32	; 50
-     afc:	89 9f       	mul	r24, r25
-     afe:	e0 0d       	add	r30, r0
-     b00:	f1 1d       	adc	r31, r1
-     b02:	11 24       	eor	r1, r1
-     b04:	eb 5d       	subi	r30, 0xDB	; 219
-     b06:	fe 4f       	sbci	r31, 0xFE	; 254
-     b08:	90 81       	ld	r25, Z
-     b0a:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     b0e:	98 13       	cpse	r25, r24
-     b10:	1d c2       	rjmp	.+1082   	; 0xf4c <kolla_efter_kok_left+0x552>
-     b12:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     b16:	84 31       	cpi	r24, 0x14	; 20
-     b18:	08 f0       	brcs	.+2      	; 0xb1c <kolla_efter_kok_left+0x122>
-     b1a:	18 c2       	rjmp	.+1072   	; 0xf4c <kolla_efter_kok_left+0x552>
-     b1c:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     b20:	84 31       	cpi	r24, 0x14	; 20
-     b22:	08 f0       	brcs	.+2      	; 0xb26 <kolla_efter_kok_left+0x12c>
-     b24:	13 c2       	rjmp	.+1062   	; 0xf4c <kolla_efter_kok_left+0x552>
-     b26:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     b2a:	84 31       	cpi	r24, 0x14	; 20
-     b2c:	08 f0       	brcs	.+2      	; 0xb30 <kolla_efter_kok_left+0x136>
-     b2e:	0e c2       	rjmp	.+1052   	; 0xf4c <kolla_efter_kok_left+0x552>
-     b30:	81 e0       	ldi	r24, 0x01	; 1
+     aea:	8a 31       	cpi	r24, 0x1A	; 26
+     aec:	08 f4       	brcc	.+2      	; 0xaf0 <kolla_efter_kok_left+0xee>
+     aee:	8a c2       	rjmp	.+1300   	; 0x1004 <kolla_efter_kok_left+0x602>
+     af0:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     af4:	8a 31       	cpi	r24, 0x1A	; 26
+     af6:	08 f4       	brcc	.+2      	; 0xafa <kolla_efter_kok_left+0xf8>
+     af8:	85 c2       	rjmp	.+1290   	; 0x1004 <kolla_efter_kok_left+0x602>
+     afa:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     afe:	8b 34       	cpi	r24, 0x4B	; 75
+     b00:	08 f0       	brcs	.+2      	; 0xb04 <kolla_efter_kok_left+0x102>
+     b02:	80 c2       	rjmp	.+1280   	; 0x1004 <kolla_efter_kok_left+0x602>
+     b04:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     b08:	8b 34       	cpi	r24, 0x4B	; 75
+     b0a:	08 f0       	brcs	.+2      	; 0xb0e <kolla_efter_kok_left+0x10c>
+     b0c:	7b c2       	rjmp	.+1270   	; 0x1004 <kolla_efter_kok_left+0x602>
+     b0e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     b12:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     b16:	f0 e0       	ldi	r31, 0x00	; 0
+     b18:	92 e3       	ldi	r25, 0x32	; 50
+     b1a:	89 9f       	mul	r24, r25
+     b1c:	e0 0d       	add	r30, r0
+     b1e:	f1 1d       	adc	r31, r1
+     b20:	11 24       	eor	r1, r1
+     b22:	eb 5d       	subi	r30, 0xDB	; 219
+     b24:	fe 4f       	sbci	r31, 0xFE	; 254
+     b26:	90 81       	ld	r25, Z
+     b28:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     b2c:	98 13       	cpse	r25, r24
+     b2e:	6a c2       	rjmp	.+1236   	; 0x1004 <kolla_efter_kok_left+0x602>
+     b30:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     b34:	84 31       	cpi	r24, 0x14	; 20
+     b36:	08 f0       	brcs	.+2      	; 0xb3a <kolla_efter_kok_left+0x138>
+     b38:	65 c2       	rjmp	.+1226   	; 0x1004 <kolla_efter_kok_left+0x602>
+     b3a:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     b3e:	84 31       	cpi	r24, 0x14	; 20
+     b40:	08 f0       	brcs	.+2      	; 0xb44 <kolla_efter_kok_left+0x142>
+     b42:	60 c2       	rjmp	.+1216   	; 0x1004 <kolla_efter_kok_left+0x602>
+     b44:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     b48:	84 31       	cpi	r24, 0x14	; 20
+     b4a:	08 f0       	brcs	.+2      	; 0xb4e <kolla_efter_kok_left+0x14c>
+     b4c:	5b c2       	rjmp	.+1206   	; 0x1004 <kolla_efter_kok_left+0x602>
+     b4e:	81 e0       	ldi	r24, 0x01	; 1
 			{
 				KokFarFarAway = 1;
-     b32:	90 e0       	ldi	r25, 0x00	; 0
-     b34:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
-     b38:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
-     b3c:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
-				
+     b50:	90 e0       	ldi	r25, 0x00	; 0
+     b52:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
+     b56:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+     b5a:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+				if (driven >= 30)
+     b5e:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     b62:	4e 97       	sbiw	r24, 0x1e	; 30
+     b64:	28 f0       	brcs	.+10     	; 0xb70 <kolla_efter_kok_left+0x16e>
+				{
+					update_position();
+     b66:	09 dd       	rcall	.-1518   	; 0x57a <update_position>
+     b68:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+					driven = 0;
+     b6c:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     b70:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+				}
 				matrix[bot_y][bot_x - 2] = wall; // köksö hittad
-     b40:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     b44:	f0 e0       	ldi	r31, 0x00	; 0
-     b46:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     b4a:	22 e3       	ldi	r18, 0x32	; 50
-     b4c:	92 9f       	mul	r25, r18
-     b4e:	e0 0d       	add	r30, r0
-     b50:	f1 1d       	adc	r31, r1
-     b52:	11 24       	eor	r1, r1
-     b54:	eb 5d       	subi	r30, 0xDB	; 219
-     b56:	fe 4f       	sbci	r31, 0xFE	; 254
+     b74:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     b78:	f0 e0       	ldi	r31, 0x00	; 0
+     b7a:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     b7e:	22 e3       	ldi	r18, 0x32	; 50
+     b80:	92 9f       	mul	r25, r18
+     b82:	e0 0d       	add	r30, r0
+     b84:	f1 1d       	adc	r31, r1
+     b86:	11 24       	eor	r1, r1
+     b88:	eb 5d       	subi	r30, 0xDB	; 219
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
-     b58:	80 83       	st	Z, r24
-     b5a:	80 e0       	ldi	r24, 0x00	; 0
+     b8a:	fe 4f       	sbci	r31, 0xFE	; 254
+     b8c:	80 83       	st	Z, r24
+     b8e:	80 e0       	ldi	r24, 0x00	; 0
 				rot_left();
-     b5c:	a3 d2       	rcall	.+1350   	; 0x10a4 <UART0_Transmit>
-     b5e:	b1 dd       	rcall	.-1182   	; 0x6c2 <rot_left>
+     b90:	e6 d2       	rcall	.+1484   	; 0x115e <UART0_Transmit>
+     b92:	9b dd       	rcall	.-1226   	; 0x6ca <rot_left>
 				UART0_Transmit(stop);
-     b60:	80 e0       	ldi	r24, 0x00	; 0
-     b62:	a0 d2       	rcall	.+1344   	; 0x10a4 <UART0_Transmit>
-     b64:	a2 ce       	rjmp	.-700    	; 0x8aa <kokHittad>
+     b94:	80 e0       	ldi	r24, 0x00	; 0
+     b96:	e3 d2       	rcall	.+1478   	; 0x115e <UART0_Transmit>
+     b98:	8c ce       	rjmp	.-744    	; 0x8b2 <kokHittad>
 				kokHittad();
-     b66:	08 95       	ret
-     b68:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     b9a:	08 95       	ret
+     b9c:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
 			}
 		}
 		break;
 		
 		case 1: //ÖST
 		if (matrix[bot_y + 1][bot_x] == unknown || (matrix[bot_y + 1][bot_x] == drive))
-     b6c:	90 e0       	ldi	r25, 0x00	; 0
-     b6e:	01 96       	adiw	r24, 0x01	; 1
-     b70:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     b74:	32 e3       	ldi	r19, 0x32	; 50
-     b76:	38 9f       	mul	r19, r24
-     b78:	f0 01       	movw	r30, r0
-     b7a:	39 9f       	mul	r19, r25
-     b7c:	f0 0d       	add	r31, r0
-     b7e:	11 24       	eor	r1, r1
-     b80:	e9 5d       	subi	r30, 0xD9	; 217
-     b82:	fe 4f       	sbci	r31, 0xFE	; 254
-     b84:	e2 0f       	add	r30, r18
-     b86:	f1 1d       	adc	r31, r1
-     b88:	90 81       	ld	r25, Z
-     b8a:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     b8e:	98 17       	cp	r25, r24
-     b90:	a1 f0       	breq	.+40     	; 0xbba <kolla_efter_kok_left+0x1c0>
-     b92:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     b96:	90 e0       	ldi	r25, 0x00	; 0
-     b98:	01 96       	adiw	r24, 0x01	; 1
-     b9a:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     b9e:	38 9f       	mul	r19, r24
-     ba0:	f0 01       	movw	r30, r0
-     ba2:	39 9f       	mul	r19, r25
-     ba4:	f0 0d       	add	r31, r0
-     ba6:	11 24       	eor	r1, r1
-     ba8:	e9 5d       	subi	r30, 0xD9	; 217
-     baa:	fe 4f       	sbci	r31, 0xFE	; 254
-     bac:	e2 0f       	add	r30, r18
-     bae:	f1 1d       	adc	r31, r1
-     bb0:	90 81       	ld	r25, Z
-     bb2:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     bb6:	98 13       	cpse	r25, r24
-     bb8:	c9 c1       	rjmp	.+914    	; 0xf4c <kolla_efter_kok_left+0x552>
-     bba:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     ba0:	90 e0       	ldi	r25, 0x00	; 0
+     ba2:	01 96       	adiw	r24, 0x01	; 1
+     ba4:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     ba8:	32 e3       	ldi	r19, 0x32	; 50
+     baa:	38 9f       	mul	r19, r24
+     bac:	f0 01       	movw	r30, r0
+     bae:	39 9f       	mul	r19, r25
+     bb0:	f0 0d       	add	r31, r0
+     bb2:	11 24       	eor	r1, r1
+     bb4:	e9 5d       	subi	r30, 0xD9	; 217
+     bb6:	fe 4f       	sbci	r31, 0xFE	; 254
+     bb8:	e2 0f       	add	r30, r18
+     bba:	f1 1d       	adc	r31, r1
+     bbc:	90 81       	ld	r25, Z
+     bbe:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     bc2:	98 17       	cp	r25, r24
+     bc4:	a1 f0       	breq	.+40     	; 0xbee <kolla_efter_kok_left+0x1ec>
+     bc6:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     bca:	90 e0       	ldi	r25, 0x00	; 0
+     bcc:	01 96       	adiw	r24, 0x01	; 1
+     bce:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     bd2:	38 9f       	mul	r19, r24
+     bd4:	f0 01       	movw	r30, r0
+     bd6:	39 9f       	mul	r19, r25
+     bd8:	f0 0d       	add	r31, r0
+     bda:	11 24       	eor	r1, r1
+     bdc:	e9 5d       	subi	r30, 0xD9	; 217
+     bde:	fe 4f       	sbci	r31, 0xFE	; 254
+     be0:	e2 0f       	add	r30, r18
+     be2:	f1 1d       	adc	r31, r1
+     be4:	90 81       	ld	r25, Z
+     be6:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     bea:	98 13       	cpse	r25, r24
+     bec:	0b c2       	rjmp	.+1046   	; 0x1004 <kolla_efter_kok_left+0x602>
+     bee:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
 		{
 			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20))
-     bbe:	89 31       	cpi	r24, 0x19	; 25
-     bc0:	50 f5       	brcc	.+84     	; 0xc16 <kolla_efter_kok_left+0x21c>
-     bc2:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     bc6:	89 31       	cpi	r24, 0x19	; 25
-     bc8:	30 f5       	brcc	.+76     	; 0xc16 <kolla_efter_kok_left+0x21c>
-     bca:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     bce:	84 31       	cpi	r24, 0x14	; 20
-     bd0:	10 f5       	brcc	.+68     	; 0xc16 <kolla_efter_kok_left+0x21c>
-     bd2:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     bd6:	84 31       	cpi	r24, 0x14	; 20
-     bd8:	f0 f4       	brcc	.+60     	; 0xc16 <kolla_efter_kok_left+0x21c>
-     bda:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     bde:	84 31       	cpi	r24, 0x14	; 20
-     be0:	d0 f4       	brcc	.+52     	; 0xc16 <kolla_efter_kok_left+0x21c>
-     be2:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     bf2:	89 31       	cpi	r24, 0x19	; 25
+     bf4:	a8 f5       	brcc	.+106    	; 0xc60 <kolla_efter_kok_left+0x25e>
+     bf6:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     bfa:	89 31       	cpi	r24, 0x19	; 25
+     bfc:	88 f5       	brcc	.+98     	; 0xc60 <kolla_efter_kok_left+0x25e>
+     bfe:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     c02:	84 31       	cpi	r24, 0x14	; 20
+     c04:	68 f5       	brcc	.+90     	; 0xc60 <kolla_efter_kok_left+0x25e>
+     c06:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     c0a:	84 31       	cpi	r24, 0x14	; 20
+     c0c:	48 f5       	brcc	.+82     	; 0xc60 <kolla_efter_kok_left+0x25e>
+     c0e:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     c12:	84 31       	cpi	r24, 0x14	; 20
+     c14:	28 f5       	brcc	.+74     	; 0xc60 <kolla_efter_kok_left+0x25e>
+     c16:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
 			{
+				if (driven >= 30)
+     c1a:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     c1e:	4e 97       	sbiw	r24, 0x1e	; 30
+     c20:	28 f0       	brcs	.+10     	; 0xc2c <kolla_efter_kok_left+0x22a>
+     c22:	ab dc       	rcall	.-1706   	; 0x57a <update_position>
+				{
+					update_position();
+     c24:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+					driven = 0;
+     c28:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     c2c:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+				}
+				
 				matrix[bot_y + 1][bot_x] = wall; // köksö hittad
-     be6:	90 e0       	ldi	r25, 0x00	; 0
-     be8:	01 96       	adiw	r24, 0x01	; 1
-     bea:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     bee:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     bf2:	42 e3       	ldi	r20, 0x32	; 50
-     bf4:	48 9f       	mul	r20, r24
-     bf6:	f0 01       	movw	r30, r0
-     bf8:	49 9f       	mul	r20, r25
-     bfa:	f0 0d       	add	r31, r0
-     bfc:	11 24       	eor	r1, r1
-     bfe:	e9 5d       	subi	r30, 0xD9	; 217
-     c00:	fe 4f       	sbci	r31, 0xFE	; 254
-     c02:	e3 0f       	add	r30, r19
+     c30:	90 e0       	ldi	r25, 0x00	; 0
+     c32:	01 96       	adiw	r24, 0x01	; 1
+     c34:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     c38:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     c3c:	42 e3       	ldi	r20, 0x32	; 50
+     c3e:	48 9f       	mul	r20, r24
+     c40:	f0 01       	movw	r30, r0
+     c42:	49 9f       	mul	r20, r25
+     c44:	f0 0d       	add	r31, r0
+     c46:	11 24       	eor	r1, r1
+     c48:	e9 5d       	subi	r30, 0xD9	; 217
+     c4a:	fe 4f       	sbci	r31, 0xFE	; 254
+     c4c:	e3 0f       	add	r30, r19
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
-     c04:	f1 1d       	adc	r31, r1
-     c06:	20 83       	st	Z, r18
-     c08:	80 e0       	ldi	r24, 0x00	; 0
+     c4e:	f1 1d       	adc	r31, r1
+     c50:	20 83       	st	Z, r18
+     c52:	80 e0       	ldi	r24, 0x00	; 0
 				rot_left();
-     c0a:	4c d2       	rcall	.+1176   	; 0x10a4 <UART0_Transmit>
-     c0c:	5a dd       	rcall	.-1356   	; 0x6c2 <rot_left>
+     c54:	84 d2       	rcall	.+1288   	; 0x115e <UART0_Transmit>
+     c56:	39 dd       	rcall	.-1422   	; 0x6ca <rot_left>
 				UART0_Transmit(stop);
-     c0e:	80 e0       	ldi	r24, 0x00	; 0
-     c10:	49 d2       	rcall	.+1170   	; 0x10a4 <UART0_Transmit>
-     c12:	4b ce       	rjmp	.-874    	; 0x8aa <kokHittad>
+     c58:	80 e0       	ldi	r24, 0x00	; 0
+     c5a:	81 d2       	rcall	.+1282   	; 0x115e <UART0_Transmit>
+     c5c:	2a ce       	rjmp	.-940    	; 0x8b2 <kokHittad>
 				kokHittad();
-     c14:	08 95       	ret
-     c16:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     c5e:	08 95       	ret
+     c60:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
 			}
 			else if((sens_safe[5] > 25 ) && (sens_safe[3] > 25) && (sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y + 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
-     c1a:	8a 31       	cpi	r24, 0x1A	; 26
-     c1c:	08 f4       	brcc	.+2      	; 0xc20 <kolla_efter_kok_left+0x226>
-     c1e:	96 c1       	rjmp	.+812    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c20:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     c24:	8a 31       	cpi	r24, 0x1A	; 26
-     c26:	08 f4       	brcc	.+2      	; 0xc2a <kolla_efter_kok_left+0x230>
-     c28:	91 c1       	rjmp	.+802    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c2a:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
-     c2e:	86 34       	cpi	r24, 0x46	; 70
-     c30:	08 f0       	brcs	.+2      	; 0xc34 <kolla_efter_kok_left+0x23a>
-     c32:	8c c1       	rjmp	.+792    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c34:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     c38:	86 34       	cpi	r24, 0x46	; 70
-     c3a:	08 f0       	brcs	.+2      	; 0xc3e <kolla_efter_kok_left+0x244>
-     c3c:	87 c1       	rjmp	.+782    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c3e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     c42:	90 e0       	ldi	r25, 0x00	; 0
-     c44:	02 96       	adiw	r24, 0x02	; 2
-     c46:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     c4a:	32 e3       	ldi	r19, 0x32	; 50
-     c4c:	38 9f       	mul	r19, r24
-     c4e:	f0 01       	movw	r30, r0
-     c50:	39 9f       	mul	r19, r25
-     c52:	f0 0d       	add	r31, r0
-     c54:	11 24       	eor	r1, r1
-     c56:	e9 5d       	subi	r30, 0xD9	; 217
-     c58:	fe 4f       	sbci	r31, 0xFE	; 254
-     c5a:	e2 0f       	add	r30, r18
-     c5c:	f1 1d       	adc	r31, r1
-     c5e:	90 81       	ld	r25, Z
-     c60:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     c64:	98 13       	cpse	r25, r24
-     c66:	72 c1       	rjmp	.+740    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c68:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     c6c:	84 31       	cpi	r24, 0x14	; 20
-     c6e:	08 f0       	brcs	.+2      	; 0xc72 <kolla_efter_kok_left+0x278>
-     c70:	6d c1       	rjmp	.+730    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c72:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     c76:	84 31       	cpi	r24, 0x14	; 20
-     c78:	08 f0       	brcs	.+2      	; 0xc7c <kolla_efter_kok_left+0x282>
-     c7a:	68 c1       	rjmp	.+720    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c7c:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     c80:	84 31       	cpi	r24, 0x14	; 20
-     c82:	08 f0       	brcs	.+2      	; 0xc86 <kolla_efter_kok_left+0x28c>
-     c84:	63 c1       	rjmp	.+710    	; 0xf4c <kolla_efter_kok_left+0x552>
-     c86:	81 e0       	ldi	r24, 0x01	; 1
-     c88:	90 e0       	ldi	r25, 0x00	; 0
+     c64:	8a 31       	cpi	r24, 0x1A	; 26
+     c66:	08 f4       	brcc	.+2      	; 0xc6a <kolla_efter_kok_left+0x268>
+     c68:	cd c1       	rjmp	.+922    	; 0x1004 <kolla_efter_kok_left+0x602>
+     c6a:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     c6e:	8a 31       	cpi	r24, 0x1A	; 26
+     c70:	08 f4       	brcc	.+2      	; 0xc74 <kolla_efter_kok_left+0x272>
+     c72:	c8 c1       	rjmp	.+912    	; 0x1004 <kolla_efter_kok_left+0x602>
+     c74:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     c78:	86 34       	cpi	r24, 0x46	; 70
+     c7a:	08 f0       	brcs	.+2      	; 0xc7e <kolla_efter_kok_left+0x27c>
+     c7c:	c3 c1       	rjmp	.+902    	; 0x1004 <kolla_efter_kok_left+0x602>
+     c7e:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     c82:	86 34       	cpi	r24, 0x46	; 70
+     c84:	08 f0       	brcs	.+2      	; 0xc88 <kolla_efter_kok_left+0x286>
+     c86:	be c1       	rjmp	.+892    	; 0x1004 <kolla_efter_kok_left+0x602>
+     c88:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     c8c:	90 e0       	ldi	r25, 0x00	; 0
+     c8e:	02 96       	adiw	r24, 0x02	; 2
+     c90:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     c94:	32 e3       	ldi	r19, 0x32	; 50
+     c96:	38 9f       	mul	r19, r24
+     c98:	f0 01       	movw	r30, r0
+     c9a:	39 9f       	mul	r19, r25
+     c9c:	f0 0d       	add	r31, r0
+     c9e:	11 24       	eor	r1, r1
+     ca0:	e9 5d       	subi	r30, 0xD9	; 217
+     ca2:	fe 4f       	sbci	r31, 0xFE	; 254
+     ca4:	e2 0f       	add	r30, r18
+     ca6:	f1 1d       	adc	r31, r1
+     ca8:	90 81       	ld	r25, Z
+     caa:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     cae:	98 13       	cpse	r25, r24
+     cb0:	a9 c1       	rjmp	.+850    	; 0x1004 <kolla_efter_kok_left+0x602>
+     cb2:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     cb6:	84 31       	cpi	r24, 0x14	; 20
+     cb8:	08 f0       	brcs	.+2      	; 0xcbc <kolla_efter_kok_left+0x2ba>
+     cba:	a4 c1       	rjmp	.+840    	; 0x1004 <kolla_efter_kok_left+0x602>
+     cbc:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     cc0:	84 31       	cpi	r24, 0x14	; 20
+     cc2:	08 f0       	brcs	.+2      	; 0xcc6 <kolla_efter_kok_left+0x2c4>
+     cc4:	9f c1       	rjmp	.+830    	; 0x1004 <kolla_efter_kok_left+0x602>
+     cc6:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     cca:	84 31       	cpi	r24, 0x14	; 20
+     ccc:	08 f0       	brcs	.+2      	; 0xcd0 <kolla_efter_kok_left+0x2ce>
+     cce:	9a c1       	rjmp	.+820    	; 0x1004 <kolla_efter_kok_left+0x602>
+     cd0:	81 e0       	ldi	r24, 0x01	; 1
 			{
 				KokFarFarAway = 1;
-     c8a:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
-     c8e:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
-     c92:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     cd2:	90 e0       	ldi	r25, 0x00	; 0
+     cd4:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
+     cd8:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+     cdc:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+				if (driven >= 30)
+     ce0:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     ce4:	4e 97       	sbiw	r24, 0x1e	; 30
+     ce6:	28 f0       	brcs	.+10     	; 0xcf2 <kolla_efter_kok_left+0x2f0>
+     ce8:	48 dc       	rcall	.-1904   	; 0x57a <update_position>
+				{
+					update_position();
+     cea:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+					driven = 0;
+     cee:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     cf2:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+				}
+				
 				matrix[bot_y + 2][bot_x] = wall; // köksö hittad
-     c96:	90 e0       	ldi	r25, 0x00	; 0
-     c98:	02 96       	adiw	r24, 0x02	; 2
-     c9a:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     c9e:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     ca2:	42 e3       	ldi	r20, 0x32	; 50
-     ca4:	48 9f       	mul	r20, r24
-     ca6:	f0 01       	movw	r30, r0
-     ca8:	49 9f       	mul	r20, r25
-     caa:	f0 0d       	add	r31, r0
-     cac:	11 24       	eor	r1, r1
-     cae:	e9 5d       	subi	r30, 0xD9	; 217
-     cb0:	fe 4f       	sbci	r31, 0xFE	; 254
-     cb2:	e3 0f       	add	r30, r19
+     cf6:	90 e0       	ldi	r25, 0x00	; 0
+     cf8:	02 96       	adiw	r24, 0x02	; 2
+     cfa:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     cfe:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     d02:	42 e3       	ldi	r20, 0x32	; 50
+     d04:	48 9f       	mul	r20, r24
+     d06:	f0 01       	movw	r30, r0
+     d08:	49 9f       	mul	r20, r25
+     d0a:	f0 0d       	add	r31, r0
+     d0c:	11 24       	eor	r1, r1
+     d0e:	e9 5d       	subi	r30, 0xD9	; 217
+     d10:	fe 4f       	sbci	r31, 0xFE	; 254
+     d12:	e3 0f       	add	r30, r19
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
-     cb4:	f1 1d       	adc	r31, r1
-     cb6:	20 83       	st	Z, r18
-     cb8:	80 e0       	ldi	r24, 0x00	; 0
+     d14:	f1 1d       	adc	r31, r1
+     d16:	20 83       	st	Z, r18
+     d18:	80 e0       	ldi	r24, 0x00	; 0
 				rot_left();
-     cba:	f4 d1       	rcall	.+1000   	; 0x10a4 <UART0_Transmit>
-     cbc:	02 dd       	rcall	.-1532   	; 0x6c2 <rot_left>
+     d1a:	21 d2       	rcall	.+1090   	; 0x115e <UART0_Transmit>
+     d1c:	d6 dc       	rcall	.-1620   	; 0x6ca <rot_left>
 				UART0_Transmit(stop);
-     cbe:	80 e0       	ldi	r24, 0x00	; 0
-     cc0:	f1 d1       	rcall	.+994    	; 0x10a4 <UART0_Transmit>
-     cc2:	f3 cd       	rjmp	.-1050   	; 0x8aa <kokHittad>
+     d1e:	80 e0       	ldi	r24, 0x00	; 0
+     d20:	1e d2       	rcall	.+1084   	; 0x115e <UART0_Transmit>
+     d22:	c7 cd       	rjmp	.-1138   	; 0x8b2 <kokHittad>
 				kokHittad();
-     cc4:	08 95       	ret
-     cc6:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     d24:	08 95       	ret
+     d26:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
 			}
 		}
 		break;
 		
 		case 2:
 		if (matrix[bot_y][bot_x + 1] == unknown || (matrix[bot_y][bot_x + 1] == drive))
-     cca:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     cce:	f0 e0       	ldi	r31, 0x00	; 0
-     cd0:	92 e3       	ldi	r25, 0x32	; 50
-     cd2:	89 9f       	mul	r24, r25
-     cd4:	e0 0d       	add	r30, r0
-     cd6:	f1 1d       	adc	r31, r1
-     cd8:	11 24       	eor	r1, r1
-     cda:	e8 5d       	subi	r30, 0xD8	; 216
-     cdc:	fe 4f       	sbci	r31, 0xFE	; 254
-     cde:	90 81       	ld	r25, Z
-     ce0:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     ce4:	98 17       	cp	r25, r24
-     ce6:	89 f0       	breq	.+34     	; 0xd0a <kolla_efter_kok_left+0x310>
-     ce8:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     cec:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     cf0:	f0 e0       	ldi	r31, 0x00	; 0
-     cf2:	22 e3       	ldi	r18, 0x32	; 50
-     cf4:	82 9f       	mul	r24, r18
-     cf6:	e0 0d       	add	r30, r0
-     cf8:	f1 1d       	adc	r31, r1
-     cfa:	11 24       	eor	r1, r1
-     cfc:	e8 5d       	subi	r30, 0xD8	; 216
-     cfe:	fe 4f       	sbci	r31, 0xFE	; 254
-     d00:	90 81       	ld	r25, Z
-     d02:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     d06:	98 13       	cpse	r25, r24
-     d08:	21 c1       	rjmp	.+578    	; 0xf4c <kolla_efter_kok_left+0x552>
-     d0a:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     d2a:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     d2e:	f0 e0       	ldi	r31, 0x00	; 0
+     d30:	92 e3       	ldi	r25, 0x32	; 50
+     d32:	89 9f       	mul	r24, r25
+     d34:	e0 0d       	add	r30, r0
+     d36:	f1 1d       	adc	r31, r1
+     d38:	11 24       	eor	r1, r1
+     d3a:	e8 5d       	subi	r30, 0xD8	; 216
+     d3c:	fe 4f       	sbci	r31, 0xFE	; 254
+     d3e:	90 81       	ld	r25, Z
+     d40:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     d44:	98 17       	cp	r25, r24
+     d46:	89 f0       	breq	.+34     	; 0xd6a <kolla_efter_kok_left+0x368>
+     d48:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     d4c:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     d50:	f0 e0       	ldi	r31, 0x00	; 0
+     d52:	22 e3       	ldi	r18, 0x32	; 50
+     d54:	82 9f       	mul	r24, r18
+     d56:	e0 0d       	add	r30, r0
+     d58:	f1 1d       	adc	r31, r1
+     d5a:	11 24       	eor	r1, r1
+     d5c:	e8 5d       	subi	r30, 0xD8	; 216
+     d5e:	fe 4f       	sbci	r31, 0xFE	; 254
+     d60:	90 81       	ld	r25, Z
+     d62:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     d66:	98 13       	cpse	r25, r24
+     d68:	4d c1       	rjmp	.+666    	; 0x1004 <kolla_efter_kok_left+0x602>
+     d6a:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
 		{
 			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)) // ökat från 20
-     d0e:	89 31       	cpi	r24, 0x19	; 25
-     d10:	50 f5       	brcc	.+84     	; 0xd66 <kolla_efter_kok_left+0x36c>
-     d12:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     d16:	89 31       	cpi	r24, 0x19	; 25
-     d18:	30 f5       	brcc	.+76     	; 0xd66 <kolla_efter_kok_left+0x36c>
-     d1a:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     d1e:	84 31       	cpi	r24, 0x14	; 20
-     d20:	10 f5       	brcc	.+68     	; 0xd66 <kolla_efter_kok_left+0x36c>
-     d22:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     d26:	84 31       	cpi	r24, 0x14	; 20
-     d28:	f0 f4       	brcc	.+60     	; 0xd66 <kolla_efter_kok_left+0x36c>
-     d2a:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     d2e:	84 31       	cpi	r24, 0x14	; 20
-     d30:	d0 f4       	brcc	.+52     	; 0xd66 <kolla_efter_kok_left+0x36c>
-     d32:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     d6e:	89 31       	cpi	r24, 0x19	; 25
+     d70:	a8 f5       	brcc	.+106    	; 0xddc <kolla_efter_kok_left+0x3da>
+     d72:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     d76:	89 31       	cpi	r24, 0x19	; 25
+     d78:	88 f5       	brcc	.+98     	; 0xddc <kolla_efter_kok_left+0x3da>
+     d7a:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     d7e:	84 31       	cpi	r24, 0x14	; 20
+     d80:	68 f5       	brcc	.+90     	; 0xddc <kolla_efter_kok_left+0x3da>
+     d82:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     d86:	84 31       	cpi	r24, 0x14	; 20
+     d88:	48 f5       	brcc	.+82     	; 0xddc <kolla_efter_kok_left+0x3da>
+     d8a:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     d8e:	84 31       	cpi	r24, 0x14	; 20
+     d90:	28 f5       	brcc	.+74     	; 0xddc <kolla_efter_kok_left+0x3da>
+     d92:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
 			{
-				
+				if (driven >= 30)
+     d96:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     d9a:	4e 97       	sbiw	r24, 0x1e	; 30
+     d9c:	28 f0       	brcs	.+10     	; 0xda8 <kolla_efter_kok_left+0x3a6>
+     d9e:	ed db       	rcall	.-2086   	; 0x57a <update_position>
+				{
+					update_position();
+     da0:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+					driven = 0;
+     da4:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     da8:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+				}
 				matrix[bot_y][bot_x + 1] = wall; // köksö hittad
-     d36:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     d3a:	f0 e0       	ldi	r31, 0x00	; 0
-     d3c:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     d40:	22 e3       	ldi	r18, 0x32	; 50
-     d42:	92 9f       	mul	r25, r18
-     d44:	e0 0d       	add	r30, r0
-     d46:	f1 1d       	adc	r31, r1
-     d48:	11 24       	eor	r1, r1
-     d4a:	e8 5d       	subi	r30, 0xD8	; 216
+     dac:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     db0:	f0 e0       	ldi	r31, 0x00	; 0
+     db2:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     db6:	22 e3       	ldi	r18, 0x32	; 50
+     db8:	92 9f       	mul	r25, r18
+     dba:	e0 0d       	add	r30, r0
+     dbc:	f1 1d       	adc	r31, r1
+     dbe:	11 24       	eor	r1, r1
+     dc0:	e8 5d       	subi	r30, 0xD8	; 216
+     dc2:	fe 4f       	sbci	r31, 0xFE	; 254
 				driven = 0; // för att inte gå in i update igen inuti rot_left
-     d4c:	fe 4f       	sbci	r31, 0xFE	; 254
-     d4e:	80 83       	st	Z, r24
-     d50:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     dc4:	80 83       	st	Z, r24
+     dc6:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     dca:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 				UART0_Transmit(stop);
-     d54:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
-     d58:	80 e0       	ldi	r24, 0x00	; 0
+     dce:	80 e0       	ldi	r24, 0x00	; 0
+     dd0:	c6 d1       	rcall	.+908    	; 0x115e <UART0_Transmit>
 				rot_left();
-     d5a:	a4 d1       	rcall	.+840    	; 0x10a4 <UART0_Transmit>
-     d5c:	b2 dc       	rcall	.-1692   	; 0x6c2 <rot_left>
+     dd2:	7b dc       	rcall	.-1802   	; 0x6ca <rot_left>
+     dd4:	80 e0       	ldi	r24, 0x00	; 0
 				UART0_Transmit(stop);
-     d5e:	80 e0       	ldi	r24, 0x00	; 0
-     d60:	a1 d1       	rcall	.+834    	; 0x10a4 <UART0_Transmit>
-     d62:	a3 cd       	rjmp	.-1210   	; 0x8aa <kokHittad>
+     dd6:	c3 d1       	rcall	.+902    	; 0x115e <UART0_Transmit>
+     dd8:	6c cd       	rjmp	.-1320   	; 0x8b2 <kokHittad>
+     dda:	08 95       	ret
 				kokHittad();
-     d64:	08 95       	ret
-     d66:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     ddc:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     de0:	86 34       	cpi	r24, 0x46	; 70
 				
 			}
 			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y][bot_x + 2] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) // ökat från 60
-     d6a:	86 34       	cpi	r24, 0x46	; 70
-     d6c:	08 f0       	brcs	.+2      	; 0xd70 <kolla_efter_kok_left+0x376>
-     d6e:	ee c0       	rjmp	.+476    	; 0xf4c <kolla_efter_kok_left+0x552>
-     d70:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     d74:	86 34       	cpi	r24, 0x46	; 70
-     d76:	08 f0       	brcs	.+2      	; 0xd7a <kolla_efter_kok_left+0x380>
-     d78:	e9 c0       	rjmp	.+466    	; 0xf4c <kolla_efter_kok_left+0x552>
-     d7a:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     d7e:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     d82:	f0 e0       	ldi	r31, 0x00	; 0
-     d84:	92 e3       	ldi	r25, 0x32	; 50
-     d86:	89 9f       	mul	r24, r25
-     d88:	e0 0d       	add	r30, r0
-     d8a:	f1 1d       	adc	r31, r1
-     d8c:	11 24       	eor	r1, r1
-     d8e:	e7 5d       	subi	r30, 0xD7	; 215
-     d90:	fe 4f       	sbci	r31, 0xFE	; 254
-     d92:	90 81       	ld	r25, Z
-     d94:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     d98:	98 13       	cpse	r25, r24
-     d9a:	d8 c0       	rjmp	.+432    	; 0xf4c <kolla_efter_kok_left+0x552>
-     d9c:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     da0:	84 31       	cpi	r24, 0x14	; 20
-     da2:	08 f0       	brcs	.+2      	; 0xda6 <kolla_efter_kok_left+0x3ac>
-     da4:	d3 c0       	rjmp	.+422    	; 0xf4c <kolla_efter_kok_left+0x552>
-     da6:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     daa:	84 31       	cpi	r24, 0x14	; 20
-     dac:	08 f0       	brcs	.+2      	; 0xdb0 <kolla_efter_kok_left+0x3b6>
-     dae:	ce c0       	rjmp	.+412    	; 0xf4c <kolla_efter_kok_left+0x552>
-     db0:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     db4:	84 31       	cpi	r24, 0x14	; 20
-     db6:	08 f0       	brcs	.+2      	; 0xdba <kolla_efter_kok_left+0x3c0>
-     db8:	c9 c0       	rjmp	.+402    	; 0xf4c <kolla_efter_kok_left+0x552>
-     dba:	81 e0       	ldi	r24, 0x01	; 1
-     dbc:	90 e0       	ldi	r25, 0x00	; 0
+     de2:	08 f0       	brcs	.+2      	; 0xde6 <kolla_efter_kok_left+0x3e4>
+     de4:	0f c1       	rjmp	.+542    	; 0x1004 <kolla_efter_kok_left+0x602>
+     de6:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     dea:	86 34       	cpi	r24, 0x46	; 70
+     dec:	08 f0       	brcs	.+2      	; 0xdf0 <kolla_efter_kok_left+0x3ee>
+     dee:	0a c1       	rjmp	.+532    	; 0x1004 <kolla_efter_kok_left+0x602>
+     df0:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     df4:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     df8:	f0 e0       	ldi	r31, 0x00	; 0
+     dfa:	92 e3       	ldi	r25, 0x32	; 50
+     dfc:	89 9f       	mul	r24, r25
+     dfe:	e0 0d       	add	r30, r0
+     e00:	f1 1d       	adc	r31, r1
+     e02:	11 24       	eor	r1, r1
+     e04:	e7 5d       	subi	r30, 0xD7	; 215
+     e06:	fe 4f       	sbci	r31, 0xFE	; 254
+     e08:	90 81       	ld	r25, Z
+     e0a:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     e0e:	98 13       	cpse	r25, r24
+     e10:	f9 c0       	rjmp	.+498    	; 0x1004 <kolla_efter_kok_left+0x602>
+     e12:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     e16:	84 31       	cpi	r24, 0x14	; 20
+     e18:	08 f0       	brcs	.+2      	; 0xe1c <kolla_efter_kok_left+0x41a>
+     e1a:	f4 c0       	rjmp	.+488    	; 0x1004 <kolla_efter_kok_left+0x602>
+     e1c:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     e20:	84 31       	cpi	r24, 0x14	; 20
+     e22:	08 f0       	brcs	.+2      	; 0xe26 <kolla_efter_kok_left+0x424>
+     e24:	ef c0       	rjmp	.+478    	; 0x1004 <kolla_efter_kok_left+0x602>
+     e26:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     e2a:	84 31       	cpi	r24, 0x14	; 20
+     e2c:	08 f0       	brcs	.+2      	; 0xe30 <kolla_efter_kok_left+0x42e>
+     e2e:	ea c0       	rjmp	.+468    	; 0x1004 <kolla_efter_kok_left+0x602>
+     e30:	81 e0       	ldi	r24, 0x01	; 1
+     e32:	90 e0       	ldi	r25, 0x00	; 0
 			{
 				KokFarFarAway = 1;
-     dbe:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
-     dc2:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
-     dc6:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     e34:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
+     e38:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+     e3c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+				if (driven >= 30)
+     e40:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     e44:	4e 97       	sbiw	r24, 0x1e	; 30
+     e46:	28 f0       	brcs	.+10     	; 0xe52 <kolla_efter_kok_left+0x450>
+     e48:	98 db       	rcall	.-2256   	; 0x57a <update_position>
+				{
+					update_position();
+     e4a:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+					driven = 0;
+     e4e:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+				}
 				matrix[bot_y][bot_x + 2] = wall; // köksö hittad
-     dca:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
-     dce:	f0 e0       	ldi	r31, 0x00	; 0
-     dd0:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
-     dd4:	22 e3       	ldi	r18, 0x32	; 50
-     dd6:	92 9f       	mul	r25, r18
-     dd8:	e0 0d       	add	r30, r0
-     dda:	f1 1d       	adc	r31, r1
-     ddc:	11 24       	eor	r1, r1
-     dde:	e7 5d       	subi	r30, 0xD7	; 215
+     e52:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <bot_y>
+     e56:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <bot_x>
+     e5a:	f0 e0       	ldi	r31, 0x00	; 0
+     e5c:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <wall>
+     e60:	22 e3       	ldi	r18, 0x32	; 50
+     e62:	92 9f       	mul	r25, r18
+     e64:	e0 0d       	add	r30, r0
+     e66:	f1 1d       	adc	r31, r1
+     e68:	11 24       	eor	r1, r1
+     e6a:	e7 5d       	subi	r30, 0xD7	; 215
+     e6c:	fe 4f       	sbci	r31, 0xFE	; 254
 				driven = 0; // för att inte gå in i update igen inuti rot_left
-     de0:	fe 4f       	sbci	r31, 0xFE	; 254
-     de2:	80 83       	st	Z, r24
-     de4:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     e6e:	80 83       	st	Z, r24
+     e70:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     e74:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 				UART0_Transmit(stop);
-     de8:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
-     dec:	80 e0       	ldi	r24, 0x00	; 0
+     e78:	80 e0       	ldi	r24, 0x00	; 0
+     e7a:	71 d1       	rcall	.+738    	; 0x115e <UART0_Transmit>
 				rot_left();
-     dee:	5a d1       	rcall	.+692    	; 0x10a4 <UART0_Transmit>
-     df0:	68 dc       	rcall	.-1840   	; 0x6c2 <rot_left>
+     e7c:	26 dc       	rcall	.-1972   	; 0x6ca <rot_left>
+     e7e:	80 e0       	ldi	r24, 0x00	; 0
 				UART0_Transmit(stop);
-     df2:	80 e0       	ldi	r24, 0x00	; 0
-     df4:	57 d1       	rcall	.+686    	; 0x10a4 <UART0_Transmit>
-     df6:	59 cd       	rjmp	.-1358   	; 0x8aa <kokHittad>
+     e80:	6e d1       	rcall	.+732    	; 0x115e <UART0_Transmit>
+     e82:	17 cd       	rjmp	.-1490   	; 0x8b2 <kokHittad>
+     e84:	08 95       	ret
 				kokHittad();
-     df8:	08 95       	ret
-     dfa:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     e86:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     e8a:	90 e0       	ldi	r25, 0x00	; 0
 			}
 		}
 		break;
 		
 		case 3:
 		if ((matrix[bot_y - 1][bot_x] == unknown) || (matrix[bot_y - 1][bot_x] == drive))
-     dfe:	90 e0       	ldi	r25, 0x00	; 0
-     e00:	01 97       	sbiw	r24, 0x01	; 1
-     e02:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     e06:	32 e3       	ldi	r19, 0x32	; 50
-     e08:	38 9f       	mul	r19, r24
-     e0a:	f0 01       	movw	r30, r0
-     e0c:	39 9f       	mul	r19, r25
-     e0e:	f0 0d       	add	r31, r0
-     e10:	11 24       	eor	r1, r1
-     e12:	e9 5d       	subi	r30, 0xD9	; 217
-     e14:	fe 4f       	sbci	r31, 0xFE	; 254
-     e16:	e2 0f       	add	r30, r18
-     e18:	f1 1d       	adc	r31, r1
-     e1a:	90 81       	ld	r25, Z
-     e1c:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     e20:	98 17       	cp	r25, r24
-     e22:	a1 f0       	breq	.+40     	; 0xe4c <kolla_efter_kok_left+0x452>
-     e24:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     e28:	90 e0       	ldi	r25, 0x00	; 0
-     e2a:	01 97       	sbiw	r24, 0x01	; 1
-     e2c:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     e30:	38 9f       	mul	r19, r24
-     e32:	f0 01       	movw	r30, r0
-     e34:	39 9f       	mul	r19, r25
-     e36:	f0 0d       	add	r31, r0
-     e38:	11 24       	eor	r1, r1
-     e3a:	e9 5d       	subi	r30, 0xD9	; 217
-     e3c:	fe 4f       	sbci	r31, 0xFE	; 254
-     e3e:	e2 0f       	add	r30, r18
-     e40:	f1 1d       	adc	r31, r1
-     e42:	90 81       	ld	r25, Z
-     e44:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
-     e48:	98 13       	cpse	r25, r24
-     e4a:	80 c0       	rjmp	.+256    	; 0xf4c <kolla_efter_kok_left+0x552>
-     e4c:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     e8c:	01 97       	sbiw	r24, 0x01	; 1
+     e8e:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     e92:	32 e3       	ldi	r19, 0x32	; 50
+     e94:	38 9f       	mul	r19, r24
+     e96:	f0 01       	movw	r30, r0
+     e98:	39 9f       	mul	r19, r25
+     e9a:	f0 0d       	add	r31, r0
+     e9c:	11 24       	eor	r1, r1
+     e9e:	e9 5d       	subi	r30, 0xD9	; 217
+     ea0:	fe 4f       	sbci	r31, 0xFE	; 254
+     ea2:	e2 0f       	add	r30, r18
+     ea4:	f1 1d       	adc	r31, r1
+     ea6:	90 81       	ld	r25, Z
+     ea8:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     eac:	98 17       	cp	r25, r24
+     eae:	a1 f0       	breq	.+40     	; 0xed8 <kolla_efter_kok_left+0x4d6>
+     eb0:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     eb4:	90 e0       	ldi	r25, 0x00	; 0
+     eb6:	01 97       	sbiw	r24, 0x01	; 1
+     eb8:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     ebc:	38 9f       	mul	r19, r24
+     ebe:	f0 01       	movw	r30, r0
+     ec0:	39 9f       	mul	r19, r25
+     ec2:	f0 0d       	add	r31, r0
+     ec4:	11 24       	eor	r1, r1
+     ec6:	e9 5d       	subi	r30, 0xD9	; 217
+     ec8:	fe 4f       	sbci	r31, 0xFE	; 254
+     eca:	e2 0f       	add	r30, r18
+     ecc:	f1 1d       	adc	r31, r1
+     ece:	90 81       	ld	r25, Z
+     ed0:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <drive>
+     ed4:	98 13       	cpse	r25, r24
+     ed6:	96 c0       	rjmp	.+300    	; 0x1004 <kolla_efter_kok_left+0x602>
+     ed8:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
 		{
 			if ((sens_safe[5] < 25 && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)))
-     e50:	89 31       	cpi	r24, 0x19	; 25
-     e52:	70 f5       	brcc	.+92     	; 0xeb0 <kolla_efter_kok_left+0x4b6>
-     e54:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     e58:	89 31       	cpi	r24, 0x19	; 25
-     e5a:	50 f5       	brcc	.+84     	; 0xeb0 <kolla_efter_kok_left+0x4b6>
-     e5c:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     e60:	84 31       	cpi	r24, 0x14	; 20
-     e62:	30 f5       	brcc	.+76     	; 0xeb0 <kolla_efter_kok_left+0x4b6>
-     e64:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     e68:	84 31       	cpi	r24, 0x14	; 20
-     e6a:	10 f5       	brcc	.+68     	; 0xeb0 <kolla_efter_kok_left+0x4b6>
-     e6c:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     e70:	84 31       	cpi	r24, 0x14	; 20
-     e72:	f0 f4       	brcc	.+60     	; 0xeb0 <kolla_efter_kok_left+0x4b6>
-     e74:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     edc:	89 31       	cpi	r24, 0x19	; 25
+     ede:	c8 f5       	brcc	.+114    	; 0xf52 <kolla_efter_kok_left+0x550>
+     ee0:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     ee4:	89 31       	cpi	r24, 0x19	; 25
+     ee6:	a8 f5       	brcc	.+106    	; 0xf52 <kolla_efter_kok_left+0x550>
+     ee8:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     eec:	84 31       	cpi	r24, 0x14	; 20
+     eee:	88 f5       	brcc	.+98     	; 0xf52 <kolla_efter_kok_left+0x550>
+     ef0:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     ef4:	84 31       	cpi	r24, 0x14	; 20
+     ef6:	68 f5       	brcc	.+90     	; 0xf52 <kolla_efter_kok_left+0x550>
+     ef8:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     efc:	84 31       	cpi	r24, 0x14	; 20
+     efe:	48 f5       	brcc	.+82     	; 0xf52 <kolla_efter_kok_left+0x550>
+     f00:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
 			{
+				if (driven >= 30)
+     f04:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     f08:	4e 97       	sbiw	r24, 0x1e	; 30
+     f0a:	28 f0       	brcs	.+10     	; 0xf16 <kolla_efter_kok_left+0x514>
+     f0c:	36 db       	rcall	.-2452   	; 0x57a <update_position>
+				{
+					update_position();
+     f0e:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+					driven = 0;
+     f12:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+				}
 				matrix[bot_y - 1][bot_x] = wall; // köksö hittad
-     e78:	90 e0       	ldi	r25, 0x00	; 0
-     e7a:	01 97       	sbiw	r24, 0x01	; 1
-     e7c:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     e80:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     e84:	42 e3       	ldi	r20, 0x32	; 50
-     e86:	48 9f       	mul	r20, r24
-     e88:	f0 01       	movw	r30, r0
-     e8a:	49 9f       	mul	r20, r25
-     e8c:	f0 0d       	add	r31, r0
-     e8e:	11 24       	eor	r1, r1
-     e90:	e9 5d       	subi	r30, 0xD9	; 217
-     e92:	fe 4f       	sbci	r31, 0xFE	; 254
-     e94:	e3 0f       	add	r30, r19
+     f16:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     f1a:	90 e0       	ldi	r25, 0x00	; 0
+     f1c:	01 97       	sbiw	r24, 0x01	; 1
+     f1e:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     f22:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     f26:	42 e3       	ldi	r20, 0x32	; 50
+     f28:	48 9f       	mul	r20, r24
+     f2a:	f0 01       	movw	r30, r0
+     f2c:	49 9f       	mul	r20, r25
+     f2e:	f0 0d       	add	r31, r0
+     f30:	11 24       	eor	r1, r1
+     f32:	e9 5d       	subi	r30, 0xD9	; 217
+     f34:	fe 4f       	sbci	r31, 0xFE	; 254
+     f36:	e3 0f       	add	r30, r19
+     f38:	f1 1d       	adc	r31, r1
+     f3a:	20 83       	st	Z, r18
 				driven = 0; // för att inte gå in i update igen inuti rot_left
-     e96:	f1 1d       	adc	r31, r1
-     e98:	20 83       	st	Z, r18
-     e9a:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     f3c:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     f40:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 				UART0_Transmit(stop);
-     e9e:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
-     ea2:	80 e0       	ldi	r24, 0x00	; 0
+     f44:	80 e0       	ldi	r24, 0x00	; 0
+     f46:	0b d1       	rcall	.+534    	; 0x115e <UART0_Transmit>
+     f48:	c0 db       	rcall	.-2176   	; 0x6ca <rot_left>
 				rot_left();
-     ea4:	ff d0       	rcall	.+510    	; 0x10a4 <UART0_Transmit>
-     ea6:	0d dc       	rcall	.-2022   	; 0x6c2 <rot_left>
+     f4a:	80 e0       	ldi	r24, 0x00	; 0
+     f4c:	08 d1       	rcall	.+528    	; 0x115e <UART0_Transmit>
 				UART0_Transmit(stop);
-     ea8:	80 e0       	ldi	r24, 0x00	; 0
-     eaa:	fc d0       	rcall	.+504    	; 0x10a4 <UART0_Transmit>
-     eac:	fe cc       	rjmp	.-1540   	; 0x8aa <kokHittad>
+     f4e:	b1 cc       	rjmp	.-1694   	; 0x8b2 <kokHittad>
+     f50:	08 95       	ret
+     f52:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
 				kokHittad();
-     eae:	08 95       	ret
-     eb0:	80 91 23 06 	lds	r24, 0x0623	; 0x800623 <sens_safe+0x5>
+     f56:	86 34       	cpi	r24, 0x46	; 70
+     f58:	08 f0       	brcs	.+2      	; 0xf5c <kolla_efter_kok_left+0x55a>
 			}
 			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y - 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
-     eb4:	86 34       	cpi	r24, 0x46	; 70
-     eb6:	08 f0       	brcs	.+2      	; 0xeba <kolla_efter_kok_left+0x4c0>
-     eb8:	49 c0       	rjmp	.+146    	; 0xf4c <kolla_efter_kok_left+0x552>
-     eba:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
-     ebe:	86 34       	cpi	r24, 0x46	; 70
-     ec0:	08 f0       	brcs	.+2      	; 0xec4 <kolla_efter_kok_left+0x4ca>
-     ec2:	44 c0       	rjmp	.+136    	; 0xf4c <kolla_efter_kok_left+0x552>
-     ec4:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     ec8:	90 e0       	ldi	r25, 0x00	; 0
-     eca:	02 97       	sbiw	r24, 0x02	; 2
-     ecc:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
-     ed0:	32 e3       	ldi	r19, 0x32	; 50
-     ed2:	38 9f       	mul	r19, r24
-     ed4:	f0 01       	movw	r30, r0
-     ed6:	39 9f       	mul	r19, r25
-     ed8:	f0 0d       	add	r31, r0
-     eda:	11 24       	eor	r1, r1
-     edc:	e9 5d       	subi	r30, 0xD9	; 217
-     ede:	fe 4f       	sbci	r31, 0xFE	; 254
-     ee0:	e2 0f       	add	r30, r18
-     ee2:	f1 1d       	adc	r31, r1
-     ee4:	90 81       	ld	r25, Z
-     ee6:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
-     eea:	98 13       	cpse	r25, r24
-     eec:	2f c0       	rjmp	.+94     	; 0xf4c <kolla_efter_kok_left+0x552>
-     eee:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     ef2:	84 31       	cpi	r24, 0x14	; 20
-     ef4:	58 f5       	brcc	.+86     	; 0xf4c <kolla_efter_kok_left+0x552>
-     ef6:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     efa:	84 31       	cpi	r24, 0x14	; 20
-     efc:	38 f5       	brcc	.+78     	; 0xf4c <kolla_efter_kok_left+0x552>
-     efe:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     f02:	84 31       	cpi	r24, 0x14	; 20
-     f04:	18 f5       	brcc	.+70     	; 0xf4c <kolla_efter_kok_left+0x552>
-     f06:	81 e0       	ldi	r24, 0x01	; 1
-     f08:	90 e0       	ldi	r25, 0x00	; 0
+     f5a:	54 c0       	rjmp	.+168    	; 0x1004 <kolla_efter_kok_left+0x602>
+     f5c:	80 91 21 06 	lds	r24, 0x0621	; 0x800621 <sens_safe+0x3>
+     f60:	86 34       	cpi	r24, 0x46	; 70
+     f62:	08 f0       	brcs	.+2      	; 0xf66 <kolla_efter_kok_left+0x564>
+     f64:	4f c0       	rjmp	.+158    	; 0x1004 <kolla_efter_kok_left+0x602>
+     f66:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     f6a:	90 e0       	ldi	r25, 0x00	; 0
+     f6c:	02 97       	sbiw	r24, 0x02	; 2
+     f6e:	20 91 06 01 	lds	r18, 0x0106	; 0x800106 <bot_x>
+     f72:	32 e3       	ldi	r19, 0x32	; 50
+     f74:	38 9f       	mul	r19, r24
+     f76:	f0 01       	movw	r30, r0
+     f78:	39 9f       	mul	r19, r25
+     f7a:	f0 0d       	add	r31, r0
+     f7c:	11 24       	eor	r1, r1
+     f7e:	e9 5d       	subi	r30, 0xD9	; 217
+     f80:	fe 4f       	sbci	r31, 0xFE	; 254
+     f82:	e2 0f       	add	r30, r18
+     f84:	f1 1d       	adc	r31, r1
+     f86:	90 81       	ld	r25, Z
+     f88:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <unknown>
+     f8c:	98 13       	cpse	r25, r24
+     f8e:	3a c0       	rjmp	.+116    	; 0x1004 <kolla_efter_kok_left+0x602>
+     f90:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+     f94:	84 31       	cpi	r24, 0x14	; 20
+     f96:	b0 f5       	brcc	.+108    	; 0x1004 <kolla_efter_kok_left+0x602>
+     f98:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+     f9c:	84 31       	cpi	r24, 0x14	; 20
+     f9e:	90 f5       	brcc	.+100    	; 0x1004 <kolla_efter_kok_left+0x602>
+     fa0:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+     fa4:	84 31       	cpi	r24, 0x14	; 20
+     fa6:	70 f5       	brcc	.+92     	; 0x1004 <kolla_efter_kok_left+0x602>
+     fa8:	81 e0       	ldi	r24, 0x01	; 1
+     faa:	90 e0       	ldi	r25, 0x00	; 0
+     fac:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
 			{
 				KokFarFarAway = 1;
-     f0a:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <__data_end+0x1>
-     f0e:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+     fb0:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+     fb4:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+				if (driven >= 30)
+     fb8:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+     fbc:	4e 97       	sbiw	r24, 0x1e	; 30
+				{
+					update_position();
+     fbe:	28 f0       	brcs	.+10     	; 0xfca <kolla_efter_kok_left+0x5c8>
+     fc0:	dc da       	rcall	.-2632   	; 0x57a <update_position>
+					driven = 0;
+     fc2:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     fc6:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+				}
 				matrix[bot_y - 2][bot_x] = wall; // köksö hittad
-     f12:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
-     f16:	90 e0       	ldi	r25, 0x00	; 0
-     f18:	02 97       	sbiw	r24, 0x02	; 2
-     f1a:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
-     f1e:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
-     f22:	42 e3       	ldi	r20, 0x32	; 50
-     f24:	48 9f       	mul	r20, r24
-     f26:	f0 01       	movw	r30, r0
-     f28:	49 9f       	mul	r20, r25
-     f2a:	f0 0d       	add	r31, r0
-     f2c:	11 24       	eor	r1, r1
-     f2e:	e9 5d       	subi	r30, 0xD9	; 217
-     f30:	fe 4f       	sbci	r31, 0xFE	; 254
-     f32:	e3 0f       	add	r30, r19
-     f34:	f1 1d       	adc	r31, r1
-     f36:	20 83       	st	Z, r18
+     fca:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <bot_y>
+     fce:	90 e0       	ldi	r25, 0x00	; 0
+     fd0:	02 97       	sbiw	r24, 0x02	; 2
+     fd2:	30 91 06 01 	lds	r19, 0x0106	; 0x800106 <bot_x>
+     fd6:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <wall>
+     fda:	42 e3       	ldi	r20, 0x32	; 50
+     fdc:	48 9f       	mul	r20, r24
+     fde:	f0 01       	movw	r30, r0
+     fe0:	49 9f       	mul	r20, r25
+     fe2:	f0 0d       	add	r31, r0
+     fe4:	11 24       	eor	r1, r1
+     fe6:	e9 5d       	subi	r30, 0xD9	; 217
+     fe8:	fe 4f       	sbci	r31, 0xFE	; 254
+     fea:	e3 0f       	add	r30, r19
+     fec:	f1 1d       	adc	r31, r1
+     fee:	20 83       	st	Z, r18
 				driven = 0; // för att inte gå in i update igen inuti rot_left
-     f38:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
-     f3c:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+     ff0:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+     ff4:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 				UART0_Transmit(stop);
-     f40:	80 e0       	ldi	r24, 0x00	; 0
-     f42:	b0 d0       	rcall	.+352    	; 0x10a4 <UART0_Transmit>
-     f44:	be db       	rcall	.-2180   	; 0x6c2 <rot_left>
+     ff8:	80 e0       	ldi	r24, 0x00	; 0
+     ffa:	b1 d0       	rcall	.+354    	; 0x115e <UART0_Transmit>
+     ffc:	66 db       	rcall	.-2356   	; 0x6ca <rot_left>
 				rot_left();
-     f46:	80 e0       	ldi	r24, 0x00	; 0
-     f48:	ad d0       	rcall	.+346    	; 0x10a4 <UART0_Transmit>
+     ffe:	80 e0       	ldi	r24, 0x00	; 0
+    1000:	ae d0       	rcall	.+348    	; 0x115e <UART0_Transmit>
 				UART0_Transmit(stop);
-     f4a:	af cc       	rjmp	.-1698   	; 0x8aa <kokHittad>
-     f4c:	08 95       	ret
+    1002:	57 cc       	rjmp	.-1874   	; 0x8b2 <kokHittad>
+    1004:	08 95       	ret
 
-00000f4e <navigation>:
-     f4e:	d2 d9       	rcall	.-3164   	; 0x2f4 <baby_proof_and_update>
+00001006 <navigation>:
+    1006:	7a d9       	rcall	.-3340   	; 0x2fc <baby_proof_and_update>
 				kokHittad();
-     f50:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <ny_fram>
-     f54:	30 91 1b 01 	lds	r19, 0x011B	; 0x80011b <ny_fram+0x1>
+    1008:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <ny_fram>
+    100c:	30 91 1b 01 	lds	r19, 0x011B	; 0x80011b <ny_fram+0x1>
 }
 void navigation() // testa att bara svänga när väggar inte finns, ej 40cm
 {
 	baby_proof_and_update();
 	
 	if (ny_fram < (start_dist))
-     f58:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <start_dist>
-     f5c:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <start_dist+0x1>
-     f60:	28 17       	cp	r18, r24
-     f62:	39 07       	cpc	r19, r25
-     f64:	70 f4       	brcc	.+28     	; 0xf82 <navigation+0x34>
+    1010:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <start_dist>
+    1014:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <start_dist+0x1>
+    1018:	28 17       	cp	r18, r24
+    101a:	39 07       	cpc	r19, r25
+    101c:	70 f4       	brcc	.+28     	; 0x103a <navigation+0x34>
 	{
 		driven = (start_dist - ny_fram);
-     f66:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <start_dist>
-     f6a:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <start_dist+0x1>
-     f6e:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <ny_fram>
-     f72:	30 91 1b 01 	lds	r19, 0x011B	; 0x80011b <ny_fram+0x1>
-     f76:	82 1b       	sub	r24, r18
-     f78:	93 0b       	sbc	r25, r19
-     f7a:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <driven+0x1>
-     f7e:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <driven>
+    101e:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <start_dist>
+    1022:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <start_dist+0x1>
+    1026:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <ny_fram>
+    102a:	30 91 1b 01 	lds	r19, 0x011B	; 0x80011b <ny_fram+0x1>
+    102e:	82 1b       	sub	r24, r18
+    1030:	93 0b       	sbc	r25, r19
+    1032:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <driven+0x1>
+    1036:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <driven>
 	}
 	
 	if (((driven) >= 36) && (harRot == 0)) // var 35 innan // funka nästan vid 37
-     f82:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
-     f86:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
-     f8a:	84 97       	sbiw	r24, 0x24	; 36
-     f8c:	88 f0       	brcs	.+34     	; 0xfb0 <navigation+0x62>
-     f8e:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
-     f92:	81 11       	cpse	r24, r1
+    103a:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <driven>
+    103e:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <driven+0x1>
+    1042:	84 97       	sbiw	r24, 0x24	; 36
+    1044:	88 f0       	brcs	.+34     	; 0x1068 <navigation+0x62>
+    1046:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
+    104a:	81 11       	cpse	r24, r1
 	{
 	 	update_position();
-     f94:	0d c0       	rjmp	.+26     	; 0xfb0 <navigation+0x62>
-     f96:	ed da       	rcall	.-2598   	; 0x572 <update_position>
+    104c:	0d c0       	rjmp	.+26     	; 0x1068 <navigation+0x62>
+    104e:	95 da       	rcall	.-2774   	; 0x57a <update_position>
 		start_dist = ny_fram; 
-     f98:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
-     f9c:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
-     fa0:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
-     fa4:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
+    1050:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <ny_fram>
+    1054:	90 91 1b 01 	lds	r25, 0x011B	; 0x80011b <ny_fram+0x1>
+    1058:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <start_dist+0x1>
+    105c:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <start_dist>
 		driven = 0;
-     fa8:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
-     fac:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
+    1060:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <driven+0x1>
+    1064:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <driven>
 	
 	}
 
 
 	if ( (sens_safe[0] > 30) && (sens_safe[1] > 30) && (sens_safe[4] > 40) && (harRot == 0))
-     fb0:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
-     fb4:	8f 31       	cpi	r24, 0x1F	; 31
-     fb6:	a0 f0       	brcs	.+40     	; 0xfe0 <navigation+0x92>
-     fb8:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
-     fbc:	8f 31       	cpi	r24, 0x1F	; 31
-     fbe:	80 f0       	brcs	.+32     	; 0xfe0 <navigation+0x92>
-     fc0:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     fc4:	89 32       	cpi	r24, 0x29	; 41
-     fc6:	60 f0       	brcs	.+24     	; 0xfe0 <navigation+0x92>
-     fc8:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
-     fcc:	81 11       	cpse	r24, r1
-     fce:	08 c0       	rjmp	.+16     	; 0xfe0 <navigation+0x92>
-     fd0:	8c ec       	ldi	r24, 0xCC	; 204
-     fd2:	9c e1       	ldi	r25, 0x1C	; 28
-     fd4:	01 97       	sbiw	r24, 0x01	; 1
-     fd6:	f1 f7       	brne	.-4      	; 0xfd4 <navigation+0x86>
-     fd8:	00 c0       	rjmp	.+0      	; 0xfda <navigation+0x8c>
+    1068:	80 91 1e 06 	lds	r24, 0x061E	; 0x80061e <sens_safe>
+    106c:	8f 31       	cpi	r24, 0x1F	; 31
+    106e:	a0 f0       	brcs	.+40     	; 0x1098 <navigation+0x92>
+    1070:	80 91 1f 06 	lds	r24, 0x061F	; 0x80061f <sens_safe+0x1>
+    1074:	8f 31       	cpi	r24, 0x1F	; 31
+    1076:	80 f0       	brcs	.+32     	; 0x1098 <navigation+0x92>
+    1078:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+    107c:	89 32       	cpi	r24, 0x29	; 41
+    107e:	60 f0       	brcs	.+24     	; 0x1098 <navigation+0x92>
+    1080:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
+    1084:	81 11       	cpse	r24, r1
+    1086:	08 c0       	rjmp	.+16     	; 0x1098 <navigation+0x92>
+    1088:	8c ec       	ldi	r24, 0xCC	; 204
+    108a:	9c e1       	ldi	r25, 0x1C	; 28
+    108c:	01 97       	sbiw	r24, 0x01	; 1
+    108e:	f1 f7       	brne	.-4      	; 0x108c <navigation+0x86>
+    1090:	00 c0       	rjmp	.+0      	; 0x1092 <navigation+0x8c>
 	{
 		_delay_ms(2);
 		rot_right();
-     fda:	00 00       	nop
-     fdc:	3d db       	rcall	.-2438   	; 0x658 <rot_right>
-     fde:	24 c0       	rjmp	.+72     	; 0x1028 <navigation+0xda>
+    1092:	00 00       	nop
+    1094:	e5 da       	rcall	.-2614   	; 0x660 <rot_right>
+    1096:	24 c0       	rjmp	.+72     	; 0x10e0 <navigation+0xda>
 	}
 
 	else if ((sens_safe[4] < 40) && (ny_fram < stop_dist) && (sens_safe[2] < 30) &&  (harRot == 0)) // 18 13dec. 21 14 dec
-     fe0:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
-     fe4:	88 32       	cpi	r24, 0x28	; 40
-     fe6:	d8 f4       	brcc	.+54     	; 0x101e <navigation+0xd0>
-     fe8:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <ny_fram>
-     fec:	30 91 1b 01 	lds	r19, 0x011B	; 0x80011b <ny_fram+0x1>
-     ff0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
-     ff4:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
-     ff8:	28 17       	cp	r18, r24
-     ffa:	39 07       	cpc	r19, r25
-     ffc:	80 f4       	brcc	.+32     	; 0x101e <navigation+0xd0>
-     ffe:	80 91 20 06 	lds	r24, 0x0620	; 0x800620 <sens_safe+0x2>
-    1002:	8e 31       	cpi	r24, 0x1E	; 30
-    1004:	60 f4       	brcc	.+24     	; 0x101e <navigation+0xd0>
-    1006:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
-    100a:	81 11       	cpse	r24, r1
+    1098:	80 91 22 06 	lds	r24, 0x0622	; 0x800622 <sens_safe+0x4>
+    109c:	88 32       	cpi	r24, 0x28	; 40
+    109e:	d8 f4       	brcc	.+54     	; 0x10d6 <navigation+0xd0>
+    10a0:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <ny_fram>
+    10a4:	30 91 1b 01 	lds	r19, 0x011B	; 0x80011b <ny_fram+0x1>
+    10a8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+    10ac:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+    10b0:	28 17       	cp	r18, r24
+    10b2:	39 07       	cpc	r19, r25
+    10b4:	80 f4       	brcc	.+32     	; 0x10d6 <navigation+0xd0>
+    10b6:	80 91 20 06 	lds	r24, 0x0620	; 0x800620 <sens_safe+0x2>
+    10ba:	8e 31       	cpi	r24, 0x1E	; 30
+    10bc:	60 f4       	brcc	.+24     	; 0x10d6 <navigation+0xd0>
+    10be:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
+    10c2:	81 11       	cpse	r24, r1
 	{
 		rot_left();
-    100c:	08 c0       	rjmp	.+16     	; 0x101e <navigation+0xd0>
-    100e:	59 db       	rcall	.-2382   	; 0x6c2 <rot_left>
+    10c4:	08 c0       	rjmp	.+16     	; 0x10d6 <navigation+0xd0>
+    10c6:	01 db       	rcall	.-2558   	; 0x6ca <rot_left>
 		stop_dist = 13;
-    1010:	8d e0       	ldi	r24, 0x0D	; 13
-    1012:	90 e0       	ldi	r25, 0x00	; 0
-    1014:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
-    1018:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
-    101c:	05 c0       	rjmp	.+10     	; 0x1028 <navigation+0xda>
+    10c8:	8d e0       	ldi	r24, 0x0D	; 13
+    10ca:	90 e0       	ldi	r25, 0x00	; 0
+    10cc:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+    10d0:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+    10d4:	05 c0       	rjmp	.+10     	; 0x10e0 <navigation+0xda>
 	}
 
 	else if (harRot == 1) // ska köra fram om vi rotera förra gången
-    101e:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
-    1022:	81 30       	cpi	r24, 0x01	; 1
+    10d6:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
+    10da:	81 30       	cpi	r24, 0x01	; 1
 	{
 		go_forward();
-    1024:	09 f4       	brne	.+2      	; 0x1028 <navigation+0xda>
-    1026:	49 d9       	rcall	.-3438   	; 0x2ba <go_forward>
+    10dc:	09 f4       	brne	.+2      	; 0x10e0 <navigation+0xda>
+    10de:	f1 d8       	rcall	.-3614   	; 0x2c2 <go_forward>
 	}
 	
  	if ((state == 2) && (harRot == 0 ))
-    1028:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
-    102c:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
-    1030:	02 97       	sbiw	r24, 0x02	; 2
-    1032:	29 f4       	brne	.+10     	; 0x103e <navigation+0xf0>
-    1034:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
-    1038:	81 11       	cpse	r24, r1
+    10e0:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <state>
+    10e4:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <state+0x1>
+    10e8:	02 97       	sbiw	r24, 0x02	; 2
+    10ea:	29 f4       	brne	.+10     	; 0x10f6 <navigation+0xf0>
+    10ec:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <harRot>
+    10f0:	81 11       	cpse	r24, r1
 	kolla_efter_kok_left();
-    103a:	01 c0       	rjmp	.+2      	; 0x103e <navigation+0xf0>
-    103c:	de cc       	rjmp	.-1604   	; 0x9fa <kolla_efter_kok_left>
-    103e:	08 95       	ret
+    10f2:	01 c0       	rjmp	.+2      	; 0x10f6 <navigation+0xf0>
+    10f4:	86 cc       	rjmp	.-1780   	; 0xa02 <kolla_efter_kok_left>
+    10f6:	08 95       	ret
 
-00001040 <main>:
+000010f8 <main>:
 }
 	
 int main(void)
 {
 
 Init();
-    1040:	43 d8       	rcall	.-3962   	; 0xc8 <Init>
+    10f8:	0e 94 66 00 	call	0xcc	; 0xcc <Init>
 
 while(1)
     {
 		if(recieve_renewed)
-    1042:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <recieve_renewed>
-    1046:	81 11       	cpse	r24, r1
+    10fc:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <recieve_renewed>
+    1100:	81 11       	cpse	r24, r1
 			{
 				 handle_incoming_data();
-    1048:	9d d9       	rcall	.-3270   	; 0x384 <handle_incoming_data>
+    1102:	44 d9       	rcall	.-3448   	; 0x38c <handle_incoming_data>
 			}
 			
 		if(AUTO == 1 )
-    104a:	80 91 15 01 	lds	r24, 0x0115	; 0x800115 <AUTO>
-    104e:	81 30       	cpi	r24, 0x01	; 1
+    1104:	80 91 15 01 	lds	r24, 0x0115	; 0x800115 <AUTO>
+    1108:	81 30       	cpi	r24, 0x01	; 1
 		{
 			navigation(); 
-    1050:	09 f4       	brne	.+2      	; 0x1054 <main+0x14>
-    1052:	7d df       	rcall	.-262    	; 0xf4e <navigation>
+    110a:	09 f4       	brne	.+2      	; 0x110e <main+0x16>
+    110c:	7c df       	rcall	.-264    	; 0x1006 <navigation>
 		}
 		if(MANUELL == 1)
-    1054:	80 91 14 01 	lds	r24, 0x0114	; 0x800114 <MANUELL>
-    1058:	81 30       	cpi	r24, 0x01	; 1
-    105a:	99 f7       	brne	.-26     	; 0x1042 <main+0x2>
+    110e:	80 91 14 01 	lds	r24, 0x0114	; 0x800114 <MANUELL>
+    1112:	81 30       	cpi	r24, 0x01	; 1
+    1114:	99 f7       	brne	.-26     	; 0x10fc <main+0x4>
 		{ 
 			UART0_Transmit(laptop_in);
-    105c:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
-    1060:	21 d0       	rcall	.+66     	; 0x10a4 <UART0_Transmit>
-    1062:	ef cf       	rjmp	.-34     	; 0x1042 <main+0x2>
+    1116:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <laptop_in>
+    111a:	21 d0       	rcall	.+66     	; 0x115e <UART0_Transmit>
+    111c:	ef cf       	rjmp	.-34     	; 0x10fc <main+0x4>
 
-00001064 <UART1_Init>:
+0000111e <UART1_Init>:
 {
 	
 	while( !(UCSR1A & (1<<RXC1)) );
 
 	return UDR1;
 }
-    1064:	88 e9       	ldi	r24, 0x98	; 152
-    1066:	80 93 c9 00 	sts	0x00C9, r24	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7e00c9>
-    106a:	10 92 cd 00 	sts	0x00CD, r1	; 0x8000cd <__TEXT_REGION_LENGTH__+0x7e00cd>
-    106e:	87 e0       	ldi	r24, 0x07	; 7
-    1070:	80 93 cc 00 	sts	0x00CC, r24	; 0x8000cc <__TEXT_REGION_LENGTH__+0x7e00cc>
-    1074:	86 e0       	ldi	r24, 0x06	; 6
-    1076:	80 93 ca 00 	sts	0x00CA, r24	; 0x8000ca <__TEXT_REGION_LENGTH__+0x7e00ca>
-    107a:	08 95       	ret
+    111e:	88 e9       	ldi	r24, 0x98	; 152
+    1120:	80 93 c9 00 	sts	0x00C9, r24	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7e00c9>
+    1124:	10 92 cd 00 	sts	0x00CD, r1	; 0x8000cd <__TEXT_REGION_LENGTH__+0x7e00cd>
+    1128:	87 e0       	ldi	r24, 0x07	; 7
+    112a:	80 93 cc 00 	sts	0x00CC, r24	; 0x8000cc <__TEXT_REGION_LENGTH__+0x7e00cc>
+    112e:	86 e0       	ldi	r24, 0x06	; 6
+    1130:	80 93 ca 00 	sts	0x00CA, r24	; 0x8000ca <__TEXT_REGION_LENGTH__+0x7e00ca>
+    1134:	08 95       	ret
 
-0000107c <UART0_Init>:
-    107c:	88 e9       	ldi	r24, 0x98	; 152
-    107e:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
-    1082:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7e00c5>
-    1086:	87 e1       	ldi	r24, 0x17	; 23
-    1088:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
-    108c:	8e e0       	ldi	r24, 0x0E	; 14
-    108e:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7e00c2>
-    1092:	08 95       	ret
+00001136 <UART0_Init>:
+    1136:	88 e9       	ldi	r24, 0x98	; 152
+    1138:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
+    113c:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7e00c5>
+    1140:	87 e1       	ldi	r24, 0x17	; 23
+    1142:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
+    1146:	8e e0       	ldi	r24, 0x0E	; 14
+    1148:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7e00c2>
+    114c:	08 95       	ret
 
-00001094 <UART1_Transmit>:
-    1094:	e8 ec       	ldi	r30, 0xC8	; 200
-    1096:	f0 e0       	ldi	r31, 0x00	; 0
-    1098:	90 81       	ld	r25, Z
-    109a:	95 ff       	sbrs	r25, 5
-    109c:	fd cf       	rjmp	.-6      	; 0x1098 <UART1_Transmit+0x4>
-    109e:	80 93 ce 00 	sts	0x00CE, r24	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
-    10a2:	08 95       	ret
+0000114e <UART1_Transmit>:
+    114e:	e8 ec       	ldi	r30, 0xC8	; 200
+    1150:	f0 e0       	ldi	r31, 0x00	; 0
+    1152:	90 81       	ld	r25, Z
+    1154:	95 ff       	sbrs	r25, 5
+    1156:	fd cf       	rjmp	.-6      	; 0x1152 <UART1_Transmit+0x4>
+    1158:	80 93 ce 00 	sts	0x00CE, r24	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
+    115c:	08 95       	ret
 
-000010a4 <UART0_Transmit>:
+0000115e <UART0_Transmit>:
 
 void UART0_Transmit(unsigned char data)
 {
 	
 	while( !(UCSR0A & (1<<UDRE0)) );
-    10a4:	e0 ec       	ldi	r30, 0xC0	; 192
-    10a6:	f0 e0       	ldi	r31, 0x00	; 0
-    10a8:	90 81       	ld	r25, Z
-    10aa:	95 ff       	sbrs	r25, 5
-    10ac:	fd cf       	rjmp	.-6      	; 0x10a8 <UART0_Transmit+0x4>
+    115e:	e0 ec       	ldi	r30, 0xC0	; 192
+    1160:	f0 e0       	ldi	r31, 0x00	; 0
+    1162:	90 81       	ld	r25, Z
+    1164:	95 ff       	sbrs	r25, 5
+    1166:	fd cf       	rjmp	.-6      	; 0x1162 <UART0_Transmit+0x4>
 
 	UDR0 = data;
-    10ae:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
-    10b2:	08 95       	ret
+    1168:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+    116c:	08 95       	ret
 
-000010b4 <_exit>:
-    10b4:	f8 94       	cli
+0000116e <_exit>:
+    116e:	f8 94       	cli
 
-000010b6 <__stop_program>:
-    10b6:	ff cf       	rjmp	.-2      	; 0x10b6 <__stop_program>
+00001170 <__stop_program>:
+    1170:	ff cf       	rjmp	.-2      	; 0x1170 <__stop_program>

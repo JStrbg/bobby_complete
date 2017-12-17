@@ -381,7 +381,7 @@ void go_home()
 	do
 	{
 		baby_proof_and_update();
-	}while(ny_fram > 13);
+	}while(ny_fram > 11);
 	
 	UART0_Transmit(stop);
 	harRot = 0;
@@ -423,7 +423,11 @@ void kolla_efter_kok_left()
 		{
 			if ((sens_safe[5] < 25 ) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) 
 			{	
-				
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
 				matrix[bot_y][bot_x - 1] = wall; // köksö hittad
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -435,7 +439,11 @@ void kolla_efter_kok_left()
 			else if((sens_safe[5] > 25 ) && (sens_safe[3] > 25) && (sens_safe[5] < 75) && (sens_safe[3] < 75) && (matrix[bot_y][bot_x - 2] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
 			{
 				KokFarFarAway = 1;
-				
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
 				matrix[bot_y][bot_x - 2] = wall; // köksö hittad
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -451,6 +459,12 @@ void kolla_efter_kok_left()
 		{
 			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20))
 			{
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
+				
 				matrix[bot_y + 1][bot_x] = wall; // köksö hittad
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -461,6 +475,12 @@ void kolla_efter_kok_left()
 			else if((sens_safe[5] > 25 ) && (sens_safe[3] > 25) && (sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y + 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
 			{
 				KokFarFarAway = 1;
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
+				
 				matrix[bot_y + 2][bot_x] = wall; // köksö hittad
 		//		driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -476,7 +496,11 @@ void kolla_efter_kok_left()
 		{
 			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)) // ökat från 20
 			{
-				
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
 				matrix[bot_y][bot_x + 1] = wall; // köksö hittad
 				driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -488,6 +512,11 @@ void kolla_efter_kok_left()
 			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y][bot_x + 2] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) // ökat från 60
 			{
 				KokFarFarAway = 1;
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
 				matrix[bot_y][bot_x + 2] = wall; // köksö hittad
 				driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -503,6 +532,11 @@ void kolla_efter_kok_left()
 		{
 			if ((sens_safe[5] < 25 && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)))
 			{
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
 				matrix[bot_y - 1][bot_x] = wall; // köksö hittad
 				driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);
@@ -513,6 +547,11 @@ void kolla_efter_kok_left()
 			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y - 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
 			{
 				KokFarFarAway = 1;
+				if (driven >= 30)
+				{
+					update_position();
+					driven = 0;
+				}
 				matrix[bot_y - 2][bot_x] = wall; // köksö hittad
 				driven = 0; // för att inte gå in i update igen inuti rot_left
 				UART0_Transmit(stop);

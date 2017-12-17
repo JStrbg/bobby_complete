@@ -2003,7 +2003,7 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
  bba:	08 95       	ret
 
 00000bbc <rot_right>:
-void rot_right() //Roterar 90 grader höger
+void rot_right() //Roterar 90 grader höger	
 {
  bbc:	cf 92       	push	r12
  bbe:	df 92       	push	r13

@@ -5,8 +5,8 @@
 #include "REGLERING.h"
 #include <avr/io.h>
 
-#define W_distance 110U
-#define base_pwm 90U
+#define W_distance 120U
+#define base_pwm 85U
 
 void Pwm_Gen( char Right_Pwm,  char Left_Pwm,  char Right_dir ,  char Left_dir ) //Program för att sätta pwm och riktning till motorerna
 {
@@ -58,7 +58,7 @@ void Regler_Func(int dir)//Program för att reglera mot en vägg
 	while( !(UCSR0A & (1<<RXC0))) //sålänge den inte mottar en ny instruktion från com
 	{
 		
-		if ((sen[0] < 65) || (sen[1] < 65) )
+		if ((sen[0] < 75) || (sen[1] < 75) )
 		{  //Ifall roboten inte ser en vägg på högersida, kör rakt fram
 			Pwm_Gen(base_pwm,base_pwm,1,1);
 		}
@@ -71,8 +71,8 @@ void Regler_Func(int dir)//Program för att reglera mot en vägg
 			EFram = (sensorFram - W_distance); //Reglerfel: Avstånd
 			EBak = (sensorBak - W_distance);
 			E3 = EFram - EBak;				   //Reglerfel: SensorSkillnad 
-			Ev =  E3 + EFram;                 //Totala felet
-			Eh =  - E3 - EFram;
+			Ev =  E3 + (EFram>>2);                 //Totala felet
+			Eh =  - E3 - (EFram>>2);
 
 			StyrSignalVanster = mult_k(2*Ev) + mult_kd(Ev - EV_old);  //Y = e*K + KD * e*d/dt 
 			StyrSignalHoger = mult_k(2*Eh) + mult_kd(Eh - EH_old);
