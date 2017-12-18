@@ -1914,7 +1914,7 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
  b48:	d1 2c       	mov	r13, r1
  b4a:	76 01       	movw	r14, r12
 	int result;
-	while (vinkel < 130000000)	   //125000000 testad gradsekundkonstant
+	while (vinkel < 134000000)	   //125000000 testad gradsekundkonstant
 	{
 		TCNT1 = 0;
  b4c:	c4 e8       	ldi	r28, 0x84	; 132
@@ -1940,12 +1940,12 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 	uint32_t time1;
 	long int vinkel = 0;
 	int result;
-	while (vinkel < 130000000)	   //125000000 testad gradsekundkonstant
+	while (vinkel < 134000000)	   //125000000 testad gradsekundkonstant
  b6a:	80 e8       	ldi	r24, 0x80	; 128
  b6c:	c8 16       	cp	r12, r24
- b6e:	84 ea       	ldi	r24, 0xA4	; 164
+ b6e:	8d ea       	ldi	r24, 0xAD	; 173
  b70:	d8 06       	cpc	r13, r24
- b72:	8f eb       	ldi	r24, 0xBF	; 191
+ b72:	8c ef       	ldi	r24, 0xFC	; 252
  b74:	e8 06       	cpc	r14, r24
  b76:	87 e0       	ldi	r24, 0x07	; 7
  b78:	f8 06       	cpc	r15, r24
@@ -1955,7 +1955,7 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 	do //Försök uppräta mot vägg på högersidan
 	{
 		Get_Sensor_Value();
-	} while (((sensor[0] - 10) > sensor[1]) && ((sensor[0] > 80) && sensor[1] > 60)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
+	} while (((sensor[0] - 5) > sensor[1]) && ((sensor[0] > 80) && sensor[1] > 60)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
  b7c:	c3 e0       	ldi	r28, 0x03	; 3
 		time1 = TCNT1;
 		vinkel  = vinkel + (result * time1);
@@ -1965,12 +1965,12 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 		Get_Sensor_Value();
  b7e:	d2 e0       	ldi	r29, 0x02	; 2
  b80:	a5 db       	rcall	.-2230   	; 0x2cc <Get_Sensor_Value>
-	} while (((sensor[0] - 10) > sensor[1]) && ((sensor[0] > 80) && sensor[1] > 60)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
+	} while (((sensor[0] - 5) > sensor[1]) && ((sensor[0] > 80) && sensor[1] > 60)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
  b82:	28 81       	ld	r18, Y
  b84:	39 81       	ldd	r19, Y+1	; 0x01
  b86:	82 2f       	mov	r24, r18
  b88:	90 e0       	ldi	r25, 0x00	; 0
- b8a:	0a 97       	sbiw	r24, 0x0a	; 10
+ b8a:	05 97       	sbiw	r24, 0x05	; 5
  b8c:	43 2f       	mov	r20, r19
  b8e:	50 e0       	ldi	r21, 0x00	; 0
  b90:	48 17       	cp	r20, r24
@@ -2020,7 +2020,7 @@ void rot_right() //Roterar 90 grader höger
  bd2:	76 01       	movw	r14, r12
 	uint32_t time1;
 	int result;
-	while (vinkel > -129000000)	   //-123000000 också testad (inte kalkylerad) gradsekundkonstant som när nådd skickar klarsignal till kom-modul
+	while (vinkel > -130000000)	   //-123000000 också testad (inte kalkylerad) gradsekundkonstant som när nådd skickar klarsignal till kom-modul
 	{
 		TCNT1 = 0;
  bd4:	c4 e8       	ldi	r28, 0x84	; 132
@@ -2046,12 +2046,12 @@ void rot_right() //Roterar 90 grader höger
 	long int vinkel = 0;
 	uint32_t time1;
 	int result;
-	while (vinkel > -129000000)	   //-123000000 också testad (inte kalkylerad) gradsekundkonstant som när nådd skickar klarsignal till kom-modul
- bf2:	81 ec       	ldi	r24, 0xC1	; 193
+	while (vinkel > -130000000)	   //-123000000 också testad (inte kalkylerad) gradsekundkonstant som när nådd skickar klarsignal till kom-modul
+ bf2:	81 e8       	ldi	r24, 0x81	; 129
  bf4:	c8 16       	cp	r12, r24
- bf6:	8d e9       	ldi	r24, 0x9D	; 157
+ bf6:	8b e5       	ldi	r24, 0x5B	; 91
  bf8:	d8 06       	cpc	r13, r24
- bfa:	8f e4       	ldi	r24, 0x4F	; 79
+ bfa:	80 e4       	ldi	r24, 0x40	; 64
  bfc:	e8 06       	cpc	r14, r24
  bfe:	88 ef       	ldi	r24, 0xF8	; 248
  c00:	f8 06       	cpc	r15, r24

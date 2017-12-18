@@ -421,7 +421,7 @@ void kolla_efter_kok_left()
 		case 0: //norr
 		if (matrix[bot_y][bot_x - 1] == unknown || (matrix[bot_y][bot_x - 1] == drive))
 		{
-			if ((sens_safe[5] < 25 ) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) ) 
+			if ((sens_safe[5] < 25 ) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) && (matrix[bot_y][bot_x - 1] == unknown) ) 
 			{	
 				if (driven >= 30)
 				{
@@ -457,7 +457,7 @@ void kolla_efter_kok_left()
 		case 1: //ÖST
 		if (matrix[bot_y + 1][bot_x] == unknown || (matrix[bot_y + 1][bot_x] == drive))
 		{
-			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20))
+			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) && (matrix[bot_y + 1][bot_x] == unknown) )
 			{
 				if (driven >= 30)
 				{
@@ -494,7 +494,7 @@ void kolla_efter_kok_left()
 		case 2:
 		if (matrix[bot_y][bot_x + 1] == unknown || (matrix[bot_y][bot_x + 1] == drive))
 		{
-			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)) // ökat från 20
+			if ((sens_safe[5] < 25) && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) && (matrix[bot_y][bot_x + 1] == unknown)) // ökat från 20
 			{
 				if (driven >= 30)
 				{
@@ -530,7 +530,7 @@ void kolla_efter_kok_left()
 		case 3:
 		if ((matrix[bot_y - 1][bot_x] == unknown) || (matrix[bot_y - 1][bot_x] == drive))
 		{
-			if ((sens_safe[5] < 25 && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)))
+			if ((sens_safe[5] < 25 && (sens_safe[3] < 25) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) && (matrix[bot_y - 1][bot_x] == unknown)))
 			{
 				if (driven >= 30)
 				{
@@ -544,7 +544,7 @@ void kolla_efter_kok_left()
 				UART0_Transmit(stop);
 				kokHittad();
 			}
-			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y - 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20) )
+			else if((sens_safe[5] < 70) && (sens_safe[3] < 70) && (matrix[bot_y - 2][bot_x] == unknown) && (sens_safe[0] < 20) && (sens_safe[1] < 20) && (sens_safe[4] < 20)  )
 			{
 				KokFarFarAway = 1;
 				if (driven >= 30)

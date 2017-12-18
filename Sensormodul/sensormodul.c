@@ -32,7 +32,7 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 	uint32_t time1;
 	long int vinkel = 0;
 	int result;
-	while (vinkel < 130000000)	   //125000000 testad gradsekundkonstant
+	while (vinkel < 134000000)	   //125000000 testad gradsekundkonstant
 	{
 		TCNT1 = 0;
 		result = getGyros_precise(8);
@@ -42,7 +42,7 @@ void rot_left() // Roterar vänster, kom skicka rot till styr, styr skickar rot 
 	do //Försök uppräta mot vägg på högersidan
 	{
 		Get_Sensor_Value();
-	} while (((sensor[0] - 10) > sensor[1]) && ((sensor[0] > 80) && sensor[1] > 60)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
+	} while (((sensor[0] - 5) > sensor[1]) && ((sensor[0] > 80) && sensor[1] > 60)); //Fast här sålänge inte robot är rak och väggen inte är för långt bort
 	//88 råvärde är 13 cm, 20 råvärde under 13cm är ungefär 3 - 4 cm
 	sensor[8] = 'D';
 	sens_to_centi();
@@ -55,7 +55,7 @@ void rot_right() //Roterar 90 grader höger
 	long int vinkel = 0;
 	uint32_t time1;
 	int result;
-	while (vinkel > -129000000)	   //-123000000 också testad (inte kalkylerad) gradsekundkonstant som när nådd skickar klarsignal till kom-modul
+	while (vinkel > -130000000)	   //-123000000 också testad (inte kalkylerad) gradsekundkonstant som när nådd skickar klarsignal till kom-modul
 	{
 		TCNT1 = 0;
 		result = getGyros_precise(8); //_precise filtrerar värdet genom att ta avarage över inparameterns gånger
