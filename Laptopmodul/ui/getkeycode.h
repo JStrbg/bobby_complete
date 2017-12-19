@@ -50,7 +50,7 @@ class getKeyCode : public QWidget
         QLabel *connectedlabel;
         QLabel *directionlabel;
         QSerialPort serialport;
-        int k = 34;
+        int k = 30;
         int kr = 0;
         int kd = 30;
         bool keys[8] = {0,0,0,1,0,0,0,0};
@@ -63,10 +63,6 @@ class getKeyCode : public QWidget
         quint16 lidar = 0;
         int direction = 0;
         bool driven[25][50] = {{false}};
-        int state = 0;
-
-        //Uppdatera sens 1 gång i sek
-        QTimer sensortimer;
 
         bool matrix[25][50] = {{false}}; // Y-X
         int xcount = 0;

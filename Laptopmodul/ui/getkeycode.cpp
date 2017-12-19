@@ -25,7 +25,7 @@ void getKeyCode::setupUi() //Initierar objekt och placerar i fönstret
     this->setAutoFillBackground(true);
     this->setStyleSheet("background-color: black; color : white;"); //Svart bakgrund
 
-    centerLabel = new QLabel("Welcöm ver 2.7");
+    centerLabel = new QLabel("Welcöm ver 2.8");
     klabel = new QLabel("K: " + QString::number(k));
     kdlabel = new QLabel("Kd: " + QString::number(kd));
     krlabel = new QLabel("Kr: " + QString::number(kr)); //Finns inte längre
@@ -128,7 +128,7 @@ void getKeyCode::paintEvent(QPaintEvent *) //Måla-ut-rutor-i-matris rutin, kan 
 
     //Måla förklaring
     painter.setPen(Qt::black);
-    rect = QRect(720,890,30,30);//x, -y
+    rect = QRect(720,920,30,30);//x, -y
     painter.drawRect(rect);
     painter.fillRect(rect,QBrush(Qt::red));
     rect = QRect(720,975,30,30);
@@ -170,13 +170,20 @@ void getKeyCode::readData()
         }
         else if(first)
         {
-            ycount = (quint8)rec[0];
+            if((quint8)rec[0] < 25)
+                ycount = (quint8)rec[0];
+            else
+                centerLabel->setText("Kartöverföring y fel");
             first = false;
         }
         else if(!first)
         {
-            xcount = (quint8)rec[0];
-            matrix[ycount][xcount] = true;
+            if((quint8)rec[0] < 50){
+                xcount = (quint8)rec[0];
+                matrix[ycount][xcount] = true;
+            }
+            else
+                centerLabel->setText("Kartöverföring x fel");
             first = true;
         }
         if((quint8)rec[0] != 255)
@@ -222,7 +229,7 @@ void getKeyCode::readData()
             sensorprog->setText("Sensormodul prog: " + QString((QChar)rec[0]));
             break;
         case 9:
-            sensorfel->setText("Styrmodul prog: " + QString((QChar)rec[0]));
+            styrprog->setText("Styrmodul prog: " + QString((QChar)rec[0]));
             break;
         case 10:
             comprog->setText("Kommunikationsmodul prog: " + QString((QChar)rec[0]));
@@ -249,8 +256,6 @@ void getKeyCode::readData()
             if((quint8)rec[0] < 50)
             {
                 robo_x = (quint8)rec[0];
-                if(robo_x == 25 && robo_y == 0)
-                    state = 1;
                 //tryck in väggar med logik, riktning och rotationssignal
                 switch(direction)
                 {
@@ -411,7 +416,7 @@ void getKeyCode::readData()
             serialport.write(ready,1);
             serialport.waitForBytesWritten(20); //väntar max 20ms
 
-            if(sens_count > 20)
+            if(sens_count > 14)
             { //Array mottagen, återställ räknare och tvinga ommålning
                 sens_count = 0;
                 update(); //Tvinga ommålning
@@ -465,7 +470,7 @@ void getKeyCode::keyPressEvent(QKeyEvent *event) //Triggas varje gång en tangen
                 driven[y][x] = false;
             }
         }
-        state = 0;
+
         matrix[0][24] = true;
         matrix[0][26] = true;
         update();
@@ -478,7 +483,7 @@ void getKeyCode::keyPressEvent(QKeyEvent *event) //Triggas varje gång en tangen
             keys[i] = 0;
         }
         keys[4] = 1;
-        sensortimer.stop();
+
         break;
     case Qt::Key_Down:
         keys[0] = 1;
@@ -493,9 +498,10 @@ void getKeyCode::keyPressEvent(QKeyEvent *event) //Triggas varje gång en tangen
         keys[0] = 1;
         keys[1] = 1;
         break;
-    case Qt::Key_U:
+    case Qt::Key_U: //Ta emot karta från robot
         centerLabel->setText("Överför karta");
         keys[5] = 1;
+        first = true;
         sens_count = 0;
         keys[0] = 0;
         keys[4] = 1;
